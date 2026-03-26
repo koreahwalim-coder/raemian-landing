@@ -24,6 +24,11 @@ body {
 }
 h1 {
     text-align: center;
+    line-height: 1.3;
+    margin: 0;
+}
+p.center {
+    text-align: center;
 }
 table {
     width: 100%;
@@ -32,26 +37,45 @@ table {
 th {
     background: #ffc107;
     padding: 10px;
+    border: 1px solid #ddd;
 }
 td {
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
 }
-.button {
-    display: block;
+.cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
     padding: 15px;
     margin-top: 10px;
-    text-align: center;
-    background: #007bff;
-    color: white;
     text-decoration: none;
     border-radius: 8px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.cta-btn img {
+    width: 22px;
+    height: 22px;
+}
+.call {
+    background: #ff6a00;
+    color: #fff;
+}
+.kakao {
+    background: #fee500;
+    color: #000;
+}
+.naver {
+    background: #03c75a;
+    color: #fff;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
@@ -59,14 +83,16 @@ td {
 <!-- 제목 -->
 <div class="card">
     <h1>래미안포레스티지<br>실거래가</h1>
-    <p style="text-align:center;">최근 매매·전월세 거래 내역</p>
+    <p class="center">최근 매매·전월세 거래 내역</p>
 </div>
 
 <!-- 안내 -->
 <div class="card">
     <h3>안내</h3>
-    <p>최근 확인된 실거래가 기준입니다.<br>
-    실제 매물은 동, 층, 방향에 따라 차이가 있을 수 있습니다.</p>
+    <p>
+    최근 확인된 실거래가 기준입니다.<br>
+    실제 매물은 동, 층, 방향, 타입에 따라 차이가 있을 수 있습니다.
+    </p>
 </div>
 
 <!-- 매매 -->
@@ -90,8 +116,8 @@ td {
 <table>
 <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
 <tr><td>26.03</td><td>84㎡ [35] 전세</td><td>6억</td></tr>
-<tr><td>26.03</td><td>97㎡ [38] 월세</td><td>1억/150만</td></tr>
-<tr><td>26.02</td><td>49㎡ [22] 월세</td><td>2천/130만</td></tr>
+<tr><td>26.03</td><td>97㎡ [38] 월세</td><td>1억 / 150만</td></tr>
+<tr><td>26.02</td><td>49㎡ [22] 월세</td><td>2천 / 130만</td></tr>
 <tr><td>26.02</td><td>84㎡ [35] 전세</td><td>5억8천</td></tr>
 <tr><td>26.02</td><td>97㎡ [38] 전세</td><td>7억2천</td></tr>
 <tr><td>26.01</td><td>135㎡ [54] 전세</td><td>9억</td></tr>
@@ -101,9 +127,22 @@ td {
 
 <!-- 상담 -->
 <div class="card">
-<a class="button" href="tel:010-3567-7087">전화 상담</a>
-<a class="button" href="#">카카오톡 상담</a>
-<a class="button" href="#">네이버 톡톡</a>
+
+<a class="cta-btn call" href="tel:010-3567-7087">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png">
+    전화 상담
+</a>
+
+<a class="cta-btn kakao" href="#">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png">
+    카카오톡 상담
+</a>
+
+<a class="cta-btn naver" href="https://talk.naver.com/ct/wf0by7x?frm=pblog#nafullscreen" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+    네이버 톡톡
+</a>
+
 </div>
 
 </div>
