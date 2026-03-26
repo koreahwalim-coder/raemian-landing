@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>래미안포레스티지 실거래가</title>
-
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -21,6 +20,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 .title-wrap {
     display: flex;
@@ -28,9 +28,18 @@ body {
     justify-content: center;
     gap: 10px;
 }
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
 h1 {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+h3 {
+    margin-top: 0;
 }
 p.center {
     text-align: center;
@@ -43,11 +52,21 @@ th {
     background: #ffc107;
     padding: 10px;
     border: 1px solid #ddd;
+    text-align: center;
 }
 td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
+}
+.notice-text {
+    line-height: 1.7;
+    color: #333;
+}
+.small-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
 }
 .cta-btn {
     display: flex;
@@ -60,6 +79,7 @@ td {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    box-sizing: border-box;
 }
 .cta-btn img {
     width: 22px;
@@ -77,84 +97,133 @@ td {
     background: #03c75a;
     color: #fff;
 }
-.logo {
-    width: 40px;
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+    .card {
+        padding: 16px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
 </style>
-
 </head>
 <body>
 
 <div class="container">
 
-<!-- 제목 + 로고 -->
-<div class="card" style="text-align:center;">
-    <div class="title-wrap">
-        <img src="logo.png" class="logo">
-        <h1>래미안포레스티지 실거래가</h1>
+    <!-- 제목 + 로고 -->
+    <div class="card" style="text-align:center;">
+        <div class="title-wrap">
+            <img src="logo.png" alt="로고" class="logo">
+            <h1>래미안포레스티지 실거래가</h1>
+        </div>
+        <p class="center">최근 매매·전월세 거래 내역</p>
     </div>
-    <p class="center">최근 매매·전월세 거래 내역</p>
-</div>
 
-<!-- 안내 -->
-<div class="card">
-    <h3>안내</h3>
-    <p>
-    최근 신고된 실거래가 기준으로 정리한 자료입니다.<br>
-동·층·방향·타입에 따라 실제 매물 가격은 차이가 있습니다.
-정확한 조건별 금액은 상담을 통해 안내드립니다.
-    </p>
-</div>
+    <!-- 안내 -->
+    <div class="card">
+        <h3>안내</h3>
+        <p class="notice-text">
+            최근 신고된 실거래가 기준으로 정리한 자료입니다.<br>
+            동·층·방향·타입에 따라 실제 매물 가격은 차이가 있을 수 있습니다.<br>
+            정확한 조건별 금액은 상담을 통해 안내드립니다.
+        </p>
+    </div>
 
-<!-- 매매 -->
-<div class="card">
-<h3>매매 실거래가</h3>
-<table>
-<tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
-<tr><td>26.03</td><td>84㎡ [35]</td><td>9억4300만</td></tr>
-<tr><td>26.03</td><td>84㎡ [35]</td><td>8억7천</td></tr>
-<tr><td>26.02</td><td>84㎡ [35]</td><td>9억5600만</td></tr>
-<tr><td>26.01</td><td>72㎡ [30]</td><td>8억5천</td></tr>
-<tr><td>26.01</td><td>97㎡ [38]</td><td>9억7043만</td></tr>
-<tr><td>26.01</td><td>49㎡ [22]</td><td>5억5천</td></tr>
-<tr><td>25.12</td><td>116㎡ [45]</td><td>12억8818만</td></tr>
-</table>
-</div>
+    <!-- 매매 -->
+    <div class="card">
+        <h3>매매 실거래가</h3>
+        <table>
+            <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
+            <tr><td>26.03</td><td>84㎡ [35]</td><td>9억4300만</td></tr>
+            <tr><td>26.03</td><td>84㎡ [35]</td><td>8억7천</td></tr>
+            <tr><td>26.02</td><td>84㎡ [35]</td><td>9억5600만</td></tr>
+            <tr><td>26.01</td><td>72㎡ [30]</td><td>8억5천</td></tr>
+            <tr><td>26.01</td><td>97㎡ [38]</td><td>9억7043만</td></tr>
+            <tr><td>26.01</td><td>49㎡ [22]</td><td>5억5천</td></tr>
+            <tr><td>25.12</td><td>116㎡ [45]</td><td>12억8818만</td></tr>
+        </table>
+    </div>
 
-<!-- 전월세 -->
-<div class="card">
-<h3>전월세 실거래가</h3>
-<table>
-<tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
-<tr><td>26.03</td><td>84㎡ [35] 전세</td><td>6억</td></tr>
-<tr><td>26.03</td><td>97㎡ [38] 월세</td><td>1억 / 150만</td></tr>
-<tr><td>26.02</td><td>49㎡ [22] 월세</td><td>2천 / 130만</td></tr>
-<tr><td>26.02</td><td>84㎡ [35] 전세</td><td>5억8천</td></tr>
-<tr><td>26.02</td><td>97㎡ [38] 전세</td><td>7억2천</td></tr>
-<tr><td>26.01</td><td>135㎡ [54] 전세</td><td>9억</td></tr>
-<tr><td>26.01</td><td>72㎡ [30] 전세</td><td>5억</td></tr>
-</table>
-</div>
+    <!-- 전월세 -->
+    <div class="card">
+        <h3>전월세 실거래가</h3>
+        <table>
+            <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
+            <tr><td>26.03</td><td>84㎡ [35] 전세</td><td>6억</td></tr>
+            <tr><td>26.03</td><td>97㎡ [38] 월세</td><td>1억 / 150만</td></tr>
+            <tr><td>26.02</td><td>49㎡ [22] 월세</td><td>2천 / 130만</td></tr>
+            <tr><td>26.02</td><td>84㎡ [35] 전세</td><td>5억8천</td></tr>
+            <tr><td>26.02</td><td>97㎡ [38] 전세</td><td>7억2천</td></tr>
+            <tr><td>26.01</td><td>135㎡ [54] 전세</td><td>9억</td></tr>
+            <tr><td>26.01</td><td>72㎡ [30] 전세</td><td>5억</td></tr>
+        </table>
+    </div>
 
-<!-- 상담 -->
-<div class="card">
+    <!-- 실시간 거래 가능 매물 -->
+    <div class="card">
+        <h3>실시간 거래 가능 매물</h3>
+        <table>
+            <tr>
+                <th>평형</th>
+                <th>거래유형</th>
+                <th>가격</th>
+                <th>특징</th>
+            </tr>
+            <tr>
+                <td>84㎡ [35]</td>
+                <td>매매</td>
+                <td>9억2천</td>
+                <td>남동향 / 고층 / 인기동</td>
+            </tr>
+            <tr>
+                <td>84㎡ [35]</td>
+                <td>전세</td>
+                <td>6억</td>
+                <td>중층 / 채광우수</td>
+            </tr>
+            <tr>
+                <td>59㎡ [26]</td>
+                <td>월세</td>
+                <td>2천 / 120만</td>
+                <td>풀옵션 / 즉시입주</td>
+            </tr>
+            <tr>
+                <td>97㎡ [38]</td>
+                <td>매매</td>
+                <td>9억7천</td>
+                <td>로얄동 / 조망우수</td>
+            </tr>
+        </table>
+        <p class="small-text">
+            ※ 실시간 매물은 빠르게 변동될 수 있습니다. 정확한 정보는 문의 바랍니다.
+        </p>
+    </div>
 
-<a class="cta-btn call" href="tel:010-3567-7087">
-    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png">
-    전화 상담
-</a>
+    <!-- 상담 -->
+    <div class="card">
+        <a class="cta-btn call" href="tel:010-3567-7087">
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="전화 아이콘">
+            전화 상담
+        </a>
 
-<a class="cta-btn kakao" href="#">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png">
-    카카오톡 상담
-</a>
+        <a class="cta-btn kakao" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png" alt="카카오톡 아이콘">
+            카카오톡 상담
+        </a>
 
-<a class="cta-btn naver" href="https://talk.naver.com/ct/wf0by7x?frm=pblog#nafullscreen" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-    네이버 톡톡
-</a>
-
-</div>
+        <a class="cta-btn naver" href="https://talk.naver.com/ct/wf0by7x?frm=pblog#nafullscreen" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="네이버 톡톡 아이콘">
+            네이버 톡톡
+        </a>
+    </div>
 
 </div>
 
