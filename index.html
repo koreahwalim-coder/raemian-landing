@@ -1,72 +1,112 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>래미안포레스티지 실거래가</title>
-  <style>
-    body { margin:0; font-family:Arial; background:#f4f6f8; }
-    .wrap { max-width:900px; margin:auto; padding:20px; }
-    .section { background:#fff; padding:20px; margin-bottom:20px; border-radius:12px; }
-    h1 { text-align:center; }
-    table { width:100%; border-collapse:collapse; }
-    th, td { border:1px solid #ddd; padding:10px; text-align:center; }
-    th { background:#facc15; }
-    .btn { display:inline-block; margin:5px; padding:12px 20px; border-radius:8px; text-decoration:none; color:#fff; }
-    .call { background:#ff6a00; }
-    .kakao { background:#fee500; color:#000; }
-    .naver { background:#03c75a; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>래미안포레스티지 실거래가</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background: #ffc107;
+    padding: 10px;
+}
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+</style>
 </head>
+
 <body>
-<div class="wrap">
 
-<section class="section">
-<h1>래미안포레스티지 실거래가</h1>
-<p style="text-align:center;">최근 매매·전월세 거래 내역</p>
-</section>
+<div class="container">
 
-<section class="section">
-<h2>안내</h2>
-<p>최근 확인된 실거래가 기준입니다.</p>
-<p>실제 매물은 조건에 따라 차이가 있을 수 있습니다.</p>
-</section>
+<!-- 제목 -->
+<div class="card">
+    <h1>래미안포레스티지<br>실거래가</h1>
+    <p style="text-align:center;">최근 매매·전월세 거래 내역</p>
+</div>
 
-<section class="section">
-<h2>매매 실거래가</h2>
+<!-- 안내 -->
+<div class="card">
+    <h3>안내</h3>
+    <p>최근 확인된 실거래가 기준입니다.<br>
+    실제 매물은 동, 층, 방향에 따라 차이가 있을 수 있습니다.</p>
+</div>
+
+<!-- 매매 -->
+<div class="card">
+<h3>매매 실거래가</h3>
 <table>
 <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
-<tr><td>26.03</td><td>84㎡(35)</td><td>9억4300</td></tr>
-<tr><td>26.03</td><td>84㎡(35)</td><td>8억7000</td></tr>
-<tr><td>26.02</td><td>84㎡(35)</td><td>9억5600</td></tr>
-<tr><td>26.01</td><td>72㎡(30)</td><td>8억5000</td></tr>
-<tr><td>26.01</td><td>97㎡(38)</td><td>9억7043</td></tr>
-<tr><td>26.01</td><td>49㎡(22)</td><td>5억5000</td></tr>
-<tr><td>25.12</td><td>116㎡(45)</td><td>12억8818</td></tr>
+<tr><td>26.03</td><td>84㎡ [35]</td><td>9억4300만</td></tr>
+<tr><td>26.03</td><td>84㎡ [35]</td><td>8억7천</td></tr>
+<tr><td>26.02</td><td>84㎡ [35]</td><td>9억5600만</td></tr>
+<tr><td>26.01</td><td>72㎡ [30]</td><td>8억5천</td></tr>
+<tr><td>26.01</td><td>97㎡ [38]</td><td>9억7043만</td></tr>
+<tr><td>26.01</td><td>49㎡ [22]</td><td>5억5천</td></tr>
+<tr><td>25.12</td><td>116㎡ [45]</td><td>12억8818만</td></tr>
 </table>
-</section>
+</div>
 
-<section class="section">
-<h2>전월세 실거래가</h2>
+<!-- 전월세 -->
+<div class="card">
+<h3>전월세 실거래가</h3>
 <table>
 <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
-<tr><td>26.03</td><td>84㎡(35) 전세</td><td>6억</td></tr>
-<tr><td>26.03</td><td>97㎡(38) 월세</td><td>1억/150</td></tr>
-<tr><td>26.02</td><td>49㎡(22) 월세</td><td>2천/130</td></tr>
-<tr><td>26.02</td><td>84㎡(35) 전세</td><td>5억8000</td></tr>
-<tr><td>26.02</td><td>97㎡(38) 전세</td><td>7억2000</td></tr>
-<tr><td>26.01</td><td>135㎡(54) 전세</td><td>9억</td></tr>
-<tr><td>26.01</td><td>72㎡(30) 전세</td><td>5억</td></tr>
+<tr><td>26.03</td><td>84㎡ [35] 전세</td><td>6억</td></tr>
+<tr><td>26.03</td><td>97㎡ [38] 월세</td><td>1억/150만</td></tr>
+<tr><td>26.02</td><td>49㎡ [22] 월세</td><td>2천/130만</td></tr>
+<tr><td>26.02</td><td>84㎡ [35] 전세</td><td>5억8천</td></tr>
+<tr><td>26.02</td><td>97㎡ [38] 전세</td><td>7억2천</td></tr>
+<tr><td>26.01</td><td>135㎡ [54] 전세</td><td>9억</td></tr>
+<tr><td>26.01</td><td>72㎡ [30] 전세</td><td>5억</td></tr>
 </table>
-</section>
+</div>
 
-<section class="section" style="text-align:center;">
-<h2>상담 문의</h2>
-<a href="tel:0515559982" class="btn call">전화 상담</a>
-<a href="#" class="btn kakao">카카오톡 상담</a>
-<a href="#" class="btn naver">네이버 톡톡</a>
-</section>
+<!-- 상담 -->
+<div class="card">
+<a class="button" href="tel:010-3567-7087">전화 상담</a>
+<a class="button" href="#">카카오톡 상담</a>
+<a class="button" href="#">네이버 톡톡</a>
+</div>
 
 </div>
+
 </body>
 </html>
