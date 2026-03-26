@@ -22,10 +22,15 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
 }
+.title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 h1 {
-    text-align: center;
-    line-height: 1.3;
     margin: 0;
+    font-size: 22px;
 }
 p.center {
     text-align: center;
@@ -55,7 +60,6 @@ td {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    box-sizing: border-box;
 }
 .cta-btn img {
     width: 22px;
@@ -73,6 +77,9 @@ td {
     background: #03c75a;
     color: #fff;
 }
+.logo {
+    width: 40px;
+}
 </style>
 
 </head>
@@ -80,9 +87,12 @@ td {
 
 <div class="container">
 
-<!-- 제목 -->
-<div class="card">
-    <h1>래미안포레스티지<br>실거래가</h1>
+<!-- 제목 + 로고 -->
+<div class="card" style="text-align:center;">
+    <div class="title-wrap">
+        <img src="logo.png" class="logo">
+        <h1>래미안포레스티지 실거래가</h1>
+    </div>
     <p class="center">최근 매매·전월세 거래 내역</p>
 </div>
 
