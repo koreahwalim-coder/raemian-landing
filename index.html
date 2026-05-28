@@ -1,621 +1,435 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>래미안포레스티지 실거래가</title>
-  <style>
-    * { box-sizing: border-box; }
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>래미안포레스티지 실거래가</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+.brand-bar {
+    background: #111;
+    color: #fff;
+    padding: 12px 10px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.brand-inner {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+.brand-name {
+    color: #fff;
+}
+.brand-call {
+    color: #ffd54f;
+    text-decoration: none;
+}
+.brand-sub {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #ccc;
+}
+.card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.title-card {
+    text-align: center;
+}
+.top-alert {
+    display: inline-block;
+    margin: 0 0 12px 0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #fff1f1;
+    color: #e53935;
+    font-weight: bold;
+    font-size: 15px;
+}
+.title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+h1 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.3;
+}
+h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+.sub-text {
+    margin: 0;
+    color: #666;
+}
+.notice-text {
+    line-height: 1.7;
+    margin: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background: #ffc107;
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+}
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.price {
+    color: #e53935;
+    font-weight: bold;
+}
+.recommend-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.recommend-item {
+    border: 1px solid #d9eefb;
+    background: #f6fbff;
+    border-radius: 12px;
+    padding: 16px;
+}
+.recommend-title {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1976d2;
+}
+.recommend-lines {
+    margin: 0;
+    line-height: 1.95;
+    font-size: 15.5px;
+}
+.recommend-lines .type {
+    display: inline-block;
+    min-width: 42px;
+    font-weight: bold;
+}
+.recommend-lines .meta {
+    color: #444;
+}
+.small-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+.cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.cta-btn img {
+    width: 22px;
+    height: 22px;
+}
+.call {
+    background: #ff6a00;
+    color: #fff;
+}
+.kakao {
+    background: #fee500;
+    color: #000;
+}
+.naver {
+    background: #03c75a;
+    color: #fff;
+}
+.sns-wrap {
+    text-align: center;
+}
+.sns-title {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+.sns-desc {
+    margin: 0 0 12px;
+    color: #666;
+    font-size: 14px;
+}
+.sns-links a {
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+.youtube {
+    color: #ff0000;
+}
+.blog {
+    color: #03c75a;
+}
+@media (max-width: 768px) {
     body {
-      margin: 0;
-      font-family: "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
-      background: linear-gradient(180deg, #f4f8fb 0%, #eef3f7 100%);
-      color: #1f2937;
-      line-height: 1.6;
+        padding: 12px;
     }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 20px;
+    .card {
+        padding: 16px;
     }
-
-    .hero {
-      background: linear-gradient(135deg, #0f4c81 0%, #1d6fa5 100%);
-      color: #fff;
-      border-radius: 22px;
-      padding: 34px 24px 28px;
-      box-shadow: 0 10px 30px rgba(15, 76, 129, 0.18);
-      margin-bottom: 22px;
+    h1 {
+        font-size: 22px;
     }
-
-    .hero-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      flex-wrap: wrap;
+    h3 {
+        font-size: 18px;
     }
-
-    .brand-badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 7px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .award-badge {
-      display: inline-block;
-      background: #fff7d6;
-      color: #7c2d12;
-      border: 1px solid #facc15;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 900;
-      margin: 0 0 14px 0;
-      box-shadow: 0 4px 12px rgba(250, 204, 21, 0.18);
-    }
-
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: 42px;
-      line-height: 1.2;
-      font-weight: 900;
-      letter-spacing: -1.5px;
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.92);
-    }
-
-    .contact-box {
-      min-width: 280px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 18px;
-      padding: 16px 18px;
-      backdrop-filter: blur(6px);
-    }
-
-    .contact-title {
-      font-size: 24px;
-      font-weight: 900;
-      margin-bottom: 10px;
-      color: #ffe082;
-      letter-spacing: -0.5px;
-    }
-
-    .contact-number {
-      font-size: 24px;
-      font-weight: 900;
-      line-height: 1.35;
-      margin-bottom: 8px;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .chip-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #ffffff;
-      color: #0f4c81;
-      padding: 9px 13px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .chip-link.kakao { background: #fee500; color: #111827; }
-    .chip-link.naver { background: #03c75a; color: #ffffff; }
-    .chip-link.blog { background: #00c73c; color: #ffffff; }
-    .chip-link.youtube { background: #ff0000; color: #ffffff; }
-
-    .section-card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      margin: 0 0 8px;
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: -1px;
-      color: #0f172a;
-    }
-
-    .section-desc {
-      margin: 0 0 18px;
-      color: #475569;
-      font-size: 16px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      border-radius: 18px;
-      border: 1px solid #d7e3ef;
-      background: #fff;
-    }
-
-    .table-title {
-      padding: 16px 18px;
-      font-size: 24px;
-      font-weight: 900;
-      text-align: center;
-      letter-spacing: -1px;
-    }
-
-    .sale-title {
-      background: linear-gradient(90deg, #ffd76a 0%, #ffbf3f 100%);
-      color: #111827;
-      border-bottom: 1px solid #d9a92c;
-    }
-
-    .rent-title {
-      background: linear-gradient(90deg, #8fd3ff 0%, #66b7f1 100%);
-      color: #0f172a;
-      border-bottom: 1px solid #4d99cf;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 360px;
-    }
-
     th, td {
-      border: 1px solid #d6e0ea;
-      padding: 14px 10px;
-      text-align: center;
-      font-size: 15px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    th {
-      background: #dbe7f2;
-      color: #1e293b;
-      font-size: 15px;
-    }
-
-    tbody tr:nth-child(even) { background: #f8fbfe; }
-
-    .price {
-      font-weight: 900;
-      color: #111827;
-    }
-
-    .highlight-box {
-      background: linear-gradient(135deg, #fefce8 0%, #fff7d6 100%);
-      border: 1px solid #f6dd8e;
-      border-radius: 18px;
-      padding: 18px 18px 16px;
-      margin-top: 18px;
-    }
-
-    .highlight-box strong { color: #92400e; }
-
-    .recommend-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 16px;
-    }
-
-    .recommend-card {
-      border: 1px solid #d9e3ee;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-    }
-
-    .recommend-thumb {
-      position: relative;
-      height: 220px;
-      overflow: hidden;
-      background: linear-gradient(135deg, #dfe9f3 0%, #f8fbff 100%);
-    }
-
-    .recommend-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .recommend-thumb-label {
-      position: absolute;
-      left: 12px;
-      bottom: 12px;
-      display: inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.78);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .recommend-body { padding: 16px; }
-
-    .recommend-title {
-      font-size: 21px;
-      font-weight: 900;
-      color: #0f172a;
-      margin-bottom: 8px;
-      letter-spacing: -0.6px;
-    }
-
-    .recommend-price {
-      font-size: 24px;
-      font-weight: 900;
-      color: #dc2626;
-      margin-bottom: 8px;
-    }
-
-    .recommend-meta {
-      font-size: 15px;
-      color: #334155;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .recommend-desc {
-      font-size: 14px;
-      color: #475569;
-      min-height: 60px;
-    }
-
-    .cta-area {
-      margin-top: 28px;
-      background: linear-gradient(135deg, #0b1324 0%, #1e293b 100%);
-      color: #fff;
-      border-radius: 22px;
-      padding: 28px 22px;
-      text-align: center;
-    }
-
-    .cta-area h3 {
-      margin: 0 0 10px;
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
-
-    .cta-area p {
-      margin: 0 0 18px;
-      color: rgba(255, 255, 255, 0.88);
-      font-size: 16px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #ffffff;
-      color: #0f172a;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 15px;
-      font-weight: 900;
-    }
-
-    .cta-btn.kakao { background: #fee500; color: #111827; }
-    .cta-btn.naver { background: #03c75a; color: #ffffff; }
-    .cta-btn.blog { background: #00c73c; color: #ffffff; }
-    .cta-btn.youtube { background: #ff0000; color: #ffffff; }
-
-    .footer {
-      text-align: center;
-      color: #64748b;
-      font-size: 14px;
-      padding: 10px 0 30px;
-    }
-
-    @media (max-width: 860px) {
-      .grid-2,
-      .recommend-grid { grid-template-columns: 1fr; }
-
-      .hero h1 { font-size: 32px; }
-      .contact-number { font-size: 21px; }
-      .section-title { font-size: 26px; }
-      .table-title { font-size: 22px; }
-      .recommend-thumb { height: 240px; }
-    }
-
-    @media (max-width: 520px) {
-      .container { padding: 14px; }
-      .hero { padding: 24px 18px 22px; }
-      .hero h1 { font-size: 28px; }
-      .section-card { padding: 18px; }
-
-      th, td {
-        padding: 12px 8px;
+        padding: 8px 6px;
         font-size: 14px;
-      }
-
-      .recommend-thumb { height: 220px; }
-      .recommend-title { font-size: 19px; }
-      .recommend-price { font-size: 22px; }
-      .contact-box { min-width: 100%; }
     }
-  </style>
+    .recommend-lines {
+        font-size: 14.5px;
+    }
+    .brand-inner {
+        font-size: 15px;
+    }
+}
+</style>
 </head>
-
 <body>
-  <div class="container">
 
-    <section class="hero">
-      <div class="hero-top">
-        <div>
-          <div class="brand-badge">현장 실매물 기반 상담</div><br>
-          <div class="award-badge">2025 한국소비자산업평가(KCIA) 공인중개사무소 부문 ‘우수업체 선정’</div>
-          <h1>뉴화림부동산<br>실거래가 랜딩페이지</h1>
-          <p>
-            실거래가와 추천매물을 한눈에 확인하고<br>
-            빠르게 상담까지 연결되는 페이지입니다.
-          </p>
+<div class="container">
+
+    <div class="brand-bar">
+        <div class="brand-inner">
+            <span class="brand-name">뉴화림부동산</span>
+            <a href="tel:051-555-9982" class="brand-call">☎ 051-555-9982</a>
+            <a href="tel:010-3567-7087" class="brand-call">📞 010-3567-7087</a>
         </div>
-
-        <div class="contact-box">
-          <div class="contact-title">뉴화림부동산</div>
-          <div class="contact-number">051-555-3777</div>
-          <div class="contact-number">010-9407-9372</div>
-
-          <div class="contact-links">
-            <a class="chip-link kakao" href="http://pf.kakao.com/_xoYJMX/chat" target="_blank" rel="noopener">💬 카카오톡</a>
-            <a class="chip-link naver" href="https://talk.naver.com/ct/wj26c8k#nafullscreen" target="_blank" rel="noopener">🟢 네이버톡톡</a>
-            <a class="chip-link blog" href="https://blog.naver.com/hahahoho9372" target="_blank" rel="noopener">📝 블로그</a>
-            <a class="chip-link youtube" href="https://www.youtube.com/@뉴화림부동산tv" target="_blank" rel="noopener">▶ 유튜브</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-card">
-      <h2 class="section-title">최근 실거래가(26.05.28 업데이트)</h2>
-      <p class="section-desc">
-        최근 확인된 실거래가 기준으로 정리했습니다. 실제 거래는 동, 향, 층 위치, 내부 상태에 따라 차이가 있을 수 있습니다.
-      </p>
-
-      <div class="grid-2">
-        <div class="table-wrap">
-          <div class="table-title sale-title">매매 실거래가</div>
-          <table>
-            <thead>
-              <tr>
-                <th>거래일</th>
-                <th>평형</th>
-                <th>거래금액</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>26.05.19</td><td>49㎡ [22], 3층</td><td class="price">5억3500만</td></tr>  
-              <tr><td>26.05.01</td><td>59㎡ [26], 19층</td><td class="price">7억2000만</td></tr>
-              <tr><td>26.04.20</td><td>59㎡ [26], 8층</td><td class="price">7억1500만</td></tr>
-              <tr><td>26.04.19</td><td>84㎡ [35], 24층</td><td class="price">9억6700만</td></tr>
-              <tr><td>26.04.13</td><td>84㎡ [35], 2층</td><td class="price">8억8500만</td></tr>
-              <tr><td>26.04.02</td><td>84㎡ [35], 11층</td><td class="price">9억2500만</td></tr>
-              <tr><td>26.03.31</td><td>49㎡ [22], 4층</td><td class="price">5억1천</td></tr>
-              <tr><td>26.03.30</td><td>59㎡ [26], 13층</td><td class="price">7억4천</td></tr>
-              <tr><td>26.03.20</td><td>84㎡ [35], 29층</td><td class="price">9억7600만</td></tr>
-              <tr><td>26.03.06</td><td>84㎡ [35], 24층</td><td class="price">9억4300만</td></tr>
-              <tr><td>26.03.02</td><td>84㎡ [35], 11층</td><td class="price">8억7천</td></tr>
-              <tr><td>26.02.28</td><td>84㎡ [35], 17층</td><td class="price">9억5600만</td></tr>
-              <tr><td>26.01.16</td><td>84㎡ [35], 9층</td><td class="price">9억</td></tr>
-              <tr><td>26.01.14</td><td>49㎡ [22], 21층</td><td class="price">5억5천</td></tr>
-              <tr><td>26.01.14</td><td>72㎡ [30], 22층</td><td class="price">8억5천</td></tr>
-              <tr><td>26.01.12</td><td>97㎡ [38], 1층</td><td class="price">9억7043만</td></tr>
-              <tr><td>26.01.08</td><td>84㎡ [35], 14층</td><td class="price">9억7천</td></tr>
-              <tr><td>26.01.07</td><td>72㎡ [30], 21층</td><td class="price">8억</td></tr>
-              <tr><td>26.01.07</td><td>72㎡ [30], 12층</td><td class="price">7억9500</td></tr>
-              <tr><td>25.12.23</td><td>115㎡ [45], 3층</td><td class="price">12억9818만</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-wrap">
-          <div class="table-title rent-title">전월세 실거래가</div>
-          <table>
-            <thead>
-              <tr>
-                <th>거래일</th>
-                <th>평형</th>
-                <th>거래금액</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>26.05.21</td><td>59㎡ [26], 2층, 전세</td><td class="price">4억1천</td></tr> 
-              <tr><td>26.05.19</td><td>59㎡ [26], 20층, 전세</td><td class="price">4억1천</td></tr>   
-              <tr><td>26.05.15</td><td>39㎡ [18], 7층, 전세</td><td class="price">2억2천</td></tr>
-              <tr><td>26.05.15</td><td>39㎡ [18], 16층, 전세</td><td class="price">2억3천</td></tr>
-              <tr><td>26.05.09</td><td>59㎡ [26], 4층, 월세</td><td class="price">4천 / 150만</td></tr>
-              <tr><td>26.05.09</td><td>59㎡ [26], 12층, 월세</td><td class="price">3천 / 150만</td></tr>              
-              <tr><td>26.04.29</td><td>84㎡ [35], 8층, 월세</td><td class="price">4천 / 190만</td></tr>
-              <tr><td>26.04.25</td><td>49㎡ [22], 27층, 전세</td><td class="price">3억3천</td></tr>
-              <tr><td>26.04.21</td><td>59㎡ [26], 16층, 전세</td><td class="price">4억</td></tr>
-              <tr><td>26.04.12</td><td>84㎡ [84], 22층, 월세</td><td class="price">2800만 / 190만</td></tr>
-              <tr><td>26.04.11</td><td>84㎡ [35], 14층, 전세</td><td class="price">6억</td></tr>
-              <tr><td>26.04.02</td><td>59㎡ [26], 21층, 월세</td><td class="price">3천 / 150만</td></tr>
-              <tr><td>26.04.02</td><td>84㎡ [35], 34층, 월세</td><td class="price">5천 / 175만</td></tr>
-              <tr><td>26.03.31</td><td>49㎡ [22], 4층, 전세</td><td class="price">3억</td></tr>
-              <tr><td>26.03.29</td><td>84㎡ [35], 7층, 월세</td><td class="price">5천 / 190만</td></tr>
-              <tr><td>26.03.26</td><td>84㎡ [35], 25층, 전세</td><td class="price">5억7,500</td></tr>
-              <tr><td>26.03.26</td><td>59㎡ [26], 10층, 전세</td><td class="price">4억1,500</td></tr>
-              <tr><td>26.03.19</td><td>72㎡ [30], 29층, 전세</td><td class="price">4억8,000</td></tr>
-              <tr><td>26.03.17</td><td>84㎡ [35], 6층, 월세</td><td class="price">4,500 / 195만</td></tr>
-              <tr><td>26.03.14</td><td>84㎡ [35], 17층, 전세</td><td class="price">5억8,000</td></tr>
-              <tr><td>26.03.14</td><td>84㎡ [35], 31층, 전세</td><td class="price">4억2,286 (갱신)</td></tr>
-              <tr><td>26.03.12</td><td>84㎡ [35], 7층, 전세</td><td class="price">5억5,000</td></tr>
-              <tr><td>26.03.07</td><td>84㎡ [35], 11층, 전세</td><td class="price">5억</td></tr>
-              <tr><td>26.03.07</td><td>84㎡ [35], 21층, 전세</td><td class="price">6억</td></tr>
-              <tr><td>26.03.04</td><td>97㎡ [38], 3층, 월세</td><td class="price">1억 / 150만</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="highlight-box">
-        <strong>체크 포인트</strong><br>
-        실거래가는 시장 흐름을 보는 기준으로 좋지만, 실제 매물 선택은 동·향·층 위치·옵션·조망에 따라 체감가 차이가 꽤 큽니다.
-        조건 좋은 추천매물은 아래에서 함께 확인해보세요.
-      </div>
-    </section>
-
-    <section class="section-card">
-      <h2 class="section-title">추천매물(26.05.28 업데이트)</h2>
-      <p class="section-desc">
-        최근 문의가 많은 대표 매물을 이미지와 함께 정리했습니다.
-      </p>
-
-      <div class="recommend-grid">
-
-        <div class="recommend-card">
-          <div class="recommend-thumb">
-            <img src="living.jpg" alt="래미안포레스티지 35평형 매매 사진" />
-            <div class="recommend-thumb-label">채광 좋은 거실</div>
-          </div>
-          <div class="recommend-body">
-            <div class="recommend-title">래미안포레스티지 35평형</div>
-            <div class="recommend-price">매매 9억5천</div>
-            <div class="recommend-meta">조합원풀옵션 · 중층 · 바로입주가능</div>
-            <div class="recommend-desc">
-              조합원 세대로 추가 인테리어 비용 부담 없이 바로 입주가 가능. 개방감 및 일조권 최고. 생활권 좋은 2단지. 넉넉한 수납공간, 세대창고.
-            </div>
-          </div>
-        </div>
-
-        <div class="recommend-card">
-          <div class="recommend-thumb">
-            <img src="view.jpg" alt="래미안포레스티지 38평형 전세 사진" />
-            <div class="recommend-thumb-label">금정산 조망</div>
-          </div>
-          <div class="recommend-body">
-            <div class="recommend-title">래미안포레스티지 38평형</div>
-            <div class="recommend-price">전세 7억5천</div>
-            <div class="recommend-meta">조합원풀옵션 · 개방감 우수</div>
-            <div class="recommend-desc">
-              시원한 조망과 쾌적한 분위기가 강점인 평형대로, 내부 컨디션과 뷰를 함께 중시하시는 분들께 문의가 많은 대표 매물입니다.
-            </div>
-          </div>
-        </div>
-
-        <div class="recommend-card">
-          <div class="recommend-thumb">
-            <img src="kitchen.jpg" alt="래미안포레스티지 26평형 전세 사진" />
-            <div class="recommend-thumb-label">고급 주방 공간</div>
-          </div>
-          <div class="recommend-body">
-            <div class="recommend-title">래미안포레스티지 26평형</div>
-            <div class="recommend-price">전세 4억1천</div>
-            <div class="recommend-meta">102동 · 고층 · 빠른 상담 권장</div>
-            <div class="recommend-desc">
-              102동에 위치한 26평 판상형 고층 세대로, 탁 트인 뷰와 넓은 동간거리로 쾌적한 주거환경을 갖춘 집입니다. 빠른 입주가 가능하며, 선호도 높은 로얄동에 위치해 실거주 만족도가 높은 매물입니다
-            </div>
-          </div>
-        </div>
-
-        <div class="recommend-card">
-          <div class="recommend-thumb">
-            <img src="22sale.jpg" alt="래미안포레스티지 22평형 매매 사진" />
-            <div class="recommend-thumb-label">2단지 1데크 로얄동</div>
-          </div>
-          <div class="recommend-body">
-            <div class="recommend-title">래미안포레스티지 22평형</div>
-            <div class="recommend-price">매매 5억7천</div>
-            <div class="recommend-meta">203동 · 중층 · 바로입주가능</div>
-            <div class="recommend-desc">
-              인기 있는 2단지 1데크 맨 앞 로얄동으로 햇살 가득 밝고 개방감 좋은 집입니다. 다양한 옵션을 보유한 세대로 1~2인 거주 추천, 세대창고 제공.
-            </div>
-          </div>
-        </div>
-
-        <div class="recommend-card">
-          <div class="recommend-thumb">
-            <img src="26rent.jpg" alt="래미안포레스티지 26평형 전세 사진" />
-            <div class="recommend-thumb-label">아이 키우기 좋은 집</div>
-          </div>
-          <div class="recommend-body">
-            <div class="recommend-title">래미안포레스티지 26평형</div>
-            <div class="recommend-price">월세 4천/140만</div>
-            <div class="recommend-meta">103동 · 중층 · 빠른입주가능</div>
-            <div class="recommend-desc">
-              1단지 1데크에 위치해 생활동선이 편리한 26평 매물입니다. 아이 키우기 좋은 단지 분위기이며, 에어컨 4대 옵션 포함, 관리 잘된 집으로 단지 조경이 이쁨.
-            </div>
-          </div>
-        </div>
-
-        <div class="recommend-card">
-          <div class="recommend-thumb">
-            <img src="35rent.jpg" alt="래미안포레스티지 35평형 전세 사진" />
-            <div class="recommend-thumb-label">고층 4Bay 판상형</div>
-          </div>
-          <div class="recommend-body">
-            <div class="recommend-title">래미안포레스티지 35평형</div>
-            <div class="recommend-price">전세 6억2천</div>
-            <div class="recommend-meta">108동 · 고층 · 바로입주가능</div>
-            <div class="recommend-desc">
-              108동 고층에 위치한 35평 4Bay 판상형 세대로, 남동향의 탁 트인 뷰와 우수한 채광이 돋보이는 집입니다. 조합원 풀옵션 적용, 세대창고 제공.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="cta-area">
-      <h3>원하시는 조건의 매물, 빠르게 찾아드립니다</h3>
-      <p>
-        실거래가 확인부터 추천매물 상담까지
-        뉴화림부동산이 현장 실매물 기준으로 정확하게 안내해드립니다.
-      </p>
-      <div class="cta-buttons">
-        <a class="cta-btn" href="tel:0515553777">📞 051-555-3777 전화하기</a>
-        <a class="cta-btn" href="tel:01094079372">📱 010-9407-9372 전화하기</a>
-        <a class="cta-btn kakao" href="http://pf.kakao.com/_xoYJMX/chat" target="_blank" rel="noopener">💬 카카오톡 채팅</a>
-        <a class="cta-btn naver" href="https://talk.naver.com/ct/wj26c8k#nafullscreen" target="_blank" rel="noopener">🟢 네이버톡톡 상담</a>
-        <a class="cta-btn blog" href="https://blog.naver.com/hahahoho9372" target="_blank" rel="noopener">📝 블로그 바로가기</a>
-        <a class="cta-btn youtube" href="https://www.youtube.com/@이지희-x9z3q" target="_blank" rel="noopener">▶ 유튜브 바로가기</a>
-      </div>
-    </section>
-
-    <div class="footer">
-      © 뉴화림부동산 | 2025 한국소비자산업평가(KCIA) 공인중개사무소 부문 우수업체 선정
+        <div class="brand-sub">래미안포레스티지 전문 · 실매물 빠른 상담</div>
     </div>
 
-  </div>
+    <div class="card title-card">
+        <p class="top-alert">지금 문의 급증중</p>
+        <div class="title-wrap">
+            <img src="logo.png" alt="로고" class="logo">
+            <h1>래미안포레스티지 실거래가</h1>
+        </div>
+        <p class="sub-text">최근 매매·전월세 거래 내역</p>
+    </div>
+
+    <div class="card">
+        <h3>안내</h3>
+        <p class="notice-text">
+            최근 신고된 실거래가 기준으로 정리한 자료입니다.<br>
+            동·층·방향·타입에 따라 실제 매물 가격은 차이가 있을 수 있습니다.<br>
+            정확한 조건별 금액은 상담을 통해 안내드립니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>매매 실거래가</h3>
+        <table>
+            <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
+            <tr><td>26.03</td><td>84㎡ [35]</td><td class="price">9억4300만</td></tr>
+            <tr><td>26.03</td><td>84㎡ [35]</td><td class="price">8억7천</td></tr>
+            <tr><td>26.02</td><td>84㎡ [35]</td><td class="price">9억5600만</td></tr>
+            <tr><td>26.01</td><td>72㎡ [30]</td><td class="price">8억5천</td></tr>
+            <tr><td>26.01</td><td>97㎡ [38]</td><td class="price">9억7043만</td></tr>
+            <tr><td>26.01</td><td>49㎡ [22]</td><td class="price">5억5천</td></tr>
+            <tr><td>25.12</td><td>116㎡ [45]</td><td class="price">12억8818만</td></tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>전월세 실거래가</h3>
+        <table>
+            <tr><th>거래일</th><th>평형</th><th>거래금액</th></tr>
+            <tr><td>26.03</td><td>84㎡ [35] 전세</td><td class="price">6억</td></tr>
+            <tr><td>26.03</td><td>97㎡ [38] 월세</td><td class="price">1억 / 150만</td></tr>
+            <tr><td>26.02</td><td>49㎡ [22] 월세</td><td class="price">2천 / 130만</td></tr>
+            <tr><td>26.02</td><td>84㎡ [35] 전세</td><td class="price">5억8천</td></tr>
+            <tr><td>26.02</td><td>97㎡ [38] 전세</td><td class="price">7억2천</td></tr>
+            <tr><td>26.01</td><td>135㎡ [54] 전세</td><td class="price">9억</td></tr>
+            <tr><td>26.01</td><td>72㎡ [30] 전세</td><td class="price">5억</td></tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>거래 가능 추천 매물</h3>
+
+        <div class="recommend-wrap">
+
+            <div class="recommend-item">
+                <p class="recommend-title">22평</p>
+                <p class="recommend-lines">
+                    <span class="type">매매</span>
+                    <span class="meta">203동 고층 · </span>
+                    <span class="price">5억8천</span>
+                    <span class="meta"> / 에어컨3대, 붙박이장 등 옵션다양 / 로얄동 로얄층</span>
+                </p>
+            </div>
+
+            <div class="recommend-item">
+                <p class="recommend-title">26평</p>
+                <p class="recommend-lines">
+                    <span class="type">매매</span>
+                    <span class="meta">303동 중층 · </span>
+                    <span class="price">7억2천</span>
+                    <span class="meta"> / 엘베2대, 에어컨4대 중문 인덕션 등</span><br>
+                    <span class="type">전세</span>
+                    <span class="meta">206동 중층 · </span>
+                    <span class="price">4억3천</span>
+                    <span class="meta"> / 엘베2대, 조합원 풀옵션 / 신혼부부 추천</span><br>
+                    <span class="type">월세</span>
+                    <span class="meta">103동 중층 · </span>
+                    <span class="price">4천 / 140</span>
+                    <span class="meta"> / 에어컨4대 붙박이장 김냉 엔지니어드 스톤 감성조명</span>
+                </p>
+            </div>
+
+            <div class="recommend-item">
+                <p class="recommend-title">35평</p>
+                <p class="recommend-lines">
+                    <span class="type">매매</span>
+                    <span class="meta">104동 저층 · </span>
+                    <span class="price">9억3천</span>
+                    <span class="meta"> / 최저가, 층간소음없는 필로티 세대, 예쁜 정원뷰</span><br>
+                    <span class="type">매매</span>
+                    <span class="meta">306동 고층 · </span>
+                    <span class="price">9억4천</span>
+                    <span class="meta"> / 엘베2대, 풀에어컨 등 옵션다양, 일조 채광 우수</span><br>
+                    <span class="type">매매</span>
+                    <span class="meta">212동 고층 · </span>
+                    <span class="price">9억8천</span>
+                    <span class="meta"> / 엘베2대, 조합원풀옵션, 고층 개방감 채광 우수</span><br>
+                    <span class="type">전세</span>
+                    <span class="meta">108동 중층 · </span>
+                    <span class="price">6억2천</span>
+                    <span class="meta"> / 조합원풀옵션, 고층 탁트인뷰, 개방감 일조 우수</span><br>
+                    <span class="type">월세</span>
+                    <span class="meta">213동 고층 · </span>
+                    <span class="price">4천 / 180</span>
+                    <span class="meta"> / 엘베2대, 풀에어컨 등 옵션다양, 남동향 고층뷰, 세련된 이면창</span>
+                </p>
+            </div>
+
+            <div class="recommend-item">
+                <p class="recommend-title">38평</p>
+                <p class="recommend-lines">
+                    <span class="type">매매</span>
+                    <span class="meta">111동 저층 · </span>
+                    <span class="price">12억</span>
+                    <span class="meta"> / 조합원풀옵션, 넓은 펜트리 공간, 금정산뷰</span><br>
+                    <span class="type">전세</span>
+                    <span class="meta">212동 중층 · </span>
+                    <span class="price">7억5천</span>
+                    <span class="meta"> / 조합원풀옵션, 금정산 조망과 하루종일 밝고 환한집</span>
+                </p>
+            </div>
+
+            <div class="recommend-item">
+                <p class="recommend-title">46평</p>
+                <p class="recommend-lines">
+                    <span class="type">매매</span>
+                    <span class="meta">310동 저층 · </span>
+                    <span class="price">13억9천</span>
+                    <span class="meta"> / 신축첫입주, 풀에어컨 중문 등 옵션다양, 대형평수 최저가 매물</span><br>
+                    <span class="type">매매</span>
+                    <span class="meta">310동 고층 · </span>
+                    <span class="price">16억3천</span>
+                    <span class="meta"> / 신축첫입주, 조합원풀옵션, 초록초록 완벽 금정산뷰</span><br>
+                    <span class="type">월세</span>
+                    <span class="meta">211동 중층 · </span>
+                    <span class="price">3억5천 / 150</span>
+                    <span class="meta"> / 조합원풀옵션, 일조 채광 좋은 남향</span>
+                </p>
+            </div>
+
+            <div class="recommend-item">
+                <p class="recommend-title">50평(피트하우스)</p>
+                <p class="recommend-lines">
+                    <span class="type">매매</span>
+                    <span class="meta">212동 고층 · </span>
+                    <span class="price">12억5천</span>
+                    <span class="meta"> / 귀한 매물, 2가구 거주가능하며 예술공간으로도 활용</span>
+                </p>
+            </div>
+
+        </div>
+
+        <p class="small-text">
+            ※ 현재 기준 거래 가능한 추천 매물입니다. 빠르게 변동될 수 있으니 정확한 정보는 문의 바랍니다.
+        </p>
+    </div>
+
+    <div class="card">
+        <a class="cta-btn call" href="tel:010-3567-7087">
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="전화 아이콘">
+            전화 상담
+        </a>
+
+        <a class="cta-btn kakao" href="http://pf.kakao.com/_SqrMX/chat" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111466.png" alt="카카오톡 아이콘">
+            카카오톡 상담
+        </a>
+
+        <a class="cta-btn naver" href="https://talk.naver.com/ct/wf0by7x?frm=pblog#nafullscreen" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="네이버 톡톡 아이콘">
+            네이버 톡톡
+        </a>
+    </div>
+
+    <div class="card sns-wrap">
+        <div class="sns-title">뉴화림부동산 채널</div>
+        <p class="sns-desc">실매물 영상과 최신 시세는 아래 채널에서 바로 확인하실 수 있습니다.</p>
+        <div class="sns-links">
+            <a class="youtube" href="https://www.youtube.com/@뉴화림부동산tv" target="_blank" rel="noopener noreferrer">
+                ▶ 유튜브 : 뉴화림부동산TV
+            </a>
+            <a class="blog" href="https://blog.naver.com/apartmentgirl" target="_blank" rel="noopener noreferrer">
+                ▶ 블로그 : 뉴화림부동산
+            </a>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
