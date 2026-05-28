@@ -21,7 +21,7 @@ body {
     color: #fff;
     padding: 12px 10px;
     border-radius: 12px;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
@@ -33,7 +33,9 @@ body {
     font-weight: bold;
     flex-wrap: wrap;
 }
-.brand-name { color: #fff; }
+.brand-name {
+    color: #fff;
+}
 .brand-call {
     color: #ffd54f;
     text-decoration: none;
@@ -43,24 +45,6 @@ body {
     margin-top: 4px;
     color: #ccc;
 }
-.award-card {
-    background: linear-gradient(135deg, #fff7d6 0%, #fff1b8 100%);
-    border: 1px solid #f2c94c;
-    color: #7c2d12;
-    padding: 13px 14px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 10px rgba(242,201,76,0.18);
-}
-.award-card .award-main {
-    font-size: 15px;
-}
-.award-card .award-sub {
-    font-size: 14px;
-    margin-top: 3px;
-}
 .card {
     background: #fff;
     padding: 20px;
@@ -68,7 +52,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
-.title-card { text-align: center; }
+.title-card {
+    text-align: center;
+}
 .top-alert {
     display: inline-block;
     margin: 0 0 12px 0;
@@ -183,10 +169,21 @@ td {
     width: 22px;
     height: 22px;
 }
-.call { background: #ff6a00; color: #fff; }
-.kakao { background: #fee500; color: #000; }
-.naver { background: #03c75a; color: #fff; }
-.sns-wrap { text-align: center; }
+.call {
+    background: #ff6a00;
+    color: #fff;
+}
+.kakao {
+    background: #fee500;
+    color: #000;
+}
+.naver {
+    background: #03c75a;
+    color: #fff;
+}
+.sns-wrap {
+    text-align: center;
+}
 .sns-title {
     font-weight: bold;
     margin-bottom: 12px;
@@ -203,24 +200,87 @@ td {
     text-decoration: none;
     font-weight: bold;
 }
-.youtube { color: #ff0000; }
-.blog { color: #03c75a; }
+.youtube {
+    color: #ff0000;
+}
+.blog {
+    color: #03c75a;
+}
+
+/* KCIA 강조 영역 */
+.award-highlight {
+    background: linear-gradient(135deg, #fff4c7 0%, #ffd54f 100%);
+    border: 3px solid #f4b400;
+    border-radius: 18px;
+    padding: 26px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 28px rgba(244,180,0,.28);
+}
+.award-badge {
+    display: inline-block;
+    background: #d32f2f;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+.award-title {
+    font-size: 34px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 10px;
+}
+.award-text {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #3e2723;
+    font-weight: 700;
+}
+.award-text strong {
+    color: #c62828;
+}
+.award-desc {
+    margin-top: 14px;
+    font-size: 15px;
+    color: #5d4037;
+    font-weight: 700;
+}
 
 @media (max-width: 768px) {
-    body { padding: 12px; }
-    .card { padding: 16px; }
-    h1 { font-size: 22px; }
-    h3 { font-size: 18px; }
+    body {
+        padding: 12px;
+    }
+    .card {
+        padding: 16px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
     th, td {
         padding: 8px 6px;
         font-size: 14px;
     }
-    .recommend-lines { font-size: 14.5px; }
-    .brand-inner { font-size: 15px; }
+    .recommend-lines {
+        font-size: 14.5px;
+    }
+    .brand-inner {
+        font-size: 15px;
+    }
+    .award-title {
+        font-size: 28px;
+    }
+    .award-text {
+        font-size: 18px;
+    }
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -232,11 +292,6 @@ td {
             <a href="tel:010-3567-7087" class="brand-call">📞 010-3567-7087</a>
         </div>
         <div class="brand-sub">래미안포레스티지 전문 · 실매물 빠른 상담</div>
-    </div>
-
-    <div class="award-card">
-        <div class="award-main">2025 한국소비자산업평가(KCIA)</div>
-        <div class="award-sub">공인중개사무소 부문 ‘우수업체 선정’</div>
     </div>
 
     <div class="card title-card">
@@ -314,6 +369,18 @@ td {
             <tr><td>26.03.07</td><td>84㎡ [35], 21층, 전세</td><td class="price">6억</td></tr>
             <tr><td>26.03.04</td><td>97㎡ [38], 3층, 월세</td><td class="price">1억 / 150만</td></tr>
         </table>
+    </div>
+
+    <div class="award-highlight">
+        <div class="award-badge">★ 2025 KCIA 우수업체 선정 ★</div>
+        <div class="award-title">뉴화림부동산</div>
+        <div class="award-text">
+            2025 한국소비자산업평가(KCIA)<br>
+            공인중개사무소 부문 <strong>‘우수업체 선정’</strong>
+        </div>
+        <div class="award-desc">
+            래미안포레스티지 전문 · 현장 실매물 기반 상담
+        </div>
     </div>
 
     <div class="card">
