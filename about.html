@@ -7,294 +7,143 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,"Noto Sans KR",sans-serif;
-line-height:1.8;
-color:#222;
-background:#fff;
-padding-bottom:70px;
-}
-
+body{font-family:Arial,"Noto Sans KR",sans-serif;color:#111;background:#fff;line-height:1.7;padding-bottom:70px}
 a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-.top{
-background:#111;
-color:#fff;
-text-align:center;
-padding:12px;
-font-weight:bold;
-}
+.header{position:fixed;top:0;left:0;width:100%;height:78px;background:rgba(255,255,255,.96);z-index:100;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:center}
+.header-inner{width:100%;max-width:1400px;display:flex;align-items:center;justify-content:space-between;padding:0 60px}
+.call-box{background:#e53935;color:#fff;padding:12px 24px;border-radius:12px;font-weight:900;text-align:center;line-height:1.25}
+.logo-title{font-size:30px;font-weight:900;color:#063b7a;letter-spacing:-1px}
+.ask-box{background:#0d1b52;color:#fff;padding:12px 24px;border-radius:12px;font-weight:900;text-align:center;line-height:1.25}
 
-.top span{
-color:#ffd400;
-font-size:22px;
-}
+.hero{margin-top:78px;height:360px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("raemian-main.jpg") center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.hero h1{font-size:52px;font-weight:900}
+.hero p{font-size:20px;margin-top:10px}
 
-.hero{
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url("raemian-main.jpg") center/cover no-repeat;
-color:#fff;
-text-align:center;
-padding:80px 20px;
-}
+.section{padding:80px 20px}
+.container{max-width:1100px;margin:0 auto}
+.title{text-align:center;margin-bottom:45px}
+.title h2{font-size:42px;font-weight:900}
+.title p{font-size:18px;color:#555;margin-top:8px}
 
-.hero h1{
-font-size:42px;
-margin-bottom:15px;
-}
+.profile-box{display:grid;grid-template-columns:320px 1fr;gap:50px;align-items:center;background:#f7f9fc;padding:50px;border-radius:12px}
+.profile-box img{width:260px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.15);margin:auto}
+.message h3{font-size:34px;margin-bottom:20px}
+.message p{font-size:18px;margin-bottom:16px;color:#333}
 
-.hero p{
-font-size:19px;
-}
+.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:45px}
+.promise-card{background:#fff;border-top:5px solid #ffd400;padding:28px;text-align:center;box-shadow:0 5px 18px rgba(0,0,0,.1)}
+.promise-card h3{font-size:23px;margin-bottom:10px}
+.promise-card p{color:#555}
 
-.wrap{
-max-width:900px;
-margin:auto;
-padding:45px 20px;
-}
+.btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:40px}
+.btn{padding:15px 30px;border-radius:50px;font-weight:900}
+.btn-yellow{background:#ffd400;color:#111}
+.btn-dark{background:#111;color:#fff}
 
-.profile{
-text-align:center;
-margin-bottom:40px;
-}
+.footer{background:#2d3138;color:#ddd;padding:45px 20px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.footer h3{color:#fff;margin-bottom:12px}
+.footer .footer-phone{font-size:30px;color:#fff;font-weight:900}
 
-.profile img{
-width:180px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-margin-bottom:20px;
-}
+.fixed{position:fixed;bottom:0;left:0;width:100%;display:flex;z-index:101}
+.fixed a{flex:1;text-align:center;padding:17px;font-weight:900;font-size:18px}
+.fixed .call{background:#111;color:#fff}
+.fixed .sms{background:#ffd400;color:#111}
 
-.profile h2{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.profile p{
-color:#666;
-}
-
-.message{
-background:#f8f8f8;
-padding:35px;
-border-radius:20px;
-box-shadow:0 3px 12px rgba(0,0,0,.08);
-margin-bottom:25px;
-}
-
-.message h3{
-font-size:26px;
-margin-bottom:20px;
-}
-
-.message p{
-margin-bottom:18px;
-font-size:17px;
-}
-
-.highlight{
-background:#fff6c7;
-}
-
-.btns{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-margin-top:25px;
-}
-
-.btn{
-padding:14px 24px;
-border-radius:40px;
-font-weight:bold;
-}
-
-.gold{
-background:#ffd400;
-color:#111;
-}
-
-.black{
-background:#111;
-color:#fff;
-}
-
-.footer{
-background:#111;
-color:#ccc;
-text-align:center;
-padding:35px 20px;
-font-size:14px;
-}
-
-.fixed{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-display:flex;
-z-index:99;
-}
-
-.fixed a{
-flex:1;
-text-align:center;
-padding:16px;
-font-weight:bold;
-}
-
-.call{
-background:#111;
-color:#fff;
-}
-
-.sms{
-background:#ffd400;
-color:#111;
-}
-
-@media(max-width:700px){
-
-.hero{
-padding:60px 18px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.profile img{
-width:140px;
-}
-
-.profile h2{
-font-size:26px;
-}
-
-.message{
-padding:25px;
-}
-
+@media(max-width:900px){
+.header{height:auto;position:relative}
+.header-inner{padding:10px;gap:8px}
+.logo-title{font-size:20px}
+.call-box,.ask-box{font-size:13px;padding:9px 10px}
+.hero{margin-top:0;height:300px}
+.hero h1{font-size:36px}
+.profile-box{grid-template-columns:1fr;padding:30px 20px}
+.promise{grid-template-columns:1fr}
+.title h2{font-size:32px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="top">
-대표 인사말
-<span>051-555-9982</span>
-</div>
+<header class="header">
+  <div class="header-inner">
+    <a class="call-box" href="tel:0515559982">☎ 문의전화<br>051-555-9982</a>
+    <a class="logo-title" href="raemian.html">뉴화림부동산</a>
+    <a class="ask-box" href="contact.html">매도 · 매수<br>문의하기</a>
+  </div>
+</header>
 
 <section class="hero">
-
-<h1>뉴화림부동산</h1>
-
-<p>
-래미안포레스티지 전문 부동산<br>
-고객과의 신뢰를 가장 중요하게 생각합니다.
-</p>
-
+  <div>
+    <h1>대표 인사말</h1>
+    <p>고객과의 신뢰를 가장 중요하게 생각합니다</p>
+  </div>
 </section>
 
-<section class="wrap">
+<section class="section">
+  <div class="container">
+    <div class="title">
+      <h2>뉴화림부동산을 찾아주셔서 감사합니다</h2>
+      <p>래미안포레스티지 단지 내 상가 입점 전문 부동산</p>
+    </div>
 
-<div class="profile">
+    <div class="profile-box">
+      <img src="director.png" alt="뉴화림부동산 대표">
+      <div class="message">
+        <h3>안녕하세요. 뉴화림부동산입니다.</h3>
+        <p>래미안포레스티지 매매, 전세, 월세 상담을 전문적으로 진행하고 있습니다.</p>
+        <p>부동산 거래는 고객님의 소중한 자산과 직결되는 만큼 정확한 정보, 안전한 계약, 책임 있는 진행이 무엇보다 중요합니다.</p>
+        <p>뉴화림부동산은 고객님의 입장에서 한 번 더 생각하고, 조건에 맞는 매물을 꼼꼼히 비교하여 만족스러운 거래가 될 수 있도록 최선을 다하겠습니다.</p>
+      </div>
+    </div>
 
-<img src="director.png" alt="대표사진">
+    <div class="promise">
+      <div class="promise-card">
+        <h3>친절 상담</h3>
+        <p>처음 상담부터 잔금까지 편안하게 안내합니다.</p>
+      </div>
+      <div class="promise-card">
+        <h3>정확한 정보</h3>
+        <p>실매물 중심으로 조건을 꼼꼼히 확인합니다.</p>
+      </div>
+      <div class="promise-card">
+        <h3>안전한 계약</h3>
+        <p>권리관계 확인과 계약 절차를 책임 있게 진행합니다.</p>
+      </div>
+      <div class="promise-card">
+        <h3>사후 관리</h3>
+        <p>계약 후 잔금일까지 필요한 절차를 함께합니다.</p>
+      </div>
+    </div>
 
-<h2>대표 이정아</h2>
-
-<p>
-래미안포레스티지 단지 내 상가 입점
-</p>
-
-</div>
-
-<div class="message">
-
-<h3>안녕하세요.</h3>
-
-<p>
-뉴화림부동산 대표 이정아입니다.
-</p>
-
-<p>
-래미안포레스티지 단지 내 상가에서
-매매, 전세, 월세 전문 상담을 진행하고 있습니다.
-</p>
-
-<p>
-부동산 거래는 단순히 계약서를 작성하는 것이 아니라
-고객님의 소중한 자산과 미래를 함께 고민하는 과정이라고 생각합니다.
-</p>
-
-<p>
-고객님의 입장에서 한 번 더 생각하고,
-안전하고 만족스러운 거래가 될 수 있도록
-항상 최선을 다하겠습니다.
-</p>
-
-</div>
-
-<div class="message highlight">
-
-<h3>뉴화림부동산의 약속</h3>
-
-<p>✔ 친절한 상담</p>
-
-<p>✔ 정확한 정보 제공</p>
-
-<p>✔ 안전한 거래 진행</p>
-
-<p>✔ 계약 후에도 지속적인 관리</p>
-
-</div>
-
-<div class="btns">
-
-<a href="tel:0515559982" class="btn gold">
-전화상담
-</a>
-
-<a href="raemian.html" class="btn black">
-메인으로
-</a>
-
-</div>
-
+    <div class="btns">
+      <a class="btn btn-yellow" href="tel:0515559982">전화상담</a>
+      <a class="btn btn-dark" href="raemian.html">메인으로</a>
+    </div>
+  </div>
 </section>
 
-<div class="footer">
-
-<h2>뉴화림부동산공인중개사사무소</h2>
-
-<p>
-부산광역시 동래구 금강로131번길 42
-</p>
-
-<p>
-래미안포레스티지 2단지 상가 A동 9호
-</p>
-
-<p>
-051-555-9982 / 010-3567-7087
-</p>
-
-</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <h3>뉴화림부동산공인중개사사무소</h3>
+      <p>주소 : 부산광역시 동래구 금강로131번길 42, 래미안포레스티지 2단지 상가 A동 9호</p>
+      <p>TEL : 051-555-9982 / HP : 010-3567-7087</p>
+      <p>COPYRIGHT(c) 2026 뉴화림부동산 ALL RIGHTS RESERVED.</p>
+    </div>
+    <div>
+      <p>TEL</p>
+      <div class="footer-phone">051-555-9982</div>
+    </div>
+  </div>
+</footer>
 
 <div class="fixed">
-
-<a class="call" href="tel:0515559982">
-전화문의
-</a>
-
-<a class="sms" href="sms:01035677087">
-문자문의
-</a>
-
+  <a class="call" href="tel:0515559982">전화문의</a>
+  <a class="sms" href="sms:01035677087">문자문의</a>
 </div>
 
 </body>
