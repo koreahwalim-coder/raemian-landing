@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상담문의 | 뉴화림부동산</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.7;color:#222;background:#fff;padding-bottom:70px}
+a{text-decoration:none;color:inherit}
+.top{background:#111;color:#fff;text-align:center;padding:12px;font-weight:bold}
+.top span{color:#ffd400;font-size:22px}
+.hero{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("raemian-main.jpg") center/cover no-repeat;color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:42px;margin-bottom:15px}
+.hero p{font-size:19px}
+.wrap{max-width:850px;margin:auto;padding:45px 20px}
+.title{text-align:center;margin-bottom:30px}
+.title h2{font-size:32px}
+.contact-card{background:#f8f8f8;border-radius:22px;padding:28px;margin-bottom:18px;box-shadow:0 3px 12px rgba(0,0,0,.08);text-align:center}
+.contact-card b{display:block;font-size:24px;margin-bottom:10px}
+.big-phone{font-size:34px;font-weight:bold;color:#111;margin:10px 0}
+.yellow{background:#fff6c7}
+.formbox{background:#f6f6f6;border-radius:22px;padding:28px;text-align:center}
+.formbox input,.formbox select,.formbox textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #ddd;border-radius:10px;font-size:16px;font-family:inherit}
+.formbox textarea{height:120px;resize:none}
+.formbox button{width:100%;border:0;background:#111;color:#fff;padding:15px;border-radius:10px;font-size:18px;font-weight:bold;margin-top:8px}
+.btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{padding:14px 24px;border-radius:40px;font-weight:bold}
+.gold{background:#ffd400;color:#111}
+.black{background:#111;color:#fff}
+.footer{background:#111;color:#ccc;text-align:center;padding:35px 20px;font-size:14px}
+.fixed{position:fixed;bottom:0;left:0;width:100%;display:flex;z-index:99}
+.fixed a{flex:1;text-align:center;padding:16px;font-weight:bold}
+.call{background:#111;color:#fff}
+.sms{background:#ffd400;color:#111}
+
+@media(max-width:700px){
+.hero{padding:60px 18px}
+.hero h1{font-size:32px}
+.title h2{font-size:26px}
+.big-phone{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+상담문의 <span>051-555-9982</span>
+</div>
+
+<section class="hero">
+<h1>상담문의</h1>
+<p>
+래미안포레스티지 매매 · 전세 · 월세<br>
+빠르게 상담해드리겠습니다.
+</p>
+</section>
+
+<section class="wrap">
+
+<div class="title">
+<h2>뉴화림부동산 상담 안내</h2>
+<p>전화, 문자, 방문 상담 모두 가능합니다.</p>
+</div>
+
+<div class="contact-card yellow">
+<b>빠른 전화 상담</b>
+<div class="big-phone">051-555-9982</div>
+<p>래미안포레스티지 매물 상담은 전화 문의가 가장 빠릅니다.</p>
+</div>
+
+<div class="contact-card">
+<b>휴대폰 상담</b>
+<div class="big-phone">010-3567-7087</div>
+<p>문자 문의도 가능합니다.</p>
+</div>
+
+<div class="formbox">
+<h2>상담 요청</h2>
+<p>현재는 전화 또는 문자 문의를 추천드립니다.</p>
+
+<input type="text" placeholder="성함">
+<input type="tel" placeholder="연락처">
+
+<select>
+<option>문의유형 선택</option>
+<option>매도 문의</option>
+<option>매수 문의</option>
+<option>전세 문의</option>
+<option>월세 문의</option>
+<option>기타 문의</option>
+</select>
+
+<textarea placeholder="문의 내용을 입력해주세요"></textarea>
+
+<button onclick="alert('현재는 전화 또는 문자로 문의 부탁드립니다.')">
+상담 요청하기
+</button>
+</div>
+
+<div class="btns">
+<a href="tel:0515559982" class="btn gold">전화상담</a>
+<a href="sms:01035677087" class="btn black">문자문의</a>
+<a href="raemian.html" class="btn black">메인으로</a>
+</div>
+
+</section>
+
+<div class="footer">
+<h2>뉴화림부동산공인중개사사무소</h2>
+<p>부산광역시 동래구 금강로131번길 42</p>
+<p>래미안포레스티지 2단지 상가 A동 9호</p>
+<p>051-555-9982 / 010-3567-7087</p>
+</div>
+
+<div class="fixed">
+<a class="call" href="tel:0515559982">전화문의</a>
+<a class="sms" href="sms:01035677087">문자문의</a>
+</div>
+
+</body>
+</html>
