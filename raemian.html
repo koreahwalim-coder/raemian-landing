@@ -23,6 +23,23 @@ a{text-decoration:none;color:inherit}
 .title{text-align:center;margin-bottom:28px}
 .title h2{font-size:30px}
 .title p{color:#666;margin-top:6px}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.photo-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  border-radius:18px;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+  background:#f5f5f5;
+}
+
 .icons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .icon{background:#f8f8f8;border-radius:18px;padding:25px;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.08)}
 .icon b{display:block;font-size:24px;margin-bottom:8px}
@@ -50,9 +67,11 @@ a{text-decoration:none;color:inherit}
 .fixed a{flex:1;text-align:center;padding:16px;font-weight:bold}
 .fixed .call{background:#111;color:#fff}
 .fixed .sms{background:#ffd400;color:#111}
+
 @media(max-width:700px){
 .hero{padding:55px 18px}
 .hero h1{font-size:30px}
+.photo-grid{grid-template-columns:1fr}
 .icons,.cards{grid-template-columns:1fr}
 .title h2{font-size:25px}
 .price{font-size:13px}
@@ -68,20 +87,22 @@ a{text-decoration:none;color:inherit}
 
 <section class="hero">
   <img src="logo.png" alt="뉴화림부동산">
- <div class="small">래미안포레스티지 단지내 부동산</div>
+  <div class="small">래미안포레스티지 단지내 부동산</div>
 
-<h1>래미안포레스티지<br>매매 · 전세 · 월세 전문상담</h1>
+  <h1>래미안포레스티지<br>매매 · 전세 · 월세 전문상담</h1>
 
-<p>
-현재 거래 가능한 매물부터<br>
-평형별 시세와 조건 비교까지<br>
-뉴화림부동산에서 빠르게 안내드립니다.
-</p>
+  <p>
+    현재 거래 가능한 매물부터<br>
+    평형별 시세와 조건 비교까지<br>
+    뉴화림부동산에서 빠르게 안내드립니다.
+  </p>
+
   <div class="btns">
     <a class="btn yellow" href="tel:051-555-9982">전화 문의</a>
     <a class="btn white" href="#form">매물 상담</a>
   </div>
 </section>
+
 <section class="wrap">
   <div class="title">
     <h2>래미안포레스티지 둘러보기</h2>
@@ -94,6 +115,7 @@ a{text-decoration:none;color:inherit}
     <img src="photo3.jpg" alt="래미안포레스티지 커뮤니티">
   </div>
 </section>
+
 <section class="wrap">
   <div class="title">
     <h2>안심중개 · 실매물 상담</h2>
