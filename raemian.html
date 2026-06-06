@@ -1,533 +1,177 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>래미안포레스티지 매매 전세 월세 전문관 | 뉴화림부동산</title>
-  <meta name="description" content="래미안포레스티지 매매 전세 월세 실시간 매물 상담. 뉴화림부동산 051-555-9982">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
-      padding-bottom: 80px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .top-bar {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 12px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #111, #333);
-      color: #fff;
-      border-radius: 20px;
-      padding: 36px 24px;
-      text-align: center;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-    }
-
-    .hero img {
-      width: 95px;
-      margin-bottom: 15px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #ffd400;
-      color: #111;
-      padding: 7px 14px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 14px;
-    }
-
-    .hero h1 {
-      font-size: 34px;
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 22px;
-    }
-
-    .btn-row {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .btn-yellow {
-      background: #ffd400;
-      color: #111;
-    }
-
-    .btn-white {
-      background: #fff;
-      color: #111;
-    }
-
-    .section {
-      background: #fff;
-      border-radius: 18px;
-      padding: 24px;
-      margin-bottom: 22px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-
-    .section h2 {
-      font-size: 25px;
-      margin-bottom: 14px;
-      text-align: center;
-    }
-
-    .section-desc {
-      text-align: center;
-      color: #666;
-      margin-bottom: 18px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .info-card {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 14px;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .info-card strong {
-      display: block;
-      font-size: 25px;
-      color: #111;
-      margin-bottom: 6px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
-      border-radius: 14px;
-      font-size: 15px;
-    }
-
-    th {
-      background: #111;
-      color: #fff;
-      padding: 12px 6px;
-    }
-
-    td {
-      border-bottom: 1px solid #eee;
-      padding: 12px 6px;
-      text-align: center;
-    }
-
-    tr:nth-child(even) {
-      background: #fafafa;
-    }
-
-    .highlight {
-      background: #fff7cc !important;
-      font-weight: bold;
-    }
-
-    .property {
-      border: 1px solid #eee;
-      border-radius: 16px;
-      padding: 18px;
-      margin-bottom: 14px;
-      background: #fafafa;
-    }
-
-    .property h3 {
-      font-size: 21px;
-      margin-bottom: 8px;
-      color: #111;
-    }
-
-    .property p {
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #111;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 30px;
-      font-size: 13px;
-      margin: 2px;
-    }
-
-    .yellow-box {
-      background: #fff7cc;
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      font-weight: bold;
-      margin-top: 12px;
-    }
-
-    .profile {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .profile img {
-      width: 130px;
-      border-radius: 16px;
-    }
-
-    .office-img {
-      width: 100%;
-      max-height: 260px;
-      object-fit: contain;
-      border-radius: 16px;
-      margin-top: 16px;
-      background: #fff;
-    }
-
-    .contact-box {
-      background: #111;
-      color: #fff;
-      border-radius: 20px;
-      padding: 28px;
-      text-align: center;
-    }
-
-    .contact-box h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-
-    .contact-box p {
-      font-size: 18px;
-      margin-bottom: 18px;
-    }
-
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-      padding: 20px;
-    }
-
-    .fixed-bottom {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      display: flex;
-      z-index: 999;
-      box-shadow: 0 -3px 14px rgba(0,0,0,0.2);
-    }
-
-    .fixed-bottom a {
-      flex: 1;
-      text-align: center;
-      padding: 16px 4px;
-      font-weight: bold;
-      font-size: 17px;
-    }
-
-    .fixed-call {
-      background: #111;
-      color: #fff;
-    }
-
-    .fixed-sms {
-      background: #ffd400;
-      color: #111;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 14px;
-      }
-
-      .hero {
-        padding: 30px 18px;
-      }
-
-      .hero h1 {
-        font-size: 29px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 20px 14px;
-      }
-
-      .section h2 {
-        font-size: 23px;
-      }
-
-      table {
-        font-size: 13px;
-      }
-
-      th, td {
-        padding: 10px 4px;
-      }
-
-      .fixed-bottom a {
-        font-size: 15px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>래미안포레스티지 전문관 | 뉴화림부동산</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Noto Sans KR",sans-serif;color:#222;background:#fff;line-height:1.6;padding-bottom:70px}
+a{text-decoration:none;color:inherit}
+.top{background:#111;color:#fff;text-align:center;padding:12px;font-weight:bold}
+.top span{color:#ffd400;font-size:22px}
+.hero{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("office.jpg") center/cover no-repeat;color:#fff;text-align:center;padding:70px 20px}
+.hero img{width:95px;margin-bottom:18px}
+.hero .small{font-size:19px;color:#ffd400;font-weight:bold}
+.hero h1{font-size:38px;margin:12px 0;line-height:1.25}
+.hero p{font-size:18px;margin-bottom:24px}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{padding:13px 22px;border-radius:40px;font-weight:bold;display:inline-block}
+.yellow{background:#ffd400;color:#111}
+.white{background:#fff;color:#111}
+.wrap{max-width:1050px;margin:auto;padding:45px 18px}
+.title{text-align:center;margin-bottom:28px}
+.title h2{font-size:30px}
+.title p{color:#666;margin-top:6px}
+.icons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.icon{background:#f8f8f8;border-radius:18px;padding:25px;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.08)}
+.icon b{display:block;font-size:24px;margin-bottom:8px}
+.dark{background:#111;color:#fff}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border-radius:18px;box-shadow:0 3px 15px rgba(0,0,0,.1);overflow:hidden;text-align:center}
+.card .pic{height:150px;background:#ddd}
+.card:nth-child(1) .pic{background:linear-gradient(135deg,#333,#777)}
+.card:nth-child(2) .pic{background:linear-gradient(135deg,#444,#999)}
+.card:nth-child(3) .pic{background:linear-gradient(135deg,#555,#aaa)}
+.card:nth-child(4) .pic{background:linear-gradient(135deg,#222,#777)}
+.card h3{padding:18px 10px 4px}
+.card p{padding:0 14px 18px;color:#666;font-size:14px}
+.price{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 15px rgba(0,0,0,.08)}
+.price th{background:#111;color:#fff;padding:13px}
+.price td{text-align:center;border-bottom:1px solid #eee;padding:13px}
+.price tr:nth-child(even){background:#fafafa}
+.formbox{background:#f6f6f6;border-radius:20px;padding:28px;text-align:center}
+.formbox input,.formbox select{width:100%;padding:14px;margin:7px 0;border:1px solid #ddd;border-radius:10px;font-size:16px}
+.formbox button{width:100%;border:0;background:#111;color:#fff;padding:15px;border-radius:10px;font-size:18px;font-weight:bold;margin-top:8px}
+.profile{display:flex;align-items:center;gap:24px;justify-content:center;flex-wrap:wrap;text-align:center}
+.profile img{width:130px;border-radius:20px}
+.footer{background:#111;color:#ccc;text-align:center;padding:35px 20px;font-size:14px}
+.fixed{position:fixed;bottom:0;left:0;width:100%;display:flex;z-index:99}
+.fixed a{flex:1;text-align:center;padding:16px;font-weight:bold}
+.fixed .call{background:#111;color:#fff}
+.fixed .sms{background:#ffd400;color:#111}
+@media(max-width:700px){
+.hero{padding:55px 18px}
+.hero h1{font-size:30px}
+.icons,.cards{grid-template-columns:1fr}
+.title h2{font-size:25px}
+.price{font-size:13px}
+.price th,.price td{padding:10px 4px}
+}
+</style>
 </head>
-
 <body>
 
-  <div class="top-bar">
-    뉴화림부동산 | 래미안포레스티지 매매 · 전세 · 월세 상담
+<div class="top">
+  문의전화 <span>051-555-9982</span>
+</div>
+
+<section class="hero">
+  <img src="logo.png" alt="뉴화림부동산">
+  <div class="small">래미안포레스티지 전문 부동산</div>
+  <h1>뉴화림부동산</h1>
+  <p>매매 · 전세 · 월세<br>실시간 매물 상담</p>
+  <div class="btns">
+    <a class="btn yellow" href="tel:051-555-9982">전화 문의</a>
+    <a class="btn white" href="#form">매물 상담</a>
   </div>
+</section>
 
-  <div class="container">
-
-    <section class="hero">
-      <img src="logo.png" alt="뉴화림부동산 로고">
-      <div class="badge">래미안포레스티지 전문관</div>
-      <h1>래미안포레스티지<br>매매 · 전세 · 월세</h1>
-      <p>
-        현재 거래 가능한 매물부터<br>
-        평형별 호가 흐름까지 빠르게 안내드립니다.
-      </p>
-      <div class="btn-row">
-        <a class="btn btn-yellow" href="tel:051-555-9982">전화 상담</a>
-        <a class="btn btn-white" href="#price">시세 보기</a>
-        <a class="btn btn-white" href="#property">추천 매물</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>래미안포레스티지 핵심 정보</h2>
-      <p class="section-desc">부산 동래구 온천동 대표 신축 대단지</p>
-
-      <div class="grid">
-        <div class="info-card">
-          <strong>4,043세대</strong>
-          대단지 프리미엄
-        </div>
-        <div class="info-card">
-          <strong>4,914대</strong>
-          총 주차대수
-        </div>
-        <div class="info-card">
-          <strong>36개동</strong>
-          대규모 브랜드 단지
-        </div>
-        <div class="info-card">
-          <strong>2024년</strong>
-          신축급 입주 단지
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="property">
-      <h2>현재 추천 상담 매물</h2>
-      <p class="section-desc">조건에 따라 매매 · 전세 · 월세 상담 가능합니다.</p>
-
-      <div class="property">
-        <h3>35평형 인기 국민평형</h3>
-        <p>실거주 선호도 높은 평형으로 매매·전세 문의가 꾸준한 대표 평형입니다.</p>
-        <span class="tag">매매</span>
-        <span class="tag">전세</span>
-        <span class="tag">월세</span>
-      </div>
-
-      <div class="property">
-        <h3>38평형 여유로운 구조</h3>
-        <p>금정산뷰, 시티뷰, 조합풀옵션 등 조건별 비교 상담이 가능합니다.</p>
-        <span class="tag">금정산뷰</span>
-        <span class="tag">시티뷰</span>
-        <span class="tag">조합풀옵션</span>
-      </div>
-
-      <div class="property">
-        <h3>46평형 대형 평형</h3>
-        <p>희소성 높은 대형 평형으로 실거주 만족도와 프리미엄을 함께 봅니다.</p>
-        <span class="tag">대형평형</span>
-        <span class="tag">희소매물</span>
-        <span class="tag">상담문의</span>
-      </div>
-
-      <div class="yellow-box">
-        같은 평형이라도 동 위치, 조망, 방향, 옵션에 따라 만족도가 달라집니다.<br>
-        조건에 맞는 매물을 뉴화림부동산에서 함께 찾아드리겠습니다.
-      </div>
-    </section>
-
-    <section class="section" id="price">
-      <h2>거래 가능한 호가 기준 시세</h2>
-      <p class="section-desc">실거래가가 아닌 현재 시장에 나온 호가 기준 안내입니다.</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>평형</th>
-            <th>매매</th>
-            <th>전세</th>
-            <th>월세</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>22평</td>
-            <td>5억4천~6억</td>
-            <td>문의</td>
-            <td>문의</td>
-          </tr>
-          <tr>
-            <td>26평</td>
-            <td>7억5천~8억5천</td>
-            <td>문의</td>
-            <td>4천/140~1억/120</td>
-          </tr>
-          <tr>
-            <td>30평</td>
-            <td>8억9천~9억7천</td>
-            <td>문의</td>
-            <td>문의</td>
-          </tr>
-          <tr class="highlight">
-            <td>35평</td>
-            <td>9억대</td>
-            <td>5억5천~6억5천</td>
-            <td>5천/200</td>
-          </tr>
-          <tr>
-            <td>38평</td>
-            <td>11억~12억대</td>
-            <td>7억~7억5천</td>
-            <td>2억/150~3억5천/145</td>
-          </tr>
-          <tr>
-            <td>46평</td>
-            <td>14억~17억대</td>
-            <td>8억~9억5천</td>
-            <td>문의</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section">
-      <h2>래미안포레스티지 장점</h2>
-      <p class="section-desc">실거주와 투자 모두에서 주목받는 이유</p>
-
-      <div class="grid">
-        <div class="info-card">
-          <strong>입지</strong>
-          온천장역 · 명륜역 생활권
-        </div>
-        <div class="info-card">
-          <strong>교육</strong>
-          온천초 배정
-        </div>
-        <div class="info-card">
-          <strong>커뮤니티</strong>
-          수영장 · 사우나 · 피트니스
-        </div>
-        <div class="info-card">
-          <strong>조경</strong>
-          삼성물산 조경 프리미엄
-        </div>
-      </div>
-
-      <div class="yellow-box">
-        대단지 규모, 브랜드 가치, 신축급 컨디션, 커뮤니티, 조경, 생활 인프라까지 갖춘 온천동 대표 단지입니다.
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>뉴화림부동산 안내</h2>
-      <div class="profile">
-        <img src="director.png" alt="뉴화림부동산 대표">
-        <div>
-          <p><strong>래미안포레스티지 단지 내 상가 입점</strong></p>
-          <p>2025 한국소비자산업평가</p>
-          <p>공인중개사무소 부문 우수업체 선정</p>
-          <p>매수 · 매도 · 전세 · 월세 상담 환영</p>
-        </div>
-      </div>
-      <img class="office-img" src="office.jpg" alt="뉴화림부동산 사무실">
-    </section>
-
-    <section class="contact-box">
-      <h2>래미안포레스티지 상담 문의</h2>
-      <p>조건에 맞는 매물을 빠르게 안내해드리겠습니다.</p>
-      <div class="btn-row">
-        <a class="btn btn-yellow" href="tel:051-555-9982">051-555-9982</a>
-        <a class="btn btn-white" href="tel:010-3567-7087">010-3567-7087</a>
-      </div>
-    </section>
-
-    <footer>
-      <p>뉴화림부동산공인중개사사무소</p>
-      <p>부산광역시 동래구 금강로131번길 42, 래미안포레스티지 2단지 상가 A동 9호</p>
-      <p>대표번호 051-555-9982 / 휴대폰 010-3567-7087</p>
-    </footer>
-
+<section class="wrap">
+  <div class="title">
+    <h2>안심중개 · 실매물 상담</h2>
+    <p>래미안포레스티지 단지 내 상가 입점</p>
   </div>
-
-  <div class="fixed-bottom">
-    <a class="fixed-call" href="tel:051-555-9982">전화문의</a>
-    <a class="fixed-sms" href="sms:010-3567-7087">문자문의</a>
+  <div class="icons">
+    <div class="icon"><b>매도 · 매수</b>금액 조율부터 계약까지</div>
+    <div class="icon"><b>전세 · 월세</b>조건별 빠른 매물 안내</div>
+    <div class="icon"><b>비밀 상담</b>매도·매수 상담 환영</div>
   </div>
+</section>
+
+<section class="wrap dark">
+  <div class="title">
+    <h2>래미안포레스티지</h2>
+    <p>부산 동래구 온천동 대표 신축 대단지</p>
+  </div>
+  <div class="icons">
+    <div class="icon"><b>4,043세대</b>대단지 프리미엄</div>
+    <div class="icon"><b>4,914대</b>넉넉한 주차공간</div>
+    <div class="icon"><b>36개동</b>브랜드 대단지</div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="title">
+    <h2>추천 상담 매물</h2>
+    <p>평형별 조건에 맞춰 빠르게 안내드립니다</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="pic"></div><h3>22평</h3><p>소형 평형, 실거주·임대수요 상담</p></div>
+    <div class="card"><div class="pic"></div><h3>26평</h3><p>신혼부부·소형 가족 선호 평형</p></div>
+    <div class="card"><div class="pic"></div><h3>35평</h3><p>가장 문의 많은 국민평형</p></div>
+    <div class="card"><div class="pic"></div><h3>38·46평</h3><p>조망·옵션·대형평형 비교 상담</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="title">
+    <h2>거래 가능한 호가 기준</h2>
+    <p>실거래가가 아닌 현재 시장 호가 기준입니다</p>
+  </div>
+  <table class="price">
+    <tr><th>평형</th><th>매매</th><th>전세</th><th>월세</th></tr>
+    <tr><td>22평</td><td>5억4천~6억</td><td>문의</td><td>문의</td></tr>
+    <tr><td>26평</td><td>7억5천~8억5천</td><td>문의</td><td>4천/140~1억/120</td></tr>
+    <tr><td>30평</td><td>8억9천~9억7천</td><td>문의</td><td>문의</td></tr>
+    <tr><td>35평</td><td>9억대</td><td>5억5천~6억5천</td><td>5천/200</td></tr>
+    <tr><td>38평</td><td>11억~12억대</td><td>7억~7억5천</td><td>2억/150~3억5천/145</td></tr>
+    <tr><td>46평</td><td>14억~17억대</td><td>8억~9억5천</td><td>문의</td></tr>
+  </table>
+</section>
+
+<section class="wrap">
+  <div class="title">
+    <h2>뉴화림부동산</h2>
+    <p>래미안포레스티지 전문 상담</p>
+  </div>
+  <div class="profile">
+    <img src="director.png" alt="대표 사진">
+    <div>
+      <h3>2025 한국소비자산업평가</h3>
+      <p>공인중개사무소 부문 우수업체 선정</p>
+      <p>매수 · 매도 · 전세 · 월세 상담 환영</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="form">
+  <div class="formbox">
+    <h2>매도 · 매수 문의</h2>
+    <p>연락처를 남겨주시면 빠르게 상담드립니다.</p>
+    <input type="text" placeholder="성함">
+    <input type="tel" placeholder="연락처">
+    <select>
+      <option>문의유형 선택</option>
+      <option>매도 문의</option>
+      <option>매수 문의</option>
+      <option>전세 문의</option>
+      <option>월세 문의</option>
+    </select>
+    <button onclick="alert('현재는 전화 또는 문자로 문의 부탁드립니다.')">문의하기</button>
+  </div>
+</section>
+
+<div class="footer">
+  <h2>뉴화림부동산공인중개사사무소</h2>
+  <p>부산광역시 동래구 금강로131번길 42, 래미안포레스티지 2단지 상가 A동 9호</p>
+  <p>대표번호 051-555-9982 / 휴대폰 010-3567-7087</p>
+</div>
+
+<div class="fixed">
+  <a class="call" href="tel:051-555-9982">전화문의</a>
+  <a class="sms" href="sms:010-3567-7087">문자문의</a>
+</div>
 
 </body>
 </html>
