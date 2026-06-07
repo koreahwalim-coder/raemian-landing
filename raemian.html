@@ -817,8 +817,36 @@ img{
     margin:0 auto;
   }
 }
+@media(max-width:900px){
 
-</style>
+  .service-grid{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+  }
+
+  .service-card{
+    width:100% !important;
+  }
+
+  .service-card img{
+    height:240px !important;
+    object-fit:cover !important;
+  }
+
+  .service-body{
+    text-align:center !important;
+    padding:26px !important;
+  }
+
+  .service-body h3{
+    font-size:28px !important;
+  }
+
+  .service-body p{
+    font-size:18px !important;
+  }
+
+}
 </style>
 </head>
 <body>
@@ -1122,22 +1150,22 @@ class="btn btn-yellow">
 <div class="commercial-photo-grid">
 
 <div class="commercial-photo">
-<img src="restaurant.jpg">
+<img src="commercial-food.jpg">
 <span>음식점</span>
 </div>
 
 <div class="commercial-photo">
-<img src="office-rent.jpg">
+<img src="commercial-office.jpg">
 <span>사무실</span>
 </div>
 
 <div class="commercial-photo">
-<img src="medical.jpg">
+<img src="commercial-medical.jpg">
 <span>메디컬</span>
 </div>
 
 <div class="commercial-photo">
-<img src="academy.jpg">
+<img src="commercial-academy.jpg">
 <span>학원</span>
 </div>
 
@@ -1200,7 +1228,7 @@ class="btn btn-blue">
 <div class="youtube-box">
 
 <div class="youtube-image">
-<img src="youtube.jpg" alt="뉴화림부동산TV">
+<img src="youtube-channel.jpg" alt="뉴화림부동산TV">
 </div>
 
 <div class="youtube-text">
