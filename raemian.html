@@ -43,10 +43,14 @@ img{max-width:100%;display:block}
 .intro p{font-size:18px;color:#444;margin-bottom:10px}
 .badge{display:inline-block;background:#ffd400;color:#111;font-weight:900;padding:8px 16px;border-radius:30px;margin-bottom:14px}
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.stat{background:#fff;text-align:center;padding:38px 20px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
-.stat strong{display:block;font-size:54px;color:#063b7a;font-weight:900}
-.stat span{font-size:19px;font-weight:700}
+.hero-stat{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.hero-stat img{width:100%;height:500px;object-fit:cover;display:block}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.48);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px}
+.hero-overlay h2{font-size:54px;font-weight:900;margin-bottom:35px}
+.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px}
+.hero-grid strong{display:block;font-size:52px;color:#ffd400;font-weight:900}
+.hero-grid span{font-size:18px;font-weight:700}
+.hero-overlay p{font-size:20px}
 
 .advantage{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .adv-left h3{color:#ffd400;font-size:20px;margin-bottom:18px}
@@ -151,6 +155,12 @@ transform:translateY(-3px);
 .fixed .sms{background:#ffd400;color:#111}
 
 @media(max-width:900px){
+.hero-stat img{height:340px}
+.hero-overlay h2{font-size:32px;margin-bottom:20px}
+.hero-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+.hero-grid strong{font-size:34px}
+.hero-grid span{font-size:14px}
+.hero-overlay p{font-size:15px}
 .header{height:auto;position:relative}
 .header-inner{padding:10px;gap:8px}
 .logo-title{font-size:20px}
@@ -160,7 +170,7 @@ transform:translateY(-3px);
 .hero p{font-size:18px}
 .title h2{font-size:32px}
 .intro,.advantage,.youtube-box,.location,.contact-wrap{grid-template-columns:1fr;padding:28px 20px}
-.stats,.adv-grid,.contract-grid,.photo-grid,.cards{grid-template-columns:1fr}
+.adv-grid,.contract-grid,.photo-grid,.cards{grid-template-columns:1fr}
 .photo-grid img{height:auto}
 .adv-left h2{font-size:34px}
 .price{font-size:13px}
@@ -255,15 +265,36 @@ transform:translateY(-3px);
 
 <section class="section">
   <div class="container">
-    <div class="title">
-      <h2>숫자로 보는 래미안포레스티지</h2>
-      <p>부산 동래구 온천동 대표 신축 대단지</p>
-    </div>
-    <div class="stats">
-      <div class="stat"><strong>4,043</strong><span>세대</span></div>
-      <div class="stat"><strong>4,914</strong><span>주차대수</span></div>
-      <div class="stat"><strong>36</strong><span>개동</span></div>
-      <div class="stat"><strong>2024</strong><span>입주</span></div>
+    <div class="hero-stat">
+      <img src="photo1.jpg" alt="래미안포레스티지 전경">
+
+      <div class="hero-overlay">
+        <h2>래미안포레스티지</h2>
+
+        <div class="hero-grid">
+          <div>
+            <strong>4,043</strong>
+            <span>세대</span>
+          </div>
+
+          <div>
+            <strong>4,914</strong>
+            <span>주차대수</span>
+          </div>
+
+          <div>
+            <strong>36</strong>
+            <span>개동</span>
+          </div>
+
+          <div>
+            <strong>2024</strong>
+            <span>입주</span>
+          </div>
+        </div>
+
+        <p>부산 동래구 온천동 대표 신축 대단지</p>
+      </div>
     </div>
   </div>
 </section>
