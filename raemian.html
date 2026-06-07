@@ -53,10 +53,18 @@ img{max-width:100%;display:block}
 .adv-left h2{font-size:48px;line-height:1.25;margin-bottom:24px}
 .adv-left p{font-size:19px;color:#ddd}
 .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.adv-item{background:#fff;color:#111;padding:30px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.15)}
-.adv-item .num{font-size:38px;font-weight:900;color:#ffd400}
-.adv-item h3{font-size:25px;margin:10px 0}
-.adv-item p{color:#555}
+
+.adv-photo{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,.18);min-height:260px;background:#111}
+
+.adv-photo img{width:100%;height:280px;object-fit:cover;display:block;transition:.3s}
+
+.adv-photo:hover img{transform:scale(1.05)}
+
+.adv-caption{position:absolute;left:0;right:0;bottom:0;padding:25px;background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.05));color:#fff}
+
+.adv-caption h3{font-size:28px;margin-bottom:8px}
+
+.adv-caption p{font-size:16px;color:#fff}
 
 .contract-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .contract-card{background:#fff;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,.1);overflow:hidden;position:relative}
@@ -268,10 +276,37 @@ transform:translateY(-3px);
       <p>단지 내에서 실시간 매물 확인과 조건별 비교 상담을 도와드립니다.</p>
     </div>
     <div class="adv-grid">
-      <a class="adv-item" href="friendly.html"><div class="num">01</div><h3>친절계약</h3><p>상담부터 잔금까지 꼼꼼하게 안내</p></a>
-      <a class="adv-item" href="property.html"><div class="num">02</div><h3>매물 다량 확보</h3><p>매매·전세·월세 비교 상담</p></a>
-      <a class="adv-item" href="safe.html"><div class="num">03</div><h3>안심중개</h3><p>권리관계 확인과 책임 상담</p></a>
-      <a class="adv-item" href="onestop.html"><div class="num">04</div><h3>원스톱 서비스</h3><p>전자계약·세무·법률·등기 지원</p></a>
+      <a href="friendly.html" class="adv-photo">
+    <img src="friendly.jpg" alt="친절계약">
+    <div class="adv-caption">
+        <h3>친절계약</h3>
+        <p>고객 한 분 한 분 정성을 다해 상담</p>
+    </div>
+</a>
+
+<a href="property.html" class="adv-photo">
+    <img src="property.jpg" alt="매물 다량 확보">
+    <div class="adv-caption">
+        <h3>부동산 최대물량 확보</h3>
+        <p>래미안포레스티지 다량 매물 보유</p>
+    </div>
+</a>
+
+<a href="safe.html" class="adv-photo">
+    <img src="safe.jpg" alt="안심중개">
+    <div class="adv-caption">
+        <h3>안심중개 100% 책임보장</h3>
+        <p>계약부터 잔금까지 안전하게</p>
+    </div>
+</a>
+
+<a href="onestop.html" class="adv-photo">
+    <img src="onestop.jpg" alt="원스톱 서비스">
+    <div class="adv-caption">
+        <h3>원스톱 서비스</h3>
+        <p>세무 · 법률 · 등기까지 한번에</p>
+    </div>
+</a>
     </div>
   </div>
 </section>
