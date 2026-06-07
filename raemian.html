@@ -7,78 +7,95 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,"Noto Sans KR",sans-serif;color:#111;background:#fff;line-height:1.6;padding-bottom:70px}
+body{font-family:Arial,"Noto Sans KR",sans-serif;color:#111;background:#fff;line-height:1.6;padding-bottom:76px}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
-.header{
-position:fixed;top:0;left:0;width:100%;height:78px;background:rgba(255,255,255,.96);
-z-index:100;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:center
-}
+.header{position:fixed;top:0;left:0;width:100%;height:78px;background:rgba(255,255,255,.97);z-index:100;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:center}
 .header-inner{width:100%;max-width:1400px;display:flex;align-items:center;justify-content:space-between;padding:0 60px}
 .call-box{background:#e53935;color:#fff;padding:12px 24px;border-radius:12px;font-weight:900;text-align:center;line-height:1.25}
-.logo-title{font-size:30px;font-weight:900;color:#063b7a;letter-spacing:-1px}
+.logo-title{font-size:30px;font-weight:900;color:#063b7a}
 .ask-box{background:#0d1b52;color:#fff;padding:12px 24px;border-radius:12px;font-weight:900;text-align:center;line-height:1.25}
 
-.hero{
-margin-top:78px;height:650px;background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url("raemian-main.jpg") center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;text-align:center;color:#fff
-}
-.hero small{font-size:20px;font-weight:700}
-.hero h1{font-size:58px;line-height:1.2;margin:18px 0;font-weight:900}
-.hero p{font-size:22px;margin-bottom:30px}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;padding:15px 30px;border-radius:50px;font-weight:900}
+.hero{margin-top:78px;min-height:680px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("raemian-main.jpg") center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:40px 20px}
+.hero small{font-size:22px;font-weight:800;color:#ffd400}
+.hero h1{font-size:62px;line-height:1.18;margin:18px 0;font-weight:900}
+.hero p{font-size:23px;margin-bottom:32px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 32px;border-radius:50px;font-weight:900}
 .btn-yellow{background:#ffd400;color:#111}
 .btn-white{background:#fff;color:#111}
 .btn-dark{background:#111;color:#fff}
 
-.section{padding:80px 20px}
-.light-blue{background:#eaf5ff}
+.section{padding:85px 20px}
+.blue{background:#eaf5ff}
 .gray{background:#f5f5f5}
+.dark{background:#0d1b52;color:#fff}
 .container{max-width:1200px;margin:0 auto}
-.title{text-align:center;margin-bottom:45px}
-.title h2{font-size:42px;font-weight:900;letter-spacing:-1px}
-.title p{font-size:18px;color:#555;margin-top:8px}
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:43px;font-weight:900;letter-spacing:-1px}
+.title p{font-size:18px;color:#666;margin-top:10px}
+.dark .title p{color:#ddd}
 
-.brand-card{
-background:#fff;border:6px solid #1d5fbf;max-width:760px;margin:0 auto;padding:40px;text-align:center
-}
-.brand-card h2{font-size:52px;color:#063b7a;font-weight:900}
-.brand-card .phone{font-size:46px;font-weight:900;margin:25px 0}
-.brand-card .big{font-size:42px;font-weight:900}
-.brand-card .red{color:#e53935}
+.intro{display:grid;grid-template-columns:320px 1fr;gap:50px;align-items:center;background:#fff;padding:50px;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.intro img{width:260px;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.18);margin:auto}
+.intro h2{font-size:38px;color:#063b7a;margin-bottom:16px}
+.intro p{font-size:18px;color:#444;margin-bottom:10px}
+.badge{display:inline-block;background:#ffd400;color:#111;font-weight:900;padding:8px 16px;border-radius:30px;margin-bottom:14px}
 
-.advantage{
-display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
-}
-.adv-left h3{font-size:18px;color:#1d5fbf;margin-bottom:20px}
-.adv-left h2{font-size:48px;line-height:1.25;margin-bottom:28px}
-.adv-left p{font-size:20px;color:#555}
-.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-.adv-item{padding:10px}
-.adv-icon{font-size:54px;margin-bottom:15px}
-.adv-item h3{font-size:26px;margin-bottom:10px}
-.adv-item p{font-size:17px;color:#555}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{background:#fff;text-align:center;padding:38px 20px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.stat strong{display:block;font-size:54px;color:#063b7a;font-weight:900}
+.stat span{font-size:19px;font-weight:700}
+
+.advantage{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.adv-left h3{color:#ffd400;font-size:20px;margin-bottom:18px}
+.adv-left h2{font-size:48px;line-height:1.25;margin-bottom:24px}
+.adv-left p{font-size:19px;color:#ddd}
+.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.adv-item{background:#fff;color:#111;padding:30px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.15)}
+.adv-item .num{font-size:38px;font-weight:900;color:#ffd400}
+.adv-item h3{font-size:25px;margin:10px 0}
+.adv-item p{color:#555}
+
+.contract-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contract-card{background:#fff;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,.1);overflow:hidden;position:relative}
+.done{position:absolute;top:14px;right:14px;background:#e53935;color:#fff;padding:7px 12px;border-radius:30px;font-size:13px;font-weight:900}
+.contract-top{background:linear-gradient(135deg,#063b7a,#1d5fbf);color:#fff;text-align:center;padding:36px 20px}
+.contract-top span{display:inline-block;background:#ffd400;color:#111;padding:6px 13px;border-radius:30px;font-weight:900;margin-bottom:12px}
+.contract-top h3{font-size:32px}
+.contract-body{padding:24px}
+.contract-body p{color:#555;margin-bottom:8px}
 
 .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.photo-grid img{width:100%;height:280px;object-fit:cover;border-radius:8px;box-shadow:0 5px 18px rgba(0,0,0,.16)}
+.photo-grid img{width:100%;height:280px;object-fit:cover;border-radius:10px;box-shadow:0 5px 18px rgba(0,0,0,.16)}
 
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.14);text-align:center}
-.card-top{height:230px;background:linear-gradient(135deg,#1b4585,#6ea8ff);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px;font-weight:900}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.12);text-align:center}
+.card-top{height:210px;background:linear-gradient(135deg,#063b7a,#5ba2ff);display:flex;align-items:center;justify-content:center;color:#ffd400;font-size:48px;font-weight:900}
 .card h3{font-size:25px;margin:22px 10px 6px}
-.card p{color:#555;padding:0 18px 25px;font-size:16px}
+.card p{color:#555;padding:0 18px 25px}
 
-.price{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.1)}
+.price{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.1);border-radius:12px;overflow:hidden}
 .price th{background:#063b7a;color:#fff;padding:18px;font-size:18px}
 .price td{text-align:center;border-bottom:1px solid #eee;padding:17px;font-size:17px}
 .price tr:nth-child(even){background:#fafafa}
 
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;background:#fff;padding:50px}
+.youtube-box{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;background:#fff;padding:45px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.youtube-thumb{height:300px;background:linear-gradient(135deg,#111,#e53935);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:84px}
+.youtube-text h2{font-size:38px;margin-bottom:15px}
+.youtube-text p{font-size:18px;color:#555;margin-bottom:20px}
+
+.location{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}
+.map{background:#ddd;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:25px;font-weight:900;color:#555;min-height:360px}
+.loc-info{background:#fff;padding:40px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.loc-info h2{font-size:36px;margin-bottom:18px;color:#063b7a}
+.loc-info p{font-size:18px;margin-bottom:12px;color:#444}
+
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;background:#fff;padding:50px;border-radius:16px}
 .contact-info h2{font-size:42px;color:#e53935;margin-bottom:15px}
 .contact-info p{font-size:18px;margin-bottom:12px}
-.contact-info .tel{font-size:30px;font-weight:900;margin:20px 0}
+.contact-info .tel{font-size:34px;font-weight:900;margin:20px 0;color:#111}
 .form input,.form select,.form textarea{width:100%;padding:15px;margin-bottom:12px;background:#f0f0f0;border:0;border-radius:6px;font-size:16px}
 .form textarea{height:130px;resize:none}
 .form button{width:100%;padding:16px;border:0;border-radius:30px;background:#111;color:#fff;font-size:18px;font-weight:900}
@@ -98,18 +115,17 @@ display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
 .header-inner{padding:10px;gap:8px}
 .logo-title{font-size:20px}
 .call-box,.ask-box{font-size:13px;padding:9px 10px}
-.hero{margin-top:0;height:520px;padding:0 18px}
+.hero{margin-top:0;min-height:520px}
 .hero h1{font-size:38px}
 .hero p{font-size:18px}
-.advantage,.contact-wrap{grid-template-columns:1fr}
-.adv-grid,.cards,.photo-grid{grid-template-columns:1fr}
-.adv-left h2,.title h2{font-size:32px}
-.brand-card h2{font-size:32px}
-.brand-card .phone{font-size:32px}
-.brand-card .big{font-size:28px}
+.title h2{font-size:32px}
+.intro,.advantage,.youtube-box,.location,.contact-wrap{grid-template-columns:1fr;padding:28px 20px}
+.stats,.adv-grid,.contract-grid,.photo-grid,.cards{grid-template-columns:1fr}
 .photo-grid img{height:auto}
+.adv-left h2{font-size:34px}
 .price{font-size:13px}
 .price th,.price td{padding:10px 4px}
+.map{min-height:240px}
 }
 </style>
 </head>
@@ -119,7 +135,7 @@ display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
 <header class="header">
   <div class="header-inner">
     <a class="call-box" href="tel:0515559982">☎ 문의전화<br>051-555-9982</a>
-    <div class="logo-title">뉴화림부동산</div>
+    <a class="logo-title" href="raemian.html">뉴화림부동산</a>
     <a class="ask-box" href="contact.html">매도 · 매수<br>문의하기</a>
   </div>
 </header>
@@ -129,65 +145,85 @@ display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
     <small>래미안포레스티지 단지내 부동산</small>
     <h1>래미안포레스티지<br>전문 중개 상담</h1>
     <p>매매 · 전세 · 월세 · 매도 · 매수<br>실매물 중심으로 빠르게 안내드립니다.</p>
-    <div class="hero-btns">
+    <div class="btns">
       <a class="btn btn-yellow" href="tel:0515559982">전화상담</a>
       <a class="btn btn-white" href="contact.html">상담문의</a>
     </div>
   </div>
 </section>
 
-<section class="section light-blue">
+<section class="section blue">
   <div class="container">
-    <div class="brand-card">
-      <h2>뉴화림부동산</h2>
-      <p>래미안포레스티지 전문 상담</p>
-      <div class="phone">☎ 051-555-9982</div>
-      <div class="big"><span class="red">실매물 중심</span> 중개업무</div>
+    <div class="intro">
+      <img src="director.png" alt="뉴화림부동산 대표">
+      <div>
+        <span class="badge">2025 한국소비자산업평가 우수업체</span>
+        <h2>뉴화림부동산</h2>
+        <p>래미안포레스티지 단지 내 상가 입점</p>
+        <p>매매 · 전세 · 월세 전문 상담</p>
+        <p>고객님의 조건에 맞는 매물을 꼼꼼하게 비교하고 안전한 계약까지 함께합니다.</p>
+        <div class="btns" style="justify-content:flex-start;margin-top:22px;">
+          <a class="btn btn-yellow" href="about.html">대표 인사말</a>
+          <a class="btn btn-dark" href="safe.html">안심중개 보기</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container advantage">
-    <div class="adv-left">
-      <h3>뉴화림부동산공인중개사사무소</h3>
-      <h2>래미안포레스티지<br>전문 중개 서비스</h2>
-      <p>단지 내 상가에서 실시간 매물 확인과 조건별 비교 상담을 도와드립니다.</p>
+  <div class="container">
+    <div class="title">
+      <h2>숫자로 보는 래미안포레스티지</h2>
+      <p>부산 동래구 온천동 대표 신축 대단지</p>
     </div>
-
-    <div class="adv-grid">
-      <a class="adv-item" href="friendly.html">
-        <div class="adv-icon">☑</div>
-        <h3>친절계약</h3>
-        <p>상담부터 잔금까지 고객 입장에서 꼼꼼하게 안내</p>
-      </a>
-
-      <a class="adv-item" href="property.html">
-        <div class="adv-icon">▣</div>
-        <h3>매물 다량 확보</h3>
-        <p>매매·전세·월세 다양한 조건 비교 상담</p>
-      </a>
-
-      <a class="adv-item" href="safe.html">
-        <div class="adv-icon">▤</div>
-        <h3>안심중개</h3>
-        <p>권리관계 확인부터 계약 진행까지 책임 상담</p>
-      </a>
-
-      <a class="adv-item" href="onestop.html">
-        <div class="adv-icon">◫</div>
-        <h3>원스톱 서비스</h3>
-        <p>전자계약·세무·법률·등기 연계 지원</p>
-      </a>
+    <div class="stats">
+      <div class="stat"><strong>4,043</strong><span>세대</span></div>
+      <div class="stat"><strong>4,914</strong><span>주차대수</span></div>
+      <div class="stat"><strong>36</strong><span>개동</span></div>
+      <div class="stat"><strong>2024</strong><span>입주</span></div>
     </div>
   </div>
 </section>
 
-<section class="section light-blue">
+<section class="section dark">
+  <div class="container advantage">
+    <div class="adv-left">
+      <h3>WHY NEWHWARIM</h3>
+      <h2>뉴화림부동산만의<br>전문 중개 서비스</h2>
+      <p>단지 내에서 실시간 매물 확인과 조건별 비교 상담을 도와드립니다.</p>
+    </div>
+    <div class="adv-grid">
+      <a class="adv-item" href="friendly.html"><div class="num">01</div><h3>친절계약</h3><p>상담부터 잔금까지 꼼꼼하게 안내</p></a>
+      <a class="adv-item" href="property.html"><div class="num">02</div><h3>매물 다량 확보</h3><p>매매·전세·월세 비교 상담</p></a>
+      <a class="adv-item" href="safe.html"><div class="num">03</div><h3>안심중개</h3><p>권리관계 확인과 책임 상담</p></a>
+      <a class="adv-item" href="onestop.html"><div class="num">04</div><h3>원스톱 서비스</h3><p>전자계약·세무·법률·등기 지원</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section gray">
+  <div class="container">
+    <div class="title">
+      <h2>최근 계약사례</h2>
+      <p>실제 계약 사례는 지속적으로 업데이트됩니다</p>
+    </div>
+    <div class="contract-grid">
+      <div class="contract-card"><div class="done">계약완료</div><div class="contract-top"><span>매매</span><h3>35평</h3></div><div class="contract-body"><p><b>특징</b> 국민평형 · 실거주 선호</p><p><b>상담</b> 동 위치, 조망, 옵션 비교</p></div></div>
+      <div class="contract-card"><div class="done">계약완료</div><div class="contract-top"><span>매매</span><h3>38평</h3></div><div class="contract-body"><p><b>특징</b> 여유로운 구조 · 조망 선호</p><p><b>상담</b> 금정산뷰, 시티뷰 비교</p></div></div>
+      <div class="contract-card"><div class="done">계약완료</div><div class="contract-top"><span>전세</span><h3>35평</h3></div><div class="contract-body"><p><b>특징</b> 전세 수요 높은 대표 평형</p><p><b>상담</b> 입주일, 방향, 옵션 조건</p></div></div>
+    </div>
+    <div class="btns" style="margin-top:35px;">
+      <a class="btn btn-dark" href="contract.html">계약사례 더보기</a>
+    </div>
+  </div>
+</section>
+
+<section class="section blue">
   <div class="container">
     <div class="title">
       <h2>래미안포레스티지 둘러보기</h2>
-      <p>부산 동래구 대표 신축 대단지</p>
+      <p>단지 전경 · 조경 · 야경</p>
     </div>
     <div class="photo-grid">
       <img src="photo1.jpg" alt="래미안포레스티지 전경">
@@ -203,7 +239,6 @@ display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
       <h2>추천 상담 매물</h2>
       <p>평형별 조건에 맞춰 빠르게 안내드립니다</p>
     </div>
-
     <div class="cards">
       <div class="card"><div class="card-top">22</div><h3>22평</h3><p>소형 평형, 실거주·임대수요 상담</p></div>
       <div class="card"><div class="card-top">26</div><h3>26평</h3><p>신혼부부·소형 가족 선호 평형</p></div>
@@ -219,7 +254,6 @@ display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
       <h2>거래 가능한 호가 기준</h2>
       <p>실거래가가 아닌 현재 시장 호가 기준입니다</p>
     </div>
-
     <table class="price">
       <tr><th>평형</th><th>매매</th><th>전세</th><th>월세</th></tr>
       <tr><td>22평</td><td>5억4천~6억</td><td>문의</td><td>문의</td></tr>
@@ -232,15 +266,45 @@ display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
   </div>
 </section>
 
+<section class="section blue">
+  <div class="container">
+    <div class="youtube-box">
+      <div class="youtube-thumb">▶</div>
+      <div class="youtube-text">
+        <h2>뉴화림부동산TV</h2>
+        <p>래미안포레스티지 시세, 추천 매물, 단지 정보를 영상으로 확인하세요.</p>
+        <div class="btns" style="justify-content:flex-start;">
+          <a class="btn btn-dark" href="youtube.html">유튜브 보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container location">
+    <div class="map">네이버 지도 삽입 예정</div>
+    <div class="loc-info">
+      <h2>오시는 길</h2>
+      <p><b>뉴화림부동산공인중개사사무소</b></p>
+      <p>부산광역시 동래구 금강로131번길 42</p>
+      <p>래미안포레스티지 2단지 상가 A동 9호</p>
+      <p><b>TEL</b> 051-555-9982</p>
+      <div class="btns" style="justify-content:flex-start;margin-top:22px;">
+        <a class="btn btn-dark" href="location.html">오시는 길 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section gray">
   <div class="container contact-wrap">
     <div class="contact-info">
       <h2>매도 · 매수 문의</h2>
       <p>래미안포레스티지 매매 · 전세 · 월세 상담</p>
       <div class="tel">TEL : 051-555-9982</div>
-      <p>부산광역시 동래구 금강로131번길 42<br>래미안포레스티지 2단지 상가 A동 9호</p>
+      <p>조건에 맞는 매물을 빠르게 안내드립니다.</p>
     </div>
-
     <div class="form">
       <input type="text" placeholder="성함">
       <input type="tel" placeholder="연락처">
