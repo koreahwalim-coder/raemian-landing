@@ -7,7 +7,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,"Noto Sans KR",sans-serif;color:#111;background:#fff;line-height:1.6;padding-bottom:76px}
+body{font-family:Arial,"Noto Sans KR",sans-serif;color:#111;background:#fff;line-height:1.6;padding-bottom:78px}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
@@ -27,13 +27,13 @@ img{max-width:100%;display:block}
 .btn-white{background:#fff;color:#111}
 .btn-dark{background:#111;color:#fff}
 
-.section{padding:85px 20px}
+.section{padding:78px 20px}
 .blue{background:#eaf5ff}
 .gray{background:#f5f5f5}
 .dark{background:#0d1b52;color:#fff}
 .container{max-width:1200px;margin:0 auto}
-.title{text-align:center;margin-bottom:50px}
-.title h2{font-size:43px;font-weight:900;letter-spacing:-1px}
+.title{text-align:center;margin-bottom:42px}
+.title h2{font-size:42px;font-weight:900;letter-spacing:-1px;line-height:1.25}
 .title p{font-size:18px;color:#666;margin-top:10px}
 .dark .title p{color:#ddd}
 
@@ -57,17 +57,11 @@ img{max-width:100%;display:block}
 .adv-left h2{font-size:48px;line-height:1.25;margin-bottom:24px}
 .adv-left p{font-size:19px;color:#ddd}
 .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-
-.adv-photo{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,.18);min-height:260px;background:#111}
-
+.adv-photo{position:relative;overflow:hidden;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,.18);min-height:260px;background:#111}
 .adv-photo img{width:100%;height:280px;object-fit:cover;display:block;transition:.3s}
-
 .adv-photo:hover img{transform:scale(1.05)}
-
-.adv-caption{position:absolute;left:0;right:0;bottom:0;padding:25px;background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.05));color:#fff}
-
-.adv-caption h3{font-size:28px;margin-bottom:8px}
-
+.adv-caption{position:absolute;left:0;right:0;bottom:0;padding:25px;background:linear-gradient(to top,rgba(0,0,0,.86),rgba(0,0,0,.05));color:#fff}
+.adv-caption h3{font-size:27px;margin-bottom:8px;line-height:1.25}
 .adv-caption p{font-size:16px;color:#fff}
 
 .contract-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -82,64 +76,33 @@ img{max-width:100%;display:block}
 .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .photo-grid img{width:100%;height:280px;object-fit:cover;border-radius:10px;box-shadow:0 5px 18px rgba(0,0,0,.16)}
 
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.12);text-align:center}
-.card-top{height:210px;background:linear-gradient(135deg,#063b7a,#5ba2ff);display:flex;align-items:center;justify-content:center;color:#ffd400;font-size:48px;font-weight:900}
-.card h3{font-size:25px;margin:22px 10px 6px}
-.card p{color:#555;padding:0 18px 25px}
+.naver-box{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;background:#fff;padding:45px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.naver-thumb{height:300px;background:#fff;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.naver-thumb img{width:100%;height:100%;object-fit:contain}
+.naver-text h2{font-size:36px;margin-bottom:15px;line-height:1.25}
+.naver-text p{font-size:18px;color:#555;margin-bottom:20px}
 
 .price{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.1);border-radius:12px;overflow:hidden}
-.price th{background:#063b7a;color:#fff;padding:18px;font-size:18px}
-.price td{text-align:center;border-bottom:1px solid #eee;padding:17px;font-size:17px}
+.price th{background:#063b7a;color:#fff;padding:16px;font-size:17px}
+.price td{text-align:center;border-bottom:1px solid #eee;padding:15px;font-size:16px}
 .price tr:nth-child(even){background:#fafafa}
 
 .youtube-box{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;background:#fff;padding:45px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
-.youtube-thumb{
-height:300px;
-background:#fff;
-border-radius:14px;
-overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.youtube-thumb img{
-width:100%;
-height:100%;
-object-fit:contain;
-}
-.youtube-text h2{font-size:38px;margin-bottom:15px}
+.youtube-thumb{height:260px;background:linear-gradient(135deg,#111,#e53935);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:76px}
+.youtube-text h2{font-size:36px;margin-bottom:15px;line-height:1.25}
 .youtube-text p{font-size:18px;color:#555;margin-bottom:20px}
 
 .location{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}
-.map{
-background:#03C75A;
-color:#fff;
-border-radius:16px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-font-weight:900;
-min-height:360px;
-text-decoration:none;
-transition:.3s;
-box-shadow:0 8px 25px rgba(0,0,0,.15);
-}
-
-.map:hover{
-background:#02b350;
-transform:translateY(-3px);
-}
-.loc-info{background:#fff;padding:40px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
-.loc-info h2{font-size:36px;margin-bottom:18px;color:#063b7a}
+.map{background:#03C75A;color:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;min-height:330px;text-decoration:none;transition:.3s;box-shadow:0 8px 25px rgba(0,0,0,.15)}
+.map:hover{background:#02b350;transform:translateY(-3px)}
+.loc-info{background:#fff;padding:38px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.loc-info h2{font-size:34px;margin-bottom:18px;color:#063b7a}
 .loc-info p{font-size:18px;margin-bottom:12px;color:#444}
 
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;background:#fff;padding:50px;border-radius:16px}
-.contact-info h2{font-size:42px;color:#e53935;margin-bottom:15px}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;background:#fff;padding:48px;border-radius:16px}
+.contact-info h2{font-size:40px;color:#e53935;margin-bottom:15px;line-height:1.25}
 .contact-info p{font-size:18px;margin-bottom:12px}
-.contact-info .tel{font-size:34px;font-weight:900;margin:20px 0;color:#111}
+.contact-info .tel{font-size:32px;font-weight:900;margin:20px 0;color:#111;word-break:keep-all}
 .form input,.form select,.form textarea{width:100%;padding:15px;margin-bottom:12px;background:#f0f0f0;border:0;border-radius:6px;font-size:16px}
 .form textarea{height:130px;resize:none}
 .form button{width:100%;padding:16px;border:0;border-radius:30px;background:#111;color:#fff;font-size:18px;font-weight:900}
@@ -155,12 +118,6 @@ transform:translateY(-3px);
 .fixed .sms{background:#ffd400;color:#111}
 
 @media(max-width:900px){
-.hero-stat img{height:340px}
-.hero-overlay h2{font-size:32px;margin-bottom:20px}
-.hero-grid{grid-template-columns:repeat(2,1fr);gap:20px}
-.hero-grid strong{font-size:34px}
-.hero-grid span{font-size:14px}
-.hero-overlay p{font-size:15px}
 .header{height:auto;position:relative}
 .header-inner{padding:10px;gap:8px}
 .logo-title{font-size:20px}
@@ -168,334 +125,623 @@ transform:translateY(-3px);
 .hero{margin-top:0;min-height:520px}
 .hero h1{font-size:38px}
 .hero p{font-size:18px}
-.title h2{font-size:32px}
-.intro,.advantage,.youtube-box,.location,.contact-wrap{grid-template-columns:1fr;padding:28px 20px}
-.adv-grid,.contract-grid,.photo-grid,.cards{grid-template-columns:1fr}
-.photo-grid img{height:auto}
-.adv-left h2{font-size:34px}
-.price{font-size:13px}
-.price th,.price td{padding:10px 4px}
-.map{min-height:240px}
+.section{padding:62px 20px}
+.title{margin-bottom:34px}
+.title h2{font-size:34px;line-height:1.25}
+.title p{font-size:17px;line-height:1.45}
+.intro,.advantage,.naver-box,.youtube-box,.location,.contact-wrap{grid-template-columns:1fr;padding:28px 20px}
+.hero-stat img{height:340px}
+.hero-overlay h2{font-size:32px;margin-bottom:20px}
+.hero-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+.hero-grid strong{font-size:34px}
+.hero-grid span{font-size:14px}
+.hero-overlay p{font-size:15px}
+.adv-left h2{font-size:36px}
+.adv-grid,.contract-grid,.photo-grid{grid-template-columns:1fr}
+.adv-photo img{height:240px}
+.adv-caption h3{font-size:25px}
+.photo-grid img{height:260px}
+.naver-text h2,.youtube-text h2{font-size:32px;line-height:1.25}
+.naver-thumb{height:230px}
+.youtube-thumb{height:220px;font-size:58px}
+.price th,.price td{font-size:12px;padding:10px 5px;word-break:keep-all}
+.map{min-height:230px;font-size:26px}
+.loc-info h2{font-size:32px}
+.loc-info p{font-size:17px}
+.contact-info h2{font-size:34px}
+.contact-info .tel{font-size:28px;line-height:1.25}
 }
 </style>
 </head>
-
 <body>
 
 <header class="header">
-  <div class="header-inner">
-    <a class="call-box" href="tel:0515559982">☎ 문의전화<br>051-555-9982</a>
-    <a class="logo-title" href="raemian.html">뉴화림부동산</a>
-    <a class="ask-box" href="contact.html">매도 · 매수<br>문의하기</a>
-  </div>
+    <div class="header-inner">
+        <a href="tel:0515559982" class="call-box">
+            ☎ 문의전화<br>
+            051-555-9982
+        </a>
+
+        <div class="logo-title">뉴화림부동산</div>
+
+        <a href="#contact" class="ask-box">
+            매도 · 매수<br>
+            문의하기
+        </a>
+    </div>
 </header>
 
 <section class="hero">
-  <div>
-    <small>래미안포레스티지 단지내 부동산</small>
-    <h1>래미안포레스티지<br>전문 중개 상담</h1>
-    <p>매매 · 전세 · 월세 · 매도 · 매수<br>실매물 중심으로 빠르게 안내드립니다.</p>
-    <div class="btns">
-      <a class="btn btn-yellow" href="tel:0515559982">전화상담</a>
-      <a class="btn btn-white" href="contact.html">상담문의</a>
+    <div>
+        <small>래미안포레스티지 단지내 부동산</small>
+
+        <h1>
+            래미안포레스티지<br>
+            전문 중개 상담
+        </h1>
+
+        <p>
+            매매 · 전세 · 월세 · 매도 · 매수<br>
+            실매물 중심으로 빠르게 안내드립니다.
+        </p>
+
+        <div class="btns">
+            <a href="tel:0515559982" class="btn btn-yellow">전화상담</a>
+            <a href="#contact" class="btn btn-white">상담문의</a>
+        </div>
     </div>
-  </div>
-</section>
-
-  <section class="section">
-  <div class="container">
-    <div class="title">
-      <h2>고객 상담 후기</h2>
-      <p>뉴화림부동산을 찾아주신 고객님들의 만족 상담</p>
-    </div>
-
-    <div class="contract-grid">
-
-      <div class="contract-card">
-        <div class="contract-top">
-          <span>★★★★★</span>
-          <h3>35평 매매 상담</h3>
-        </div>
-        <div class="contract-body">
-          <p>처음부터 끝까지 친절하게 설명해주셔서 편하게 계약했습니다.</p>
-        </div>
-      </div>
-
-      <div class="contract-card">
-        <div class="contract-top">
-          <span>★★★★★</span>
-          <h3>전세 상담</h3>
-        </div>
-        <div class="contract-body">
-          <p>조건에 맞는 매물을 빠르게 비교해주셔서 도움이 많이 됐습니다.</p>
-        </div>
-      </div>
-
-      <div class="contract-card">
-        <div class="contract-top">
-          <span>★★★★★</span>
-          <h3>매도 상담</h3>
-        </div>
-        <div class="contract-body">
-          <p>금액 조율부터 계약 진행까지 꼼꼼하게 챙겨주셨습니다.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section class="section blue">
-  <div class="container">
-    <div class="intro">
-      <img src="director.png" alt="뉴화림부동산 대표">
-      <div>
-        <span class="badge">2025 한국소비자산업평가 우수업체</span>
-        <h2>뉴화림부동산</h2>
-        <p>래미안포레스티지 단지 내 상가 입점</p>
-        <p>매매 · 전세 · 월세 전문 상담</p>
-        <p>고객님의 조건에 맞는 매물을 꼼꼼하게 비교하고 안전한 계약까지 함께합니다.</p>
-        <div class="btns" style="justify-content:flex-start;margin-top:22px;">
-          <a class="btn btn-yellow" href="about.html">대표 인사말</a>
-          <a class="btn btn-dark" href="safe.html">안심중개 보기</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="hero-stat">
-      <img src="photo1.jpg" alt="래미안포레스티지 전경">
+<div class="container">
 
-      <div class="hero-overlay">
-        <h2>래미안포레스티지</h2>
+<div class="intro">
 
-        <div class="hero-grid">
-          <div>
-            <strong>4,043</strong>
-            <span>세대</span>
-          </div>
+    <img src="director.png" alt="대표">
 
-          <div>
-            <strong>4,914</strong>
-            <span>주차대수</span>
-          </div>
-
-          <div>
-            <strong>36</strong>
-            <span>개동</span>
-          </div>
-
-          <div>
-            <strong>2024</strong>
-            <span>입주</span>
-          </div>
+    <div>
+        <div class="badge">
+            2025 한국소비자산업평가 우수업체
         </div>
 
-        <p>부산 동래구 온천동 대표 신축 대단지</p>
-      </div>
+        <h2>뉴화림부동산</h2>
+
+        <p>래미안포레스티지 단지 내 상가 입점</p>
+        <p>매매 · 전세 · 월세 전문 상담</p>
+
+        <p>
+            고객님의 조건에 맞는 매물을 꼼꼼하게 비교하고
+            안전한 계약까지 함께합니다.
+        </p>
+
+        <div class="btns" style="justify-content:flex-start;margin-top:20px;">
+            <a href="friendly.html" class="btn btn-yellow">
+                대표 인사말
+            </a>
+
+            <a href="safe.html" class="btn btn-dark">
+                안심중개 보기
+            </a>
+        </div>
     </div>
-  </div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section blue">
+<div class="container">
+
+<div class="hero-stat">
+
+<img src="photo1.jpg" alt="래미안포레스티지 전경">
+
+<div class="hero-overlay">
+
+<h2>래미안포레스티지</h2>
+
+<div class="hero-grid">
+
+<div>
+<strong>4,043</strong>
+<span>세대</span>
+</div>
+
+<div>
+<strong>4,914</strong>
+<span>주차대수</span>
+</div>
+
+<div>
+<strong>36</strong>
+<span>개동</span>
+</div>
+
+<div>
+<strong>2024</strong>
+<span>입주</span>
+</div>
+
+</div>
+
+<p>
+부산 동래구 온천동 대표 신축 대단지
+</p>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
 <section class="section dark">
-  <div class="container advantage">
-    <div class="adv-left">
-      <h3>WHY NEWHWARIM</h3>
-      <h2>뉴화림부동산만의<br>전문 중개 서비스</h2>
-      <p>단지 내에서 실시간 매물 확인과 조건별 비교 상담을 도와드립니다.</p>
-    </div>
-    <div class="adv-grid">
-      <a href="friendly.html" class="adv-photo">
-    <img src="adv-friendly.jpg" alt="친절계약">
-    <div class="adv-caption">
-        <h3>친절계약</h3>
-        <p>고객 한 분 한 분 정성을 다해 상담</p>
-    </div>
+<div class="container advantage">
+
+<div class="adv-left">
+
+<h3>WHY NEWHWARIM</h3>
+
+<h2>
+뉴화림부동산만의<br>
+전문 중개 서비스
+</h2>
+
+<p>
+단지 내에서 실시간 매물 확인과 조건별 비교 상담을 도와드립니다.
+</p>
+
+</div>
+
+<div class="adv-grid">
+
+<a href="friendly.html" class="adv-photo">
+
+<img src="adv-friendly.jpg" alt="친절계약">
+
+<div class="adv-caption">
+<h3>친절계약</h3>
+<p>고객 한 분 한 분 정성을 다해 상담</p>
+</div>
+
 </a>
 
 <a href="property.html" class="adv-photo">
-    <img src="adv-property.jpg" alt="매물 다량 확보">
-    <div class="adv-caption">
-        <h3>부동산 최대물량 확보</h3>
-        <p>래미안포레스티지 다량 매물 보유</p>
-    </div>
+
+<img src="adv-property.jpg" alt="매물 다량 확보">
+
+<div class="adv-caption">
+<h3>부동산 최대물량 확보</h3>
+<p>래미안포레스티지 다량 매물 보유</p>
+</div>
+
 </a>
 
 <a href="safe.html" class="adv-photo">
-    <img src="adv-safe.jpg" alt="안심중개">
-    <div class="adv-caption">
-        <h3>안심중개 100% 책임보장</h3>
-        <p>계약부터 잔금까지 안전하게</p>
-    </div>
+
+<img src="adv-safe.jpg" alt="안심중개">
+
+<div class="adv-caption">
+<h3>안심중개 100% 책임보장</h3>
+<p>계약부터 잔금까지 안전하게</p>
+</div>
+
 </a>
 
 <a href="onestop.html" class="adv-photo">
-    <img src="adv-onestop.jpg" alt="원스톱 서비스">
-    <div class="adv-caption">
-        <h3>원스톱 서비스</h3>
-        <p>세무 · 법률 · 등기까지 한번에</p>
-    </div>
-</a>
-    </div>
-  </div>
-</section>
 
-<section class="section gray">
-  <div class="container">
-    <div class="title">
-      <h2>최근 계약사례</h2>
-      <p>실제 계약 사례는 지속적으로 업데이트됩니다</p>
-    </div>
-    <div class="contract-grid">
-      <div class="contract-card"><div class="done">계약완료</div><div class="contract-top"><span>매매</span><h3>35평</h3></div><div class="contract-body"><p><b>특징</b> 국민평형 · 실거주 선호</p><p><b>상담</b> 동 위치, 조망, 옵션 비교</p></div></div>
-      <div class="contract-card"><div class="done">계약완료</div><div class="contract-top"><span>매매</span><h3>38평</h3></div><div class="contract-body"><p><b>특징</b> 여유로운 구조 · 조망 선호</p><p><b>상담</b> 금정산뷰, 시티뷰 비교</p></div></div>
-      <div class="contract-card"><div class="done">계약완료</div><div class="contract-top"><span>전세</span><h3>35평</h3></div><div class="contract-body"><p><b>특징</b> 전세 수요 높은 대표 평형</p><p><b>상담</b> 입주일, 방향, 옵션 조건</p></div></div>
-    </div>
-    <div class="btns" style="margin-top:35px;">
-      <a class="btn btn-dark" href="contract.html">계약사례 더보기</a>
-    </div>
-  </div>
-</section>
+<img src="adv-onestop.jpg" alt="원스톱">
 
-<section class="section blue">
-  <div class="container">
-    <div class="title">
-      <h2>래미안포레스티지 둘러보기</h2>
-      <p>단지 전경 · 조경 · 야경</p>
-    </div>
-    <div class="photo-grid">
-      <img src="photo1.jpg" alt="래미안포레스티지 전경">
-      <img src="photo2.png" alt="래미안포레스티지 조경">
-      <img src="photo3.jpg" alt="래미안포레스티지 야경">
-    </div>
-  </div>
-</section>
-
-<section class="section blue">
-  <div class="container">
-    <div class="title">
-      <h2>실시간 네이버부동산 매물 확인</h2>
-      <p>래미안포레스티지 매매 · 전세 · 월세 매물을 바로 확인하세요</p>
-    </div>
-
-    <div class="youtube-box">
-      <div class="youtube-thumb">
-  <img src="naver-check.gif" alt="네이버부동산 확인매물">
+<div class="adv-caption">
+<h3>원스톱 서비스</h3>
+<p>세무 · 법률 · 등기까지 한번에</p>
 </div>
-      <div class="youtube-text">
-        <h2>현재 등록 매물 보기</h2>
-        <p>
-          직접 매물을 업데이트하지 않아도<br>
-          네이버부동산에 등록된 최신 매물을 확인할 수 있습니다.
-        </p>
 
-        <div class="btns" style="justify-content:flex-start;">
-          <a class="btn btn-dark"
-             href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15"
-             target="_blank">
-            네이버부동산 매물 보기
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+</a>
+
+</div>
+
+</div>
 </section>
 
 <section class="section gray">
-  <div class="container">
-    <div class="title">
-      <h2>거래 가능한 호가 기준</h2>
-      <p>실거래가가 아닌 현재 시장 호가 기준입니다</p>
-    </div>
-    <table class="price">
-      <tr><th>평형</th><th>매매</th><th>전세</th><th>월세</th></tr>
-      <tr><td>22평</td><td>5억4천~6억</td><td>문의</td><td>문의</td></tr>
-      <tr><td>26평</td><td>7억5천~8억5천</td><td>문의</td><td>4천/140~1억/120</td></tr>
-      <tr><td>30평</td><td>8억9천~9억7천</td><td>문의</td><td>문의</td></tr>
-      <tr><td>35평</td><td>9억대</td><td>5억5천~6억5천</td><td>5천/200</td></tr>
-      <tr><td>38평</td><td>11억~12억대</td><td>7억~7억5천</td><td>2억/150~3억5천/145</td></tr>
-      <tr><td>46평</td><td>14억~17억대</td><td>8억~9억5천</td><td>문의</td></tr>
-    </table>
-  </div>
+<div class="container">
+
+<div class="title">
+
+<h2>고객 상담 후기</h2>
+
+<p>
+뉴화림부동산을 찾아주신 고객님들의 만족 상담
+</p>
+
+</div>
+
+<div class="contract-grid">
+
+<div class="contract-card">
+
+<div class="contract-top">
+<span>★★★★★</span>
+<h3>35평 매매 상담</h3>
+</div>
+
+<div class="contract-body">
+<p>처음부터 끝까지 친절하게 설명해주셔서 편하게 계약했습니다.</p>
+</div>
+
+</div>
+
+<div class="contract-card">
+
+<div class="contract-top">
+<span>★★★★★</span>
+<h3>전세 상담</h3>
+</div>
+
+<div class="contract-body">
+<p>조건 비교를 꼼꼼하게 해주셔서 만족했습니다.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
-<section class="section blue">
-  <div class="container">
-    <div class="youtube-box">
-      <div class="youtube-thumb">▶</div>
-      <div class="youtube-text">
-        <h2>뉴화림부동산TV</h2>
-        <p>래미안포레스티지 시세, 추천 매물, 단지 정보를 영상으로 확인하세요.</p>
-        <div class="btns" style="justify-content:flex-start;">
-          <a class="btn btn-dark" href="https://www.youtube.com/@뉴화림부동산TV" target="_blank">유튜브 바로가기</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section gray">
+<div class="container">
+
+<div class="title">
+
+<h2>최근 계약사례</h2>
+
+<p>실제 계약 사례는 지속적으로 업데이트됩니다</p>
+
+</div>
+
+<div class="contract-grid">
+
+<div class="contract-card">
+
+<div class="done">계약완료</div>
+
+<div class="contract-top">
+<span>매매</span>
+<h3>35평</h3>
+</div>
+
+<div class="contract-body">
+<p><b>특징</b> 국민평형 · 실거주 선호</p>
+<p><b>상담</b> 동 위치, 조망, 옵션 비교</p>
+</div>
+
+</div>
+
+<div class="contract-card">
+
+<div class="done">계약완료</div>
+
+<div class="contract-top">
+<span>매매</span>
+<h3>38평</h3>
+</div>
+
+<div class="contract-body">
+<p><b>특징</b> 여유로운 구조 · 조망 선호</p>
+<p><b>상담</b> 금정산뷰, 시티뷰 비교</p>
+</div>
+
+</div>
+
+<div class="contract-card">
+
+<div class="done">계약완료</div>
+
+<div class="contract-top">
+<span>전세</span>
+<h3>35평</h3>
+</div>
+
+<div class="contract-body">
+<p><b>특징</b> 전세 수요 높은 대표 평형</p>
+<p><b>상담</b> 입주일, 방향, 옵션 조건</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="btns" style="margin-top:35px;">
+<a href="contract.html" class="btn btn-dark">
+계약사례 더보기
+</a>
+</div>
+
+</div>
+</section>
+<section class="section light">
+<div class="container">
+
+<div class="title">
+<h2>래미안포레스티지 둘러보기</h2>
+<p>단지 전경 · 조경 · 야경</p>
+</div>
+
+<div class="photo-grid">
+
+<img src="photo1.jpg" alt="래미안포레스티지 전경">
+
+<img src="photo2.png" alt="래미안포레스티지 조경">
+
+<img src="photo3.jpg" alt="래미안포레스티지 단지">
+
+</div>
+
+</div>
+</section>
+
+<section class="section light">
+<div class="container">
+
+<div class="title">
+<h2>실시간 네이버부동산 매물 확인</h2>
+<p>
+래미안포레스티지 매매 · 전세 · 월세 매물을
+바로 확인하세요
+</p>
+</div>
+
+<a
+href="https://new.land.naver.com/complexes/146548"
+target="_blank"
+class="naver-box">
+
+<img src="naver-check.gif" alt="네이버부동산">
+
+<h3>현재 등록 매물 보기</h3>
+
+</a>
+
+</div>
+</section>
+
+<section class="section gray">
+<div class="container">
+
+<div class="title">
+<h2>거래 가능한 호가 기준</h2>
+<p>실거래가가 아닌 현재 시장 호가 기준입니다</p>
+</div>
+
+<div class="price">
+
+<table>
+
+<thead>
+<tr>
+<th>평형</th>
+<th>매매</th>
+<th>전세</th>
+<th>월세</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>22평</td>
+<td>5억4천~6억</td>
+<td>문의</td>
+<td>문의</td>
+</tr>
+
+<tr>
+<td>26평</td>
+<td>7억5천~8억5천</td>
+<td>문의</td>
+<td>4천/140~1억/120</td>
+</tr>
+
+<tr>
+<td>30평</td>
+<td>8억9천~9억7천</td>
+<td>문의</td>
+<td>문의</td>
+</tr>
+
+<tr>
+<td>35평</td>
+<td>9억대</td>
+<td>5억5천~6억5천</td>
+<td>5천/200</td>
+</tr>
+
+<tr>
+<td>38평</td>
+<td>11억~12억대</td>
+<td>7억~7억5천</td>
+<td>2억/150~3억5천/145</td>
+</tr>
+
+<tr>
+<td>46평</td>
+<td>14억~17억대</td>
+<td>8억~9억5천</td>
+<td>문의</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
+<section class="section light">
+<div class="container">
+
+<div class="youtube-box">
+
+<iframe
+src="https://www.youtube.com/embed?listType=user_uploads&list=뉴화림부동산TV"
+allowfullscreen>
+</iframe>
+
+<div>
+
+<h2>뉴화림부동산TV</h2>
+
+<p>
+래미안포레스티지 시세, 추천 매물,
+단지 정보를 영상으로 확인하세요.
+</p>
+
+<a
+href="https://www.youtube.com"
+target="_blank"
+class="btn btn-dark">
+
+유튜브 바로가기
+
+</a>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
 <section class="section">
-  <div class="container location">
-   <a class="map" href="https://map.naver.com/p/entry/place/38248655?c=15.00,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606070920&locale=ko&svcName=map_pcv5" target="_blank">
-  네이버 지도에서 보기
+<div class="container location">
+
+<a
+href="https://map.naver.com"
+target="_blank">
+
+<img src="location.jpg" alt="네이버지도">
+
 </a>
-    <div class="loc-info">
-      <h2>오시는 길</h2>
-      <p><b>뉴화림부동산공인중개사사무소</b></p>
-      <p>부산광역시 동래구 금강로131번길 42</p>
-      <p>래미안포레스티지 2단지 상가 A동 9호</p>
-      <p><b>TEL</b> 051-555-9982</p>
-      <div class="btns" style="justify-content:flex-start;margin-top:22px;">
-        <a class="btn btn-dark" href="location.html">오시는 길 보기</a>
-      </div>
-    </div>
-  </div>
+
+<div>
+
+<h2>오시는 길</h2>
+
+<p>
+<b>뉴화림부동산공인중개사사무소</b>
+</p>
+
+<p>
+부산광역시 동래구 금강로131번길 42
+</p>
+
+<p>
+래미안포레스티지 2단지 상가 A동 9호
+</p>
+
+<p>
+TEL 051-555-9982
+</p>
+
+</div>
+
+</div>
 </section>
 
-<section class="section gray">
-  <div class="container contact-wrap">
-    <div class="contact-info">
-      <h2>매도 · 매수 문의</h2>
-      <p>래미안포레스티지 매매 · 전세 · 월세 상담</p>
-      <div class="tel">TEL : 051-555-9982</div>
-      <p>조건에 맞는 매물을 빠르게 안내드립니다.</p>
-    </div>
-    <div class="form">
-      <input type="text" placeholder="성함">
-      <input type="tel" placeholder="연락처">
-      <select>
-        <option>문의유형 선택</option>
-        <option>매도 문의</option>
-        <option>매수 문의</option>
-        <option>전세 문의</option>
-        <option>월세 문의</option>
-      </select>
-      <textarea placeholder="문의내용"></textarea>
-      <button onclick="alert('현재는 전화 또는 문자로 문의 부탁드립니다.')">문의하기</button>
-    </div>
-  </div>
+<section id="contact" class="section gray">
+<div class="container">
+
+<div class="contact-wrap">
+
+<div>
+
+<h2 style="font-size:54px;color:#e53935">
+매도 · 매수 문의
+</h2>
+
+<p>
+래미안포레스티지 매매 · 전세 · 월세 상담
+</p>
+
+<h3 style="font-size:56px;margin-top:25px">
+TEL : 051-555-9982
+</h3>
+
+<p style="margin-top:30px">
+조건에 맞는 매물을 빠르게 안내드립니다.
+</p>
+
+</div>
+
+<form>
+
+<input
+type="text"
+placeholder="성함">
+
+<input
+type="tel"
+placeholder="연락처">
+
+<select>
+<option>문의유형 선택</option>
+<option>매수 문의</option>
+<option>매도 문의</option>
+<option>전세 문의</option>
+<option>월세 문의</option>
+</select>
+
+<textarea
+rows="6"
+placeholder="문의내용"></textarea>
+
+<button type="submit">
+상담 신청하기
+</button>
+
+</form>
+
+</div>
+
+</div>
 </section>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <h3>뉴화림부동산공인중개사사무소</h3>
-      <p>주소 : 부산광역시 동래구 금강로131번길 42, 래미안포레스티지 2단지 상가 A동 9호</p>
-      <p>TEL : 051-555-9982 / HP : 010-3567-7087</p>
-      <p>COPYRIGHT(c) 2026 뉴화림부동산 ALL RIGHTS RESERVED.</p>
-    </div>
-    <div>
-      <p>TEL</p>
-      <div class="footer-phone">051-555-9982</div>
-    </div>
-  </div>
+<footer>
+
+<p>
+상호 : 뉴화림부동산공인중개사사무소
+</p>
+
+<p>
+대표 : 이정아
+</p>
+
+<p>
+전화 : 051-555-9982
+</p>
+
+<p>
+주소 : 부산광역시 동래구 금강로131번길 42
+래미안포레스티지 2단지 상가 A동 9호
+</p>
+
 </footer>
 
 <div class="fixed">
-  <a class="call" href="tel:0515559982">전화문의</a>
-  <a class="sms" href="sms:01035677087">문자문의</a>
+
+<a href="tel:0515559982" class="call">
+전화문의
+</a>
+
+<a href="sms:01035677087" class="sms">
+문자문의
+</a>
+
 </div>
 
 </body>
