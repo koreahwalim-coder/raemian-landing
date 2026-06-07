@@ -4,1061 +4,1274 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>래미안포레스티지 전문관 | 뉴화림부동산</title>
+<title>뉴화림부동산 | 래미안포레스티지 전문 · 부산 상가 임대</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:'Noto Sans KR',sans-serif;
-background:#f8fafc;
-color:#111;
-line-height:1.7;
-padding-bottom:80px;
+  font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  background:#f6f8fb;
+  color:#111;
+  line-height:1.65;
+  padding-top:118px;
+  padding-bottom:74px;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+  color:inherit;
+  text-decoration:none;
 }
 
 img{
-display:block;
-max-width:100%;
+  display:block;
+  width:100%;
 }
 
 .container{
-width:100%;
-max-width:1200px;
-margin:auto;
-padding:0 20px;
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 22px;
 }
 
-/* 상단 */
-
+/* 상단 고정 */
 .header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:80px;
-background:rgba(255,255,255,.96);
-backdrop-filter:blur(10px);
-z-index:1000;
-border-bottom:1px solid #eee;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+  box-shadow:0 4px 20px rgba(0,0,0,.05);
 }
 
-.header-inner{
-height:80px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-max-width:1200px;
-margin:auto;
-padding:0 20px;
+.header-top{
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 22px;
 }
 
 .logo{
-font-size:28px;
-font-weight:900;
-color:#063b7a;
+  font-size:30px;
+  font-weight:900;
+  color:#063b7a;
+  letter-spacing:-1px;
 }
 
-.top-call{
-background:#063b7a;
-color:#fff;
-padding:12px 22px;
-border-radius:12px;
-font-weight:700;
+.header-call{
+  background:#063b7a;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:12px;
+  font-size:17px;
+  font-weight:900;
 }
 
-/* 메인 */
-
-.hero{
-margin-top:80px;
-height:720px;
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('raemian-main.jpg') center center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
+.nav{
+  border-top:1px solid #edf0f3;
+  background:#fff;
 }
 
-.hero-content{
-max-width:900px;
-padding:20px;
+.nav-inner{
+  max-width:1180px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
 }
 
-.hero-badge{
-display:inline-block;
-background:#ffd400;
-color:#111;
-padding:10px 20px;
-border-radius:50px;
-font-weight:800;
-margin-bottom:20px;
+.nav-inner a{
+  padding:14px 22px;
+  font-size:16px;
+  font-weight:800;
+  color:#333;
 }
 
-.hero h1{
-font-size:72px;
-line-height:1.2;
-margin-bottom:20px;
-font-weight:900;
-}
-
-.hero p{
-font-size:24px;
-opacity:.95;
-margin-bottom:35px;
-}
-
-.hero-btns{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-block;
-padding:16px 34px;
-border-radius:999px;
-font-weight:800;
-transition:.3s;
-}
-
-.btn-yellow{
-background:#ffd400;
-color:#111;
-}
-
-.btn-dark{
-background:#111;
-color:#fff;
+.nav-inner a:hover{
+  background:#f1f5f9;
+  color:#063b7a;
 }
 
 /* 공통 */
-
 .section{
-padding:90px 0;
+  padding:90px 0;
+}
+
+.section.white{
+  background:#fff;
+}
+
+.section.dark{
+  background:#0f172a;
+  color:#fff;
+}
+
+.section.blue{
+  background:#eef7ff;
 }
 
 .title{
-text-align:center;
-margin-bottom:50px;
+  text-align:center;
+  margin-bottom:48px;
 }
 
 .title h2{
-font-size:48px;
-font-weight:900;
-margin-bottom:10px;
-color:#111827;
+  font-size:46px;
+  line-height:1.25;
+  font-weight:900;
+  letter-spacing:-1.5px;
 }
 
 .title p{
-font-size:20px;
-color:#6b7280;
+  margin-top:12px;
+  font-size:20px;
+  color:#666;
+}
+
+.dark .title p{
+  color:#cbd5e1;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 30px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:17px;
+}
+
+.btn-yellow{
+  background:#ffd400;
+  color:#111;
+}
+
+.btn-dark{
+  background:#111;
+  color:#fff;
+}
+
+.btn-blue{
+  background:#063b7a;
+  color:#fff;
+}
+
+/* 메인 */
+.hero{
+  min-height:680px;
+  background:
+    linear-gradient(90deg,rgba(3,11,31,.78),rgba(3,11,31,.45)),
+    url('raemian-main.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  color:#fff;
+}
+
+.hero-content{
+  max-width:760px;
+}
+
+.hero-badge{
+  display:inline-block;
+  background:#ffd400;
+  color:#111;
+  padding:10px 22px;
+  border-radius:999px;
+  font-size:17px;
+  font-weight:900;
+  margin-bottom:24px;
+}
+
+.hero h1{
+  font-size:70px;
+  line-height:1.16;
+  font-weight:900;
+  letter-spacing:-2.5px;
+}
+
+.hero p{
+  margin-top:24px;
+  font-size:24px;
+  color:#f1f5f9;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:38px;
 }
 
 /* 소개 */
-
-.intro-card{
-background:#fff;
-border-radius:24px;
-padding:50px;
-box-shadow:0 15px 40px rgba(0,0,0,.06);
-
-display:grid;
-grid-template-columns:280px 1fr;
-gap:50px;
-align-items:center;
+.intro-wrap{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:38px;
+  align-items:center;
 }
 
-.intro-card img{
-width:240px;
-border-radius:20px;
-margin:auto;
+.intro-photo{
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(0,0,0,.14);
 }
 
-.intro-badge{
-display:inline-block;
-background:#e8f1ff;
-color:#063b7a;
-padding:10px 18px;
-border-radius:50px;
-font-weight:800;
-margin-bottom:20px;
+.intro-text{
+  background:#fff;
+  border-radius:26px;
+  padding:46px;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
-.intro-card h3{
-font-size:42px;
-margin-bottom:15px;
-color:#063b7a;
+.badge{
+  display:inline-block;
+  background:#e8f1ff;
+  color:#063b7a;
+  padding:10px 18px;
+  border-radius:999px;
+  font-weight:900;
+  margin-bottom:20px;
 }
 
-.intro-card p{
-font-size:18px;
-color:#444;
-margin-bottom:10px;
-}
-    /* 핵심 서비스 */
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:24px;
+.intro-text h2{
+  font-size:44px;
+  color:#063b7a;
+  line-height:1.25;
+  margin-bottom:20px;
 }
 
-.service-card{
-background:#fff;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 12px 35px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.service-card:hover{
-transform:translateY(-6px);
-}
-
-.service-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.service-body{
-padding:25px;
-}
-
-.service-body h3{
-font-size:25px;
-margin-bottom:10px;
-color:#111827;
-}
-
-.service-body p{
-font-size:16px;
-color:#666;
+.intro-text p{
+  font-size:19px;
+  color:#444;
+  margin-bottom:10px;
 }
 
 /* 래미안 전문 */
-
-.raemian-pro{
-background:#0f172a;
-color:#fff;
+.raemian-special{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:46px;
+  align-items:center;
 }
 
-.pro-box{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+.raemian-special h2{
+  font-size:52px;
+  line-height:1.22;
+  font-weight:900;
+  letter-spacing:-1.8px;
 }
 
-.pro-text h2{
-font-size:48px;
-line-height:1.25;
-margin-bottom:20px;
+.raemian-special p{
+  margin-top:18px;
+  font-size:20px;
+  color:#cbd5e1;
 }
 
-.pro-text p{
-font-size:20px;
-color:#cbd5e1;
-margin-bottom:25px;
+.check-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:28px;
 }
 
-.pro-list{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px;
+.check-grid div{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  padding:16px 18px;
+  font-size:17px;
+  font-weight:800;
 }
 
-.pro-list div{
-background:rgba(255,255,255,.08);
-padding:16px;
-border-radius:14px;
-font-weight:700;
+.raemian-photo{
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.28);
 }
 
-.pro-photo{
-background:
-linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
-url('raemian-main.jpg') center/cover;
-height:460px;
-border-radius:26px;
-box-shadow:0 20px 50px rgba(0,0,0,.25);
+.raemian-photo img{
+  height:430px;
+  object-fit:cover;
 }
 
-/* 상가 임대 */
-
-.commercial{
-background:#fff;
+/* 핵심 서비스 */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
 }
 
-.commercial-box{
-background:linear-gradient(135deg,#063b7a,#0f172a);
-color:#fff;
-border-radius:28px;
-padding:60px;
-text-align:center;
-box-shadow:0 18px 45px rgba(0,0,0,.14);
+.service-card{
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 14px 35px rgba(0,0,0,.09);
+  transition:.25s;
 }
 
-.commercial-badge{
-display:inline-block;
-background:#ffd400;
-color:#111;
-padding:10px 22px;
-border-radius:50px;
-font-weight:900;
-margin-bottom:25px;
+.service-card:hover{
+  transform:translateY(-7px);
 }
 
-.commercial-box h2{
-font-size:46px;
-margin-bottom:18px;
+.service-card img{
+  height:220px;
+  object-fit:cover;
 }
 
-.commercial-box p{
-font-size:20px;
-color:#e5e7eb;
-margin-bottom:35px;
+.service-body{
+  padding:26px;
+}
+
+.service-body h3{
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.service-body p{
+  font-size:16px;
+  color:#666;
+}
+/* 상가 전문 */
+.commercial-wrap{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:44px;
+  align-items:center;
+}
+
+.commercial-text h2{
+  font-size:50px;
+  line-height:1.24;
+  font-weight:900;
+  color:#063b7a;
+}
+
+.commercial-text p{
+  margin-top:18px;
+  font-size:20px;
+  color:#444;
 }
 
 .commercial-list{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin-bottom:35px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin:30px 0;
 }
 
 .commercial-list div{
-background:rgba(255,255,255,.12);
-padding:18px;
-border-radius:16px;
-font-weight:800;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:17px;
+  font-weight:900;
+  box-shadow:0 8px 24px rgba(0,0,0,.06);
 }
 
-/* 네이버부동산 */
-
-.naver-section{
-background:#f1f8f4;
+.commercial-photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
 }
 
+.commercial-photo{
+  height:210px;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 14px 35px rgba(0,0,0,.12);
+}
+
+.commercial-photo img{
+  height:100%;
+  object-fit:cover;
+}
+
+.commercial-photo span{
+  position:absolute;
+  left:16px;
+  bottom:16px;
+  background:rgba(0,0,0,.68);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:900;
+}
+
+/* 네이버 부동산 */
 .naver-box{
-background:#fff;
-border-radius:26px;
-padding:45px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-box-shadow:0 14px 35px rgba(0,0,0,.08);
+  background:#fff;
+  border-radius:28px;
+  padding:46px;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:42px;
+  align-items:center;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
-.naver-image{
-height:280px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#fff;
-border-radius:20px;
-overflow:hidden;
+.naver-visual{
+  background:#03c75a;
+  border-radius:24px;
+  min-height:240px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
 }
 
-.naver-image img{
-width:100%;
-height:100%;
-object-fit:contain;
+.naver-visual img{
+  max-width:86%;
+  max-height:190px;
+  object-fit:contain;
 }
 
 .naver-text h2{
-font-size:42px;
-margin-bottom:15px;
-color:#03c75a;
+  font-size:44px;
+  color:#03c75a;
+  margin-bottom:12px;
 }
 
 .naver-text p{
-font-size:19px;
-color:#555;
-margin-bottom:25px;
+  font-size:20px;
+  color:#444;
+  margin-bottom:26px;
 }
 
 /* 오시는 길 */
-
-.location-box{
-background:#fff;
-border-radius:26px;
-padding:45px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-box-shadow:0 14px 35px rgba(0,0,0,.08);
+.location-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:center;
 }
 
-.map-btn{
-height:260px;
-background:#03c75a;
-color:#fff;
-border-radius:22px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:34px;
-font-weight:900;
+.map-card{
+  min-height:300px;
+  background:#03c75a;
+  color:#fff;
+  border-radius:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  font-weight:900;
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+
+.location-info{
+  background:#fff;
+  border-radius:28px;
+  padding:46px;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
 .location-info h2{
-font-size:42px;
-margin-bottom:18px;
-color:#063b7a;
+  font-size:42px;
+  color:#063b7a;
+  margin-bottom:20px;
 }
 
 .location-info p{
-font-size:18px;
-color:#444;
-margin-bottom:10px;
+  font-size:19px;
+  color:#444;
+  margin-bottom:12px;
 }
 
 /* 문의 */
-
-.contact-section{
-background:#111827;
-color:#fff;
+.contact-wrap{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:42px;
+  align-items:center;
 }
 
-.contact-box{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+.contact-copy h2{
+  font-size:50px;
+  line-height:1.25;
 }
 
-.contact-info h2{
-font-size:48px;
-margin-bottom:18px;
-}
-
-.contact-info p{
-font-size:20px;
-color:#d1d5db;
-margin-bottom:15px;
+.contact-copy p{
+  margin-top:15px;
+  font-size:20px;
+  color:#d1d5db;
 }
 
 .contact-phone{
-font-size:42px;
-font-weight:900;
-color:#ffd400;
-margin:25px 0;
+  margin-top:28px;
+  font-size:42px;
+  font-weight:900;
+  color:#ffd400;
 }
 
 .contact-form{
-background:#fff;
-padding:35px;
-border-radius:24px;
+  background:#fff;
+  border-radius:28px;
+  padding:38px;
+  box-shadow:0 18px 45px rgba(0,0,0,.16);
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea{
-width:100%;
-padding:16px;
-margin-bottom:14px;
-border:1px solid #ddd;
-border-radius:12px;
-font-size:16px;
-font-family:inherit;
+  width:100%;
+  border:1px solid #e5e7eb;
+  border-radius:13px;
+  padding:17px;
+  margin-bottom:14px;
+  font-size:16px;
+  font-family:inherit;
+  color:#111;
 }
 
 .contact-form textarea{
-height:130px;
-resize:none;
+  height:140px;
+  resize:none;
 }
 
 .contact-form button{
-width:100%;
-border:none;
-background:#063b7a;
-color:#fff;
-padding:17px;
-border-radius:12px;
-font-size:18px;
-font-weight:900;
+  width:100%;
+  border:0;
+  border-radius:13px;
+  background:#063b7a;
+  color:#fff;
+  padding:18px;
+  font-size:18px;
+  font-weight:900;
 }
 
-/* 하단 */
-
+/* 푸터 */
 .footer{
-background:#020617;
-color:#cbd5e1;
-padding:40px 20px;
-text-align:center;
+  background:#020617;
+  color:#cbd5e1;
+  padding:42px 20px;
+  text-align:center;
 }
 
 .footer h3{
-color:#fff;
-font-size:24px;
-margin-bottom:10px;
+  color:#fff;
+  font-size:24px;
+  margin-bottom:12px;
 }
 
-.fixed{
-position:fixed;
-left:0;
-bottom:0;
-width:100%;
-display:flex;
-z-index:1001;
+/* 하단 고정 */
+.fixed-bottom{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  display:flex;
+  z-index:1001;
+  box-shadow:0 -4px 18px rgba(0,0,0,.12);
 }
 
-.fixed a{
-flex:1;
-text-align:center;
-padding:17px;
-font-weight:900;
-font-size:18px;
+.fixed-bottom a{
+  flex:1;
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:900;
 }
 
-.fixed .call{
-background:#111;
-color:#fff;
+.fixed-bottom .call{
+  background:#111;
+  color:#fff;
 }
 
-.fixed .sms{
-background:#ffd400;
-color:#111;
+.fixed-bottom .sms{
+  background:#ffd400;
+  color:#111;
+}
+
+.fixed-bottom .talk{
+  background:#03c75a;
+  color:#fff;
 }
 
 /* 모바일 */
-
 @media(max-width:900px){
 
-.header{
-position:relative;
-height:auto;
-}
+  body{
+    padding-top:112px;
+    padding-bottom:68px;
+  }
 
-.header-inner{
-height:auto;
-padding:12px 14px;
-gap:10px;
-}
+  .header-top{
+    height:66px;
+    padding:0 16px;
+  }
 
-.logo{
-font-size:20px;
-}
+  .logo{
+    font-size:23px;
+  }
 
-.top-call{
-font-size:13px;
-padding:9px 12px;
-}
+  .header-call{
+    font-size:13px;
+    padding:9px 12px;
+  }
 
-.hero{
-margin-top:0;
-height:560px;
-}
+  .nav-inner{
+    overflow-x:auto;
+    justify-content:flex-start;
+    white-space:nowrap;
+  }
 
-.hero h1{
-font-size:38px;
-}
+  .nav-inner a{
+    padding:12px 16px;
+    font-size:14px;
+  }
 
-.hero p{
-font-size:18px;
-}
+  .hero{
+    min-height:560px;
+    background-position:center;
+  }
 
-.section{
-padding:58px 0;
-}
+  .hero h1{
+    font-size:42px;
+    letter-spacing:-1px;
+  }
 
-.title{
-margin-bottom:34px;
-}
+  .hero p{
+    font-size:18px;
+  }
 
-.title h2{
-font-size:32px;
-line-height:1.3;
-}
+  .section{
+    padding:58px 0;
+  }
 
-.title p{
-font-size:17px;
-}
+  .title{
+    margin-bottom:32px;
+  }
 
-.intro-card,
-.pro-box,
-.naver-box,
-.location-box,
-.contact-box{
-grid-template-columns:1fr;
-padding:28px 20px;
-}
+  .title h2{
+    font-size:32px;
+  }
 
-.intro-card img{
-width:180px;
-}
+  .title p{
+    font-size:17px;
+  }
 
-.intro-card h3{
-font-size:32px;
-}
+  .intro-wrap,
+  .raemian-special,
+  .commercial-wrap,
+  .naver-box,
+  .location-wrap,
+  .contact-wrap{
+    grid-template-columns:1fr;
+  }
 
-.service-grid{
-grid-template-columns:1fr;
-}
+  .intro-text,
+  .naver-box,
+  .location-info,
+  .contact-form{
+    padding:28px 22px;
+    border-radius:22px;
+  }
 
-.service-card img{
-height:220px;
-}
+  .intro-text h2,
+  .raemian-special h2,
+  .commercial-text h2,
+  .naver-text h2,
+  .location-info h2,
+  .contact-copy h2{
+    font-size:32px;
+  }
 
-.pro-text h2,
-.commercial-box h2,
-.naver-text h2,
-.location-info h2,
-.contact-info h2{
-font-size:32px;
-line-height:1.3;
-}
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
 
-.pro-photo{
-height:300px;
-}
+  .service-card img{
+    height:130px;
+  }
 
-.pro-list{
-grid-template-columns:1fr 1fr;
-}
+  .service-body{
+    padding:18px;
+  }
 
-.commercial-box{
-padding:35px 22px;
-}
+  .service-body h3{
+    font-size:20px;
+  }
 
-.commercial-list{
-grid-template-columns:1fr 1fr;
-}
+  .service-body p{
+    font-size:14px;
+  }
 
-.naver-image{
-height:190px;
-}
+  .check-grid,
+  .commercial-list,
+  .commercial-photo-grid{
+    grid-template-columns:1fr 1fr;
+  }
 
-.map-btn{
-height:150px;
-font-size:24px;
-}
+  .raemian-photo img{
+    height:260px;
+  }
 
-.contact-phone{
-font-size:30px;
-}
+  .commercial-photo{
+    height:145px;
+  }
 
-.contact-form{
-padding:24px 18px;
-}
+  .commercial-photo span{
+    font-size:14px;
+  }
+
+  .naver-visual{
+    min-height:170px;
+  }
+
+  .map-card{
+    min-height:150px;
+    font-size:25px;
+  }
+
+  .contact-phone{
+    font-size:30px;
+  }
+
+  .fixed-bottom a{
+    height:68px;
+    font-size:18px;
+  }
 
 }
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="header-inner">
+<!-- 상단 고정 -->
 
-    <div class="logo">
-      뉴화림부동산
+<header class="header">
+
+    <div class="header-top">
+
+        <div class="logo">뉴화림부동산</div>
+
+        <a href="tel:0515559982" class="header-call">
+            ☎ 051-555-9982
+        </a>
+
     </div>
 
-    <a href="tel:0515559982" class="top-call">
-      ☎ 051-555-9982
-    </a>
+    <nav class="nav">
 
-  </div>
+        <div class="nav-inner">
+
+            <a href="#intro">소개</a>
+            <a href="#service">핵심서비스</a>
+            <a href="#raemian">래미안포레스티지</a>
+            <a href="#commercial">상가임대</a>
+            <a href="#naver">네이버부동산</a>
+            <a href="#location">오시는길</a>
+            <a href="#contact">문의하기</a>
+
+        </div>
+
+    </nav>
+
 </header>
 
 <!-- 메인 -->
 
 <section class="hero">
 
-  <div class="hero-content">
+    <div class="container">
 
-    <div class="hero-badge">
-      래미안포레스티지 전문 부동산
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                래미안포레스티지 전문 상담
+            </div>
+
+            <h1>
+                4,043세대<br>
+                래미안포레스티지 전문
+            </h1>
+
+            <p>
+                매매 · 전세 · 월세 · 매도 · 매수
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="tel:0515559982" class="btn btn-yellow">
+                    전화문의
+                </a>
+
+                <a href="sms:01035677087" class="btn btn-dark">
+                    문자문의
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <h1>
-      래미안포레스티지<br>
-      전문 상담
-    </h1>
-
-    <p>
-      매매 · 전세 · 월세 · 매도 · 매수
-    </p>
-
-    <div class="hero-btns">
-
-      <a href="tel:0515559982" class="btn btn-yellow">
-        전화문의
-      </a>
-
-      <a href="sms:01035677087" class="btn btn-dark">
-        문자문의
-      </a>
-
-    </div>
-
-  </div>
 
 </section>
 
 <!-- 소개 -->
 
-<section class="section">
+<section id="intro" class="section white">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="title">
-      <h2>뉴화림부동산 소개</h2>
-      <p>래미안포레스티지 단지 내 상가 입점</p>
-    </div>
+        <div class="intro-wrap">
 
-    <div class="intro-card">
+            <div class="intro-photo">
+                <img src="office.jpg">
+            </div>
 
-      <img src="director.png" alt="대표">
+            <div class="intro-text">
 
-      <div>
+                <div class="badge">
+                    🏆 2025 한국소비자산업평가 우수업체
+                </div>
 
-        <div class="intro-badge">
-          2025 한국소비자산업평가 우수업체
+                <h2>
+                    뉴화림부동산 소개
+                </h2>
+
+                <p>
+                    래미안포레스티지 단지 내 상가 입점
+                </p>
+
+                <p>
+                    온천동 아파트 및 상가 전문 중개
+                </p>
+
+                <p>
+                    실거주 상담부터 매매·전세·월세,
+                    상가 임대까지 책임있게 진행합니다.
+                </p>
+
+            </div>
+
         </div>
 
-        <h3>뉴화림부동산</h3>
-
-        <p>래미안포레스티지 단지 내 상가 입점</p>
-
-        <p>온천동 아파트 및 상가 전문 중개</p>
-
-        <p>
-          고객님의 조건에 맞는 매물을
-          꼼꼼하게 비교하고 안전하게 안내합니다.
-        </p>
-
-      </div>
-
     </div>
-
-  </div>
 
 </section>
 
 <!-- 핵심 서비스 -->
 
-<section class="section">
+<section id="service" class="section blue">
 
-  <div class="container">
+<div class="container">
 
-    <div class="title">
-      <h2>핵심 서비스</h2>
-      <p>뉴화림부동산만의 차별화된 상담</p>
-    </div>
+<div class="title">
 
-    <div class="service-grid">
+<h2>핵심 서비스 4가지</h2>
 
-      <div class="service-card">
-        <img src="adv-friendly.jpg">
-        <div class="service-body">
-          <h3>친절 계약</h3>
-          <p>처음부터 끝까지 꼼꼼하게 상담합니다.</p>
-        </div>
-      </div>
+<p>클릭하면 상세 안내 페이지로 이동합니다</p>
 
-      <div class="service-card">
-        <img src="adv-property.jpg">
-        <div class="service-body">
-          <h3>매물 다량 확보</h3>
-          <p>다양한 조건을 비교해드립니다.</p>
-        </div>
-      </div>
+</div>
 
-      <div class="service-card">
-        <img src="adv-safe.jpg">
-        <div class="service-body">
-          <h3>안심 중개</h3>
-          <p>계약부터 잔금까지 안전하게.</p>
-        </div>
-      </div>
+<div class="service-grid">
 
-      <div class="service-card">
-        <img src="adv-onestop.jpg">
-        <div class="service-body">
-          <h3>원스톱 서비스</h3>
-          <p>세무 · 법률 · 등기 연계 지원.</p>
-        </div>
-      </div>
+<a href="friendly.html" class="service-card">
 
-    </div>
+<img src="service-friendly.jpg">
 
-  </div>
+<div class="service-body">
+
+<h3>친절 계약</h3>
+
+<p>처음부터 끝까지 꼼꼼한 상담</p>
+
+</div>
+
+</a>
+
+<a href="inventory.html" class="service-card">
+
+<img src="service-listing.jpg">
+
+<div class="service-body">
+
+<h3>매물 다량 확보</h3>
+
+<p>다양한 조건 비교 가능</p>
+
+</div>
+
+</a>
+
+<a href="safe.html" class="service-card">
+
+<img src="service-safe.jpg">
+
+<div class="service-body">
+
+<h3>안심 중개</h3>
+
+<p>등기변동 모니터링 지원</p>
+
+</div>
+
+</a>
+
+<a href="onestop.html" class="service-card">
+
+<img src="service-onestop.jpg">
+
+<div class="service-body">
+
+<h3>원스톱 서비스</h3>
+
+<p>세무 · 법률 · 등기 연계</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- 래미안 전문 -->
 
-<section class="section raemian-pro">
+<section id="raemian" class="section dark">
 
-  <div class="container">
+<div class="container">
 
-    <div class="pro-box">
+<div class="raemian-special">
 
-      <div class="pro-text">
+<div>
 
-        <h2>
-          4,043세대<br>
-          래미안포레스티지 전문
-        </h2>
+<h2>
 
-        <p>
-          실시간 매물 확인과 조건별 비교 상담
-        </p>
+래미안포레스티지<br>
 
-        <div class="pro-list">
+전문 부동산
 
-          <div>✔ 매매</div>
-          <div>✔ 전세</div>
+</h2>
 
-          <div>✔ 월세</div>
-          <div>✔ 실거주 상담</div>
+<p>
 
-          <div>✔ 동·라인 비교</div>
-          <div>✔ 조망 비교</div>
+4,043세대 래미안포레스티지 전문
 
-          <div>✔ 실시간 매물</div>
-          <div>✔ 입주 상담</div>
+</p>
 
-        </div>
+<div class="check-grid">
 
-        <div style="margin-top:30px;">
+<div>✔ 매매</div>
+<div>✔ 전세</div>
+<div>✔ 월세</div>
+<div>✔ 실거주 상담</div>
+<div>✔ 동·라인 비교</div>
+<div>✔ 조망 비교</div>
+<div>✔ 실시간 매물</div>
+<div>✔ 입주 상담</div>
 
-          <a
-          href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15"
-          target="_blank"
-          class="btn btn-yellow">
+</div>
 
-          래미안포레스티지 매물 보기
+<br>
 
-          </a>
+<a href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15"
+target="_blank"
+class="btn btn-yellow">
 
-        </div>
+래미안포레스티지 매물 보기
 
-      </div>
+</a>
 
-      <div class="pro-photo"></div>
+</div>
 
-    </div>
+<div class="raemian-photo">
 
-  </div>
+<img src="raemian-main.jpg">
 
-</section>
+</div>
 
-<!-- 상가 임대 -->
+</div>
 
-<section class="section commercial">
-
-  <div class="container">
-
-    <div class="commercial-box">
-
-      <div class="commercial-badge">
-        부산 전지역
-      </div>
-
-      <h2>
-        상가 · 사무실 임대 전문
-      </h2>
-
-      <p>
-        일반상가 · 사무실 · 메디컬 · 학원 · 운동시설<br>
-        부산 전지역 임대 상담
-      </p>
-
-      <div class="commercial-list">
-
-        <div>일반상가</div>
-        <div>사무실</div>
-        <div>메디컬</div>
-
-        <div>학원</div>
-        <div>운동시설</div>
-        <div>대형상가</div>
-
-      </div>
-
-      <a href="#contact" class="btn btn-yellow">
-        상가 임대 문의하기
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<!-- 네이버 부동산 -->
+<!-- 상가 -->
 
-<section class="section naver-section">
+<section id="commercial" class="section white">
 
-  <div class="container">
+<div class="container">
 
-    <div class="naver-box">
+<div class="commercial-wrap">
 
-      <div class="naver-image">
-        <img src="naver-check.gif">
-      </div>
+<div class="commercial-text">
 
-      <div class="naver-text">
+<h2>
 
-        <h2>네이버부동산</h2>
+상가 임대<br>
 
-        <p>
-          현재 등록된 래미안포레스티지
-          매물을 바로 확인하세요.
-        </p>
+전문 상담
 
-        <a
-        href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15"
-        target="_blank"
-        class="btn btn-dark">
+</h2>
 
-        현재 등록 매물 보기
+<p>
 
-        </a>
+부산 전지역 상가 · 사무실 임대 전문
 
-      </div>
+</p>
 
-    </div>
+<div class="commercial-list">
 
-  </div>
+<div>🏢 일반상가</div>
+<div>🏢 사무실</div>
+<div>🏢 메디컬</div>
+<div>🏢 학원</div>
+<div>🏢 프랜차이즈</div>
+<div>🏢 대형상가</div>
+
+</div>
+
+<a href="#contact" class="btn btn-blue">
+
+상가 임대 문의하기
+
+</a>
+
+</div>
+
+<div class="commercial-photo-grid">
+
+<div class="commercial-photo">
+<img src="restaurant.jpg">
+<span>음식점</span>
+</div>
+
+<div class="commercial-photo">
+<img src="office-rent.jpg">
+<span>사무실</span>
+</div>
+
+<div class="commercial-photo">
+<img src="medical.jpg">
+<span>메디컬</span>
+</div>
+
+<div class="commercial-photo">
+<img src="academy.jpg">
+<span>학원</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- 오시는 길 -->
+<!-- 네이버 -->
 
-<section class="section">
+<section id="naver" class="section blue">
 
-  <div class="container">
+<div class="container">
 
-    <div class="location-box">
+<div class="naver-box">
 
-      <a
-      href="https://map.naver.com/p/entry/place/38248655"
-      target="_blank"
-      class="map-btn">
+<div class="naver-visual">
 
-      네이버 지도 보기
+<img src="naver-logo.png">
 
-      </a>
+</div>
 
-      <div class="location-info">
+<div class="naver-text">
 
-        <h2>오시는 길</h2>
+<h2>네이버 부동산</h2>
 
-        <p><b>뉴화림부동산공인중개사사무소</b></p>
+<p>
 
-        <p>부산광역시 동래구 금강로131번길 42</p>
+현재 등록 매물을 실시간으로 확인하세요.
 
-        <p>래미안포레스티지 2단지 상가 A동 9호</p>
+</p>
 
-        <p>TEL 051-555-9982</p>
+<a href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15"
+target="_blank"
+class="btn btn-blue">
 
-      </div>
+네이버부동산 보기
 
-    </div>
+</a>
 
-  </div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 오시는길 -->
+
+<section id="location" class="section white">
+
+<div class="container">
+
+<div class="location-wrap">
+
+<div class="map-card">
+
+뉴화림부동산
+
+</div>
+
+<div class="location-info">
+
+<h2>오시는 길</h2>
+
+<p>
+
+뉴화림부동산
+
+</p>
+
+<p>
+
+부산광역시 동래구 금강로131번길 42
+
+</p>
+
+<p>
+
+래미안포레스티지 2단지 상가 A동 9호
+
+</p>
+
+<p>
+
+☎ 051-555-9982
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- 문의 -->
 
-<section id="contact" class="section contact-section">
+<section id="contact" class="section dark">
 
-  <div class="container">
+<div class="container">
 
-    <div class="contact-box">
+<div class="contact-wrap">
 
-      <div class="contact-info">
+<div class="contact-copy">
 
-        <h2>문의하기</h2>
+<h2>
 
-        <p>
-          래미안포레스티지 및 상가 임대 상담
-        </p>
+문의하기
 
-        <div class="contact-phone">
-          051-555-9982
-        </div>
+</h2>
 
-        <p>
-          문자 : 010-3567-7087
-        </p>
+<p>
 
-      </div>
+매매 · 전세 · 월세 · 상가 임대 문의
 
-      <div class="contact-form">
+</p>
 
-        <input type="text" placeholder="성함">
+<div class="contact-phone">
 
-        <input type="tel" placeholder="연락처">
+051-555-9982
 
-        <select>
-          <option>문의유형 선택</option>
-          <option>매수 문의</option>
-          <option>매도 문의</option>
-          <option>전세 문의</option>
-          <option>월세 문의</option>
-          <option>상가 임대 문의</option>
-        </select>
+</div>
 
-        <textarea placeholder="문의내용"></textarea>
+</div>
 
-        <button>
-          상담 신청하기
-        </button>
+<div class="contact-form">
 
-      </div>
+<form>
 
-    </div>
+<input type="text" placeholder="성함">
 
-  </div>
+<input type="tel" placeholder="연락처">
+
+<select>
+
+<option>문의유형 선택</option>
+
+<option>매매 문의</option>
+
+<option>전세 문의</option>
+
+<option>월세 문의</option>
+
+<option>상가 임대 문의</option>
+
+<option>상가 매매 문의</option>
+
+<option>기타</option>
+
+</select>
+
+<textarea placeholder="문의 내용을 입력해주세요"></textarea>
+
+<button type="submit">
+
+문의 접수하기
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <footer class="footer">
 
-  <h3>뉴화림부동산공인중개사사무소</h3>
+<h3>뉴화림부동산</h3>
 
-  <p>
-    부산광역시 동래구 금강로131번길 42<br>
-    래미안포레스티지 2단지 상가 A동 9호
-  </p>
-
-  <p>
-    TEL 051-555-9982
-  </p>
+<p>
+부산광역시 동래구 금강로131번길 42<br>
+래미안포레스티지 2단지 상가 A동 9호
+</p>
 
 </footer>
 
-<div class="fixed">
+<!-- 하단 고정 -->
 
-  <a href="tel:0515559982" class="call">
-    전화문의
-  </a>
+<div class="fixed-bottom">
 
-  <a href="sms:01035677087" class="sms">
-    문자문의
-  </a>
+<a href="tel:0515559982" class="call">
+전화문의
+</a>
+
+<a href="sms:01035677087" class="sms">
+문자문의
+</a>
+
+<a href="https://open.kakao.com/" target="_blank" class="talk">
+카카오톡
+</a>
 
 </div>
 
