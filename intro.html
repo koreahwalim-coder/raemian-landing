@@ -17,7 +17,7 @@ img{max-width:100%;display:block}
 .logo{font-size:32px;font-weight:900;color:#00458f;letter-spacing:-2px}
 .home-btn{background:#071a54;color:#fff;border-radius:15px;padding:11px 23px;font-size:16px;font-weight:800;line-height:1.25;text-align:center}
 
-.hero{margin-top:82px;height:430px;background:url('friendly-banner.jpg') center center/cover no-repeat;position:relative}
+.hero{margin-top:82px;height:430px;background:url('images/friendly-banner.jpg') center center/cover no-repeat;position:relative}
 .hero:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.38)}
 .hero-text{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;text-align:center;color:#fff}
 .hero-text h1{font-size:58px;font-weight:900;letter-spacing:-2px}
@@ -72,7 +72,7 @@ img{max-width:100%;display:block}
     .hero-text p{font-size:16px}
     .tab-wrap{padding:10px}
     .tabs{grid-template-columns:1fr 1fr}
-    .tabs a{height:52px;font-size:15px}
+    .tabs button{height:52px;font-size:15px}
     .section{padding:58px 18px}
     .section-title h2{font-size:31px}
     .section-title p{font-size:16px}
@@ -110,14 +110,14 @@ img{max-width:100%;display:block}
 
 <nav class="tab-wrap">
     <div class="tabs">
-        <a href="#intro" class="active">뉴화림 소개</a>
-        <a href="#message">대표 인사말</a>
-        <a href="#award">수상 및 인증</a>
-        <a href="#map">오시는 길</a>
+        <button class="tab-btn active" onclick="showTab('intro', this)">뉴화림 소개</button>
+        <button class="tab-btn" onclick="showTab('message', this)">대표 인사말</button>
+        <button class="tab-btn" onclick="showTab('award', this)">수상 및 인증</button>
+        <button class="tab-btn" onclick="showTab('map', this)">오시는 길</button>
     </div>
 </nav>
 
-<section class="section" id="intro">
+<section class="section tab-content active" id="intro">
     <div class="section-title">
         <h2>뉴화림부동산 소개</h2>
         <p>온천장 · 래미안포레스티지 전문 중개</p>
@@ -125,7 +125,7 @@ img{max-width:100%;display:block}
 
     <div class="intro-grid">
         <div class="intro-photo">
-            <img src="friendly-office.jpg" alt="뉴화림부동산 소개">
+            <img src="images/friendly-office.jpg" alt="뉴화림부동산 소개">
         </div>
         <div class="intro-text">
             <h3>지역을 잘 아는 현장 중심 중개사무소</h3>
@@ -140,7 +140,7 @@ img{max-width:100%;display:block}
     </div>
 </section>
 
-<section class="section" id="message">
+<section class="section tab-content" id="message">
     <div class="section-title">
         <h2>대표 인사말</h2>
         <p>고객의 입장에서 먼저 생각하겠습니다</p>
@@ -158,7 +158,7 @@ img{max-width:100%;display:block}
     </div>
 </section>
 
-<section class="section" id="award">
+<section class="section tab-content" id="award">
     <div class="section-title">
         <h2>수상 및 인증</h2>
         <p>지역 소비자가 직접 평가한 공식 인증 우수 중개사무소</p>
@@ -185,7 +185,7 @@ img{max-width:100%;display:block}
     </div>
 </section>
 
-<section class="section" id="map">
+<section class="section tab-content" id="map">
     <div class="section-title">
         <h2>오시는 길</h2>
         <p>뉴화림부동산공인중개사사무소</p>
@@ -223,6 +223,27 @@ img{max-width:100%;display:block}
 </footer>
 
 <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+function showTab(tabId, clickedButton){
+    const contents = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
 
+    contents.forEach(function(content){
+        content.classList.remove('active');
+    });
+
+    buttons.forEach(function(button){
+        button.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+    clickedButton.classList.add('active');
+
+    window.scrollTo({
+        top: document.querySelector('.tab-wrap').offsetTop - 80,
+        behavior: 'smooth'
+    });
+}
+</script>
 </body>
 </html>
