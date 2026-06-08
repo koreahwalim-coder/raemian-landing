@@ -6,765 +6,159 @@
 <title>뉴화림부동산공인중개사</title>
 
 <style>
-@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
-    color: #111;
-    background: #fff;
-    overflow-x: hidden;
-    padding-bottom: 78px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 86px;
-    background: rgba(255,255,255,0.78);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.header-inner {
-    height: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-}
-
-.call-btn {
-    background: #ef3d3d;
-    color: #fff;
-    border-radius: 15px;
-    padding: 10px 26px;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.25;
-    text-align: center;
-}
-
-.logo-text {
-    font-family: 'PyeongChangPeace-Bold', sans-serif;
-    color: #00458f;
-    font-size: 34px;
-    font-weight: 900;
-    letter-spacing: -2px;
-}
-
-.top-inquiry {
-    background: #071a54;
-    color: #fff;
-    border-radius: 15px;
-    padding: 11px 23px;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 1.25;
-    cursor: pointer;
-    text-align: center;
-    animation: blink 1.4s infinite;
-}
-
-@keyframes blink {
-    0%,100% { opacity: 1; }
-    50% { opacity: .82; }
-}
-
-.hero {
-    position: relative;
-    height: 800px;
-    margin-top: 0;
-    overflow: hidden;
-}
-
-.hero-slide {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1.2s ease;
-}
-
-.hero-slide.active {
-    opacity: 1;
-}
-
-.hero-slide::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.42);
-}
-
-.hero-slide.slide01 { background-image: url('./images/main-slide-01.jpg'); }
-.hero-slide.slide02 { background-image: url('./images/main-slide-02.jpg'); }
-.hero-slide.slide03 { background-image: url('./images/main-slide-03.jpg'); }
-
-.hero-copy {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    max-width: 760px;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: left;
-}
-
-.hero-copy .small {
-    font-size: 18px;
-    margin-bottom: 16px;
-    font-weight: 600;
-}
-
-.hero-copy h1 {
-    font-size: 64px;
-    line-height: 1.25;
-    font-weight: 900;
-    letter-spacing: -3px;
-}
-
-.hero-copy p {
-    margin-top: 24px;
-    font-size: 19px;
-    line-height: 1.7;
-    color: #eee;
-}
-
-.hero-arrow {
-    position: absolute;
-    z-index: 3;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    border: 1px solid rgba(255,255,255,0.75);
-    background: transparent;
-    color: #fff;
-    font-size: 42px;
-    cursor: pointer;
-}
-
-.hero-arrow.prev { left: 6%; }
-.hero-arrow.next { right: 6%; }
-
-.hero-dots {
-    position: absolute;
-    z-index: 4;
-    left: 0;
-    bottom: 135px;
-    width: 100%;
-    text-align: center;
-}
-
-.hero-dots span {
-    display: inline-block;
-    width: 34px;
-    height: 5px;
-    background: rgba(255,255,255,0.45);
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.hero-dots span.active {
-    background: #fff;
-}
-
-.promo-image {
-    background: #eef7ff;
-    padding: 52px 14px;
-    text-align: center;
-}
-
-.promo-image img {
-    max-width: 960px;
-    margin: 0 auto;
-    border: 6px solid #2d6dbb;
-}
-
-.service-section {
-    padding: 75px 20px 65px;
-    background: #fff;
-}
-
-.service-inner {
-    max-width: 1350px;
-    margin: 0 auto;
-    display: flex;
-    gap: 80px;
-    align-items: flex-start;
-}
-
-.service-left {
-    width: 38%;
-    padding-top: 120px;
-}
-
-.service-left h4 {
-    color: #167ac6;
-    font-size: 18px;
-    margin-bottom: 18px;
-}
-
-.service-left h2 {
-    font-size: 40px;
-    line-height: 1.35;
-    letter-spacing: -2px;
-}
-
-.service-left p {
-    margin-top: 22px;
-    color: #555;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.service-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px 95px;
-}
-
-.service-card {
-    cursor: pointer;
-}
-
-.service-card svg {
-    width: 86px;
-    height: 86px;
-    stroke: #111;
-}
-
-.service-card h3 {
-    margin-top: 22px;
-    font-size: 24px;
-    letter-spacing: -1px;
-}
-
-.service-card p {
-    margin-top: 12px;
-    font-size: 16px;
-    line-height: 1.55;
-    color: #555;
-    word-break: keep-all;
-}
-
-.listing-section {
-    background: #cfe2ff;
-    padding: 60px 20px 35px;
-}
-
-.listing-grid {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 34px 44px;
-}
-
-.listing-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    padding-bottom: 48px;
-}
-
-.listing-card img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-}
-
-.listing-title {
-    width: 76%;
-    height: 62px;
-    margin: 48px auto 0;
-    border-radius: 100px;
-    background: linear-gradient(45deg, #5fb1ff 0%, #5968ff 48%, #d54cff 68%, #ff6b65 100%);
-    color: #fff;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 62px;
-    text-align: center;
-    letter-spacing: -1px;
-}
-
-.live-section {
-    padding: 70px 20px 70px;
-    background: #fff;
-}
-
-.live-title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.live-title h2 {
-    font-size: 42px;
-    letter-spacing: -2px;
-}
-
-.live-title p {
-    margin-top: 12px;
-    font-size: 17px;
-    color: #555;
-}
-
-.live-grid {
-    max-width: 1320px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.live-card {
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    background: #6b97e5;
-    color: #fff;
-    text-align: center;
-}
-
-.live-card img {
-    height: 230px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.live-card .live-text {
-    padding: 22px 10px 26px;
-}
-
-.live-card h3 {
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
-.live-card p {
-    font-size: 18px;
-}
-
-.inquiry-section {
-    background: #f1f1f1;
-    padding: 80px 20px;
-}
-
-.inquiry-box {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 42px 32px;
-    display: flex;
-    gap: 48px;
-}
-
-.inquiry-left,
-.inquiry-right {
-    width: 50%;
-}
-
-.inquiry-left h3 {
-    font-size: 28px;
-    margin-bottom: 18px;
-}
-
-.inquiry-left p {
-    font-size: 17px;
-    margin-bottom: 24px;
-}
-
-.inquiry-left img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.inquiry-right h2 {
-    color: #e03d3d;
-    font-size: 43px;
-    text-align: center;
-    letter-spacing: -2px;
-}
-
-.inquiry-right .desc {
-    margin: 22px 0 28px;
-    text-align: center;
-    color: #555;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.form-list input,
-.form-list select,
-.form-list textarea {
-    width: 100%;
-    border: 0;
-    background: #f0f0f0;
-    border-radius: 6px;
-    padding: 0 20px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.form-list input,
-.form-list select {
-    height: 46px;
-}
-
-.form-list textarea {
-    height: 130px;
-    padding-top: 18px;
-    resize: none;
-}
-
-.privacy-row {
-    text-align: left;
-    font-size: 16px;
-    margin: 12px 0 25px;
-}
-
-.submit-btn {
-    display: block;
-    width: 190px;
-    height: 54px;
-    margin: 0 auto;
-    border: 0;
-    border-radius: 35px;
-    background: #333;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.footer-banner img {
-    width: 100%;
-}
-
-.footer {
-    background: #2f333a;
-    color: #b8bcc3;
-    padding: 55px 20px 70px;
-}
-
-.footer-inner {
-    max-width: 1350px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.footer h3 {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 24px;
-}
-
-.footer p {
-    font-size: 15px;
-    line-height: 1.9;
-}
-
-.footer-tel {
-    color: #fff;
-    font-size: 34px;
-    font-weight: 900;
-    margin-top: 12px;
-}
-
-.quick-bottom {
-    display: none;
-}
-
-.top-btn {
-    position: fixed;
-    right: 32px;
-    bottom: 95px;
-    width: 50px;
-    height: 50px;
-    z-index: 900;
-    background: rgba(255,255,255,.75);
-    border: 2px solid #333;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 3000;
-    inset: 0;
-    background: rgba(0,0,0,0.42);
-}
-
-.modal-content {
-    width: 70%;
-    max-width: 960px;
-    background: #fff;
-    margin: 12% auto;
-    padding: 22px;
-    border-radius: 8px;
-}
-
-.modal-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #111;
-    padding-bottom: 14px;
-}
-
-.modal-head h3 {
-    font-size: 17px;
-}
-
-.close-modal {
-    font-size: 24px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.privacy-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 15px;
-    margin-top: 0;
-}
-
-.privacy-table th,
-.privacy-table td {
-    border: 1px solid #ddd;
-    padding: 20px 10px;
-    text-align: center;
-}
-
-.privacy-table th {
-    background: #f4f4f4;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-bottom: 78px;
-    }
-
-    .header {
-        height: 86px;
-        background: #fff;
-    }
-
-    .header-inner {
-        justify-content: center;
-    }
-
-    .call-btn,
-    .top-inquiry {
-        display: none;
-    }
-
-    .logo-text {
-        font-size: 27px;
-        letter-spacing: -1.5px;
-    }
-
-    .hero {
-        height: 620px;
-        margin-top: 86px;
-    }
-
-    .hero-copy {
-        text-align: left;
-        width: 88%;
-    }
-
-    .hero-copy .small {
-        font-size: 15px;
-    }
-
-    .hero-copy h1 {
-        font-size: 38px;
-    }
-
-    .hero-copy p {
-        font-size: 16px;
-    }
-
-    .hero-arrow {
-        display: none;
-    }
-
-    .hero-dots {
-        bottom: 60px;
-    }
-
-    .promo-image {
-        padding: 35px 12px;
-    }
-
-    .service-inner {
-        display: block;
-    }
-
-    .service-left {
-        width: 100%;
-        padding-top: 25px;
-    }
-
-    .service-left h2 {
-        font-size: 31px;
-    }
-
-    .service-grid {
-        display: block;
-        margin-top: 35px;
-    }
-
-    .service-card {
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .service-card h3,
-    .service-card p {
-        text-align: left;
-    }
-
-    .listing-section {
-        padding: 42px 20px 25px;
-    }
-
-    .listing-grid {
-        display: block;
-    }
-
-    .listing-card {
-        margin-bottom: 38px;
-        padding: 18px 18px 42px;
-    }
-
-    .listing-card img {
-        height: auto;
-    }
-
-    .listing-title {
-        width: 100%;
-        height: 48px;
-        line-height: 48px;
-        font-size: 20px;
-        margin-top: 42px;
-    }
-
-    .live-title h2 {
-        font-size: 39px;
-    }
-
-    .live-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .live-card img {
-        height: 170px;
-    }
-
-    .live-card h3 {
-        font-size: 23px;
-    }
-
-    .live-card p {
-        font-size: 18px;
-    }
-
-    .inquiry-box {
-        display: block;
-        padding: 30px 26px;
-    }
-
-    .inquiry-left,
-    .inquiry-right {
-        width: 100%;
-    }
-
-    .inquiry-right h2 {
-        margin-top: 45px;
-        font-size: 38px;
-    }
-
-    .footer-inner {
-        display: block;
-    }
-
-    .footer-tel {
-        font-size: 32px;
-        margin-top: 35px;
-    }
-
-    .quick-bottom {
-        position: fixed;
-        display: flex;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 76px;
-        z-index: 2500;
-    }
-
-    .quick-bottom a {
-        width: 50%;
-        color: #fff;
-        font-size: 22px;
-        font-weight: 800;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .quick-bottom a:first-child {
-        background: #f23939;
-    }
-
-    .quick-bottom a:last-child {
-        background: #382d27;
-    }
-
-    .top-btn {
-        right: 36px;
-        bottom: 125px;
-    }
-
-    .modal-content {
-        width: 92%;
-        margin: 28% auto;
-        padding: 18px;
-        overflow-x: auto;
-    }
-
-    .privacy-table {
-        min-width: 680px;
-    }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard','Noto Sans KR',Arial,sans-serif;color:#111;background:#fff;overflow-x:hidden;padding-bottom:78px}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.header{position:fixed;top:0;left:0;width:100%;height:86px;background:rgba(255,255,255,.82);z-index:1000;border-bottom:1px solid rgba(0,0,0,.08)}
+.header-inner{height:100%;max-width:1500px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.call-btn{background:#ef3d3d;color:#fff;border-radius:15px;padding:10px 26px;font-size:17px;font-weight:800;line-height:1.25;text-align:center}
+.logo-text{color:#00458f;font-size:34px;font-weight:900;letter-spacing:-2px}
+.top-inquiry{background:#071a54;color:#fff;border-radius:15px;padding:11px 23px;font-size:16px;font-weight:800;line-height:1.25;cursor:pointer;text-align:center}
+
+.hero{position:relative;height:800px;overflow:hidden}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease}
+.hero-slide.active{opacity:1}
+.hero-slide:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.42)}
+.slide01{background-image:url('./images/main-slide-01.jpg')}
+.slide02{background-image:url('./images/main-slide-02.jpg')}
+.slide03{background-image:url('./images/main-slide-03.jpg')}
+.hero-copy{position:absolute;z-index:2;top:50%;left:50%;width:90%;max-width:760px;transform:translate(-50%,-50%);color:#fff}
+.hero-copy .small{font-size:18px;margin-bottom:16px;font-weight:700}
+.hero-copy h1{font-size:64px;line-height:1.25;font-weight:900;letter-spacing:-3px}
+.hero-copy p{margin-top:24px;font-size:19px;line-height:1.7;color:#eee}
+.hero-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:60px;height:60px;border:1px solid rgba(255,255,255,.75);background:transparent;color:#fff;font-size:42px;cursor:pointer}
+.prev{left:6%}.next{right:6%}
+.hero-dots{position:absolute;z-index:4;left:0;bottom:135px;width:100%;text-align:center}
+.hero-dots span{display:inline-block;width:34px;height:5px;background:rgba(255,255,255,.45);margin:0 5px;cursor:pointer}
+.hero-dots span.active{background:#fff}
+
+.promo-image{background:#eef7ff;padding:52px 14px;text-align:center}
+.promo-image img{max-width:960px;margin:0 auto;border:6px solid #2d6dbb}
+
+.service-section{padding:75px 20px 65px;background:#fff}
+.service-inner{max-width:1350px;margin:0 auto;display:flex;gap:80px;align-items:flex-start}
+.service-left{width:38%;padding-top:120px}
+.service-left h4{color:#167ac6;font-size:18px;margin-bottom:18px}
+.service-left h2{font-size:40px;line-height:1.35;letter-spacing:-2px}
+.service-left p{margin-top:22px;color:#555;font-size:17px;line-height:1.6}
+.service-grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:70px 95px}
+.service-card{cursor:pointer}
+.service-card svg{width:86px;height:86px;stroke:#111}
+.service-card h3{margin-top:22px;font-size:24px;letter-spacing:-1px}
+.service-card p{margin-top:12px;font-size:16px;line-height:1.55;color:#555;word-break:keep-all}
+
+.detail-section{background:#f7f9fc;padding:70px 20px}
+.detail-box{max-width:1100px;margin:0 auto;background:#fff;border-radius:18px;padding:55px 60px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.detail-badge{display:inline-block;background:#eaf3ff;color:#0b5eb8;padding:8px 18px;border-radius:30px;font-size:15px;font-weight:800}
+.detail-title{font-size:38px;margin:22px 0 25px;letter-spacing:-2px}
+.detail-text{font-size:18px;line-height:1.85;color:#333;word-break:keep-all}
+.detail-list{margin-top:18px}
+.detail-list li{font-size:18px;line-height:1.9;color:#333;padding-left:16px;position:relative}
+.detail-list li:before{content:"-";position:absolute;left:0}
+
+.listing-section{background:#cfe2ff;padding:60px 20px 35px}
+.listing-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:34px 44px}
+.listing-card{background:#fff;border-radius:12px;overflow:hidden;padding-bottom:48px}
+.listing-card img{width:100%;height:420px;object-fit:cover}
+.listing-title{width:76%;height:62px;margin:48px auto 0;border-radius:100px;background:linear-gradient(45deg,#5fb1ff 0%,#5968ff 48%,#d54cff 68%,#ff6b65 100%);color:#fff;font-size:25px;font-weight:900;line-height:62px;text-align:center;letter-spacing:-1px}
+
+.live-section{padding:70px 20px;background:#fff}
+.live-title{text-align:center;margin-bottom:45px}
+.live-title h2{font-size:42px;letter-spacing:-2px}
+.live-title p{margin-top:12px;font-size:17px;color:#555}
+.live-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.live-card{border-radius:8px;overflow:hidden;cursor:pointer;background:#6b97e5;color:#fff;text-align:center}
+.live-card img{height:230px;width:100%;object-fit:cover}
+.live-card .live-text{padding:22px 10px 26px}
+.live-card h3{font-size:25px;margin-bottom:12px}
+.live-card p{font-size:18px}
+
+.channel-section{background:#f6f8fb;padding:35px 20px 70px}
+.channel-title{text-align:center;font-size:32px;font-weight:900;margin-bottom:28px;letter-spacing:-1px}
+.channel-wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:22px}
+.channel-card{display:flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.channel-card img{width:38%;height:220px;object-fit:cover}
+.channel-info{padding:30px}
+.channel-info h3{font-size:30px;margin-bottom:12px}
+.channel-info p{font-size:17px;color:#555;line-height:1.6}
+
+.inquiry-section{background:#f1f1f1;padding:80px 20px}
+.inquiry-box{max-width:1200px;margin:0 auto;background:#fff;padding:42px 32px;display:flex;gap:48px}
+.inquiry-left,.inquiry-right{width:50%}
+.inquiry-left h3{font-size:28px;margin-bottom:18px}
+.inquiry-left p{font-size:17px;margin-bottom:24px}
+.inquiry-left img{width:100%;border-radius:10px}
+.inquiry-right h2{color:#e03d3d;font-size:43px;text-align:center;letter-spacing:-2px}
+.inquiry-right .desc{margin:22px 0 28px;text-align:center;color:#555;font-size:17px;line-height:1.7}
+.form-list input,.form-list select,.form-list textarea{width:100%;border:0;background:#f0f0f0;border-radius:6px;padding:0 20px;font-size:16px;margin-bottom:10px}
+.form-list input,.form-list select{height:46px}
+.form-list textarea{height:130px;padding-top:18px;resize:none}
+.privacy-row{text-align:left;font-size:16px;margin:12px 0 25px}
+.submit-btn{display:block;width:190px;height:54px;margin:0 auto;border:0;border-radius:35px;background:#333;color:#fff;font-size:17px;font-weight:700}
+
+.footer-banner{background:#fff;padding:26px 0}
+.footer-banner img{width:100%;max-width:1800px;margin:0 auto}
+.footer{background:#2f333a;color:#b8bcc3;padding:55px 20px 70px}
+.footer-inner{max-width:1350px;margin:0 auto;display:flex;justify-content:space-between;gap:40px}
+.footer h3{color:#fff;font-size:20px;margin-bottom:24px}
+.footer p{font-size:15px;line-height:1.9}
+.footer-tel{color:#fff;font-size:34px;font-weight:900;margin-top:12px}
+
+.quick-bottom{display:none}
+.top-btn{position:fixed;right:32px;bottom:95px;width:50px;height:50px;z-index:900;background:rgba(255,255,255,.75);border:2px solid #333;font-size:28px;cursor:pointer}
+.modal{display:none;position:fixed;z-index:3000;inset:0;background:rgba(0,0,0,.42)}
+.modal-content{width:70%;max-width:960px;background:#fff;margin:12% auto;padding:22px;border-radius:8px}
+.modal-head{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #111;padding-bottom:14px}
+.close-modal{font-size:24px;cursor:pointer;font-weight:bold}
+.privacy-table{width:100%;border-collapse:collapse;font-size:15px}
+.privacy-table th,.privacy-table td{border:1px solid #ddd;padding:20px 10px;text-align:center}
+.privacy-table th{background:#f4f4f4}
+
+@media(max-width:768px){
+    .header{height:86px;background:#fff}
+    .header-inner{justify-content:center}
+    .call-btn,.top-inquiry{display:none}
+    .logo-text{font-size:27px;letter-spacing:-1.5px}
+    .hero{height:620px;margin-top:86px}
+    .hero-copy{width:88%}
+    .hero-copy .small{font-size:15px}
+    .hero-copy h1{font-size:38px}
+    .hero-copy p{font-size:16px}
+    .hero-arrow{display:none}
+    .hero-dots{bottom:60px}
+    .service-inner{display:block}
+    .service-left{width:100%;padding-top:25px}
+    .service-left h2{font-size:31px}
+    .service-grid{display:block;margin-top:35px}
+    .service-card{margin-bottom:40px;text-align:center}
+    .service-card h3,.service-card p{text-align:left}
+    .detail-box{padding:38px 25px}
+    .detail-title{font-size:30px}
+    .detail-text,.detail-list li{font-size:16px}
+    .listing-grid{display:block}
+    .listing-card{margin-bottom:38px;padding:18px 18px 42px}
+    .listing-card img{height:auto}
+    .listing-title{width:100%;height:48px;line-height:48px;font-size:20px;margin-top:42px}
+    .live-title h2{font-size:39px}
+    .live-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .live-card img{height:170px}
+    .channel-card{display:block}
+    .channel-card img{width:100%;height:auto}
+    .channel-info h3{font-size:26px}
+    .inquiry-box{display:block;padding:30px 26px}
+    .inquiry-left,.inquiry-right{width:100%}
+    .inquiry-right h2{margin-top:45px;font-size:38px}
+    .footer-inner{display:block}
+    .footer-tel{font-size:32px;margin-top:35px}
+    .quick-bottom{position:fixed;display:flex;left:0;bottom:0;width:100%;height:76px;z-index:2500}
+    .quick-bottom a{width:50%;color:#fff;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center}
+    .quick-bottom a:first-child{background:#f23939}
+    .quick-bottom a:last-child{background:#382d27}
+    .top-btn{right:36px;bottom:125px}
+    .modal-content{width:92%;margin:28% auto;overflow-x:auto}
+    .privacy-table{min-width:680px}
 }
 </style>
 </head>
@@ -773,15 +167,9 @@ img {
 
 <header class="header">
     <div class="header-inner">
-        <a href="tel:051-555-9982" class="call-btn">
-            ☎ 문의전화<br>051-555-9982
-        </a>
-
+        <a href="tel:051-555-9982" class="call-btn">☎ 문의전화<br>051-555-9982</a>
         <div class="logo-text">뉴화림부동산</div>
-
-        <div class="top-inquiry" onclick="scrollToInquiry()">
-            매도・매수<br>문의하기
-        </div>
+        <div class="top-inquiry" onclick="scrollToInquiry()">매도・매수<br>문의하기</div>
     </div>
 </header>
 
@@ -789,19 +177,13 @@ img {
     <div class="hero-slide slide01 active"></div>
     <div class="hero-slide slide02"></div>
     <div class="hero-slide slide03"></div>
-
     <button class="hero-arrow prev" onclick="prevSlide()">‹</button>
     <button class="hero-arrow next" onclick="nextSlide()">›</button>
-
     <div class="hero-copy">
         <div class="small">래미안포레스티지 · 온천장 전문 중개</div>
         <h1>뉴화림부동산<br>공인중개사</h1>
-        <p>
-            정직한 상담과 꼼꼼한 권리분석으로<br>
-            매도・매수・전월세・상가 중개를 책임감 있게 진행합니다.
-        </p>
+        <p>정직한 상담과 꼼꼼한 권리분석으로<br>매도・매수・전월세・상가 중개를 책임감 있게 진행합니다.</p>
     </div>
-
     <div class="hero-dots">
         <span class="active" onclick="showSlide(0)"></span>
         <span onclick="showSlide(1)"></span>
@@ -818,86 +200,53 @@ img {
         <div class="service-left">
             <h4>뉴화림부동산공인중개사</h4>
             <h2>온천장・래미안포레스티지<br>전문 중개</h2>
-            <p>
-                아파트, 상가, 전월세, 매매 상담까지 지역을 잘 아는 중개사가
-                고객님의 상황에 맞춰 꼼꼼하게 안내드립니다.
-            </p>
+            <p>아파트, 상가, 전월세, 매매 상담까지 지역을 잘 아는 중개사가 고객님의 상황에 맞춰 꼼꼼하게 안내드립니다.</p>
         </div>
 
         <div class="service-grid">
-            <div class="service-card">
-                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22">
-                    <path d="M186-132q-23 0-38.5-15.5T132-186v-388q0-23 15.5-38.5T186-628h235v-178h118v178h235q23 0 38.5 15.5T828-574v388q0 23-15.5 38.5T774-132H186Z"/>
-                    <path d="M254-272h207q0-23-24-40-38-16-79-16t-79 16q-25 17-25 40Z"/>
-                    <circle cx="358" cy="-404" r="42"/>
-                    <path d="M562-422h163M562-336h163"/>
-                </svg>
-                <h3>친절계약</h3>
-                <p>처음 상담부터 계약 마무리까지 고객 입장에서 쉽고 정확하게 안내합니다.</p>
+            <div class="service-card" onclick="openService('intro')">
+                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22"><path d="M186-132q-23 0-38.5-15.5T132-186v-388q0-23 15.5-38.5T186-628h235v-178h118v178h235q23 0 38.5 15.5T828-574v388q0 23-15.5 38.5T774-132H186Z"/><path d="M254-272h207q0-23-24-40-38-16-79-16t-79 16q-25 17-25 40Z"/><circle cx="358" cy="-404" r="42"/><path d="M562-422h163M562-336h163"/></svg>
+                <h3>부동산소개</h3>
+                <p>공식 인증 우수 중개사무소로 빠르고 정확한 매물 상담을 제공합니다.</p>
             </div>
 
-            <div class="service-card">
-                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22">
-                    <path d="M154-766h328M154-274h652M154-766v492M806-374v100"/>
-                    <path d="M672-443 512-603M672-443 832-603M672-443v-345"/>
-                    <path d="M375-172v-80h210v80"/>
-                </svg>
+            <div class="service-card" onclick="openService('stock')">
+                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22"><path d="M154-766h328M154-274h652M154-766v492M806-374v100"/><path d="M672-443 512-603M672-443 832-603M672-443v-345"/><path d="M375-172v-80h210v80"/></svg>
                 <h3>부동산 최대물량 확보</h3>
-                <p>래미안포레스티지와 온천장 일대 아파트・상가 매물을 폭넓게 확인합니다.</p>
+                <p>현장 중심 실매물 확보 시스템으로 빠른 매칭을 도와드립니다.</p>
             </div>
 
-            <div class="service-card">
-                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22">
-                    <path d="M132-180v-594q0-23 15.5-38.5T186-828h588q23 0 38.5 15.5T828-774v428q0 23-15.5 38.5T774-292H244L132-180Z"/>
-                    <path d="M412-657h282M412-549h282M412-441h162"/>
-                    <circle cx="288" cy="-668" r="28"/>
-                    <circle cx="288" cy="-560" r="28"/>
-                    <circle cx="288" cy="-452" r="28"/>
-                </svg>
-                <h3>합리적인 중개 진행</h3>
-                <p>거래 조건과 상황을 투명하게 설명드리고 부담 없는 방향으로 조율합니다.</p>
+            <div class="service-card" onclick="openService('special')">
+                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22"><path d="M132-180v-594q0-23 15.5-38.5T186-828h588q23 0 38.5 15.5T828-774v428q0 23-15.5 38.5T774-292H244L132-180Z"/><path d="M412-657h282M412-549h282M412-441h162"/><circle cx="288" cy="-668" r="28"/><circle cx="288" cy="-560" r="28"/><circle cx="288" cy="-452" r="28"/></svg>
+                <h3>뉴화림만의 차별화 서비스</h3>
+                <p>전자계약, 세무·법률 상담, 등기까지 원스톱으로 지원합니다.</p>
             </div>
 
-            <div class="service-card">
-                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22">
-                    <path d="M194-194v-572h572v162"/>
-                    <path d="M306-620h348M306-469h181M306-318h110"/>
-                    <circle cx="680" cy="-426" r="84"/>
-                    <path d="M476-119v-80q0-26 21-38 52-31 110-42l73 98 72-98q58 11 111 42 21 12 21 38v80H476Z"/>
-                </svg>
+            <div class="service-card" onclick="openService('safe')">
+                <svg viewBox="0 -960 960 960" fill="none" stroke="currentColor" stroke-width="22"><path d="M194-194v-572h572v162"/><path d="M306-620h348M306-469h181M306-318h110"/><circle cx="680" cy="-426" r="84"/><path d="M476-119v-80q0-26 21-38 52-31 110-42l73 98 72-98q58 11 111 42 21 12 21 38v80H476Z"/></svg>
                 <h3>안심중개 100% 책임보장</h3>
-                <p>계약 전후 발생할 수 있는 부분까지 꼼꼼히 확인하고 책임 있게 대응합니다.</p>
+                <p>잔금일까지 등기변동 모니터링과 권리보험까지 꼼꼼히 챙깁니다.</p>
             </div>
         </div>
     </div>
 </section>
 
+<section class="detail-section" id="serviceDetail">
+    <div class="detail-box">
+        <span class="detail-badge" id="detailBadge">뉴화림부동산</span>
+        <h2 class="detail-title" id="detailTitle">부동산소개</h2>
+        <div class="detail-text" id="detailText"></div>
+    </div>
+</section>
+
 <section class="listing-section">
     <div class="listing-grid">
-        <div class="listing-card">
-            <img src="./images/li01.jpg" alt="">
-            <div class="listing-title">래미안포레스티지</div>
-        </div>
-        <div class="listing-card">
-            <img src="./images/km01.jpg" alt="">
-            <div class="listing-title">온천장 아파트</div>
-        </div>
-        <div class="listing-card">
-            <img src="./images/km02.jpg" alt="">
-            <div class="listing-title">상가・상가임대</div>
-        </div>
-        <div class="listing-card">
-            <img src="./images/km03.jpg" alt="">
-            <div class="listing-title">메디컬・학원 자리</div>
-        </div>
-        <div class="listing-card">
-            <img src="./images/km04.jpg" alt="">
-            <div class="listing-title">전세・월세 매물</div>
-        </div>
-        <div class="listing-card">
-            <img src="./images/li02.jpg" alt="">
-            <div class="listing-title">매도・매수 상담</div>
-        </div>
+        <div class="listing-card"><img src="./images/li01.jpg"><div class="listing-title">래미안포레스티지</div></div>
+        <div class="listing-card"><img src="./images/li02.jpg"><div class="listing-title">온천장 아파트</div></div>
+        <div class="listing-card"><img src="./images/km04.jpg"><div class="listing-title">분양권・입주권</div></div>
+        <div class="listing-card"><img src="./images/km03.jpg"><div class="listing-title">상가・상가임대</div></div>
+        <div class="listing-card"><img src="./images/km01.jpg"><div class="listing-title">메디컬・학원 자리</div></div>
+        <div class="listing-card"><img src="./images/km02.jpg"><div class="listing-title">매도・매수 상담</div></div>
     </div>
 </section>
 
@@ -906,39 +255,31 @@ img {
         <h2>실시간 매물 확인</h2>
         <p>검증된 매물을 빠르게 확인해보세요</p>
     </div>
-
     <div class="live-grid">
-        <div class="live-card" onclick="openRealListing()">
-            <img src="./images/mma01.jpg" alt="">
-            <div class="live-text">
-                <h3>실매물 보기</h3>
-                <p>아파트</p>
-            </div>
-        </div>
+        <div class="live-card" onclick="openRealListing()"><img src="./images/mma01.jpg"><div class="live-text"><h3>실매물 보기</h3><p>아파트</p></div></div>
+        <div class="live-card" onclick="openRealListing()"><img src="./images/mma02.jpg"><div class="live-text"><h3>실매물 보기</h3><p>상가・건물</p></div></div>
+        <div class="live-card" onclick="openRealListing()"><img src="./images/mma03.jpg"><div class="live-text"><h3>실매물 보기</h3><p>전세・월세</p></div></div>
+        <div class="live-card" onclick="openRealListing()"><img src="./images/mma04.jpg"><div class="live-text"><h3>실매물 보기</h3><p>상가임대</p></div></div>
+    </div>
+</section>
 
-        <div class="live-card" onclick="openRealListing()">
-            <img src="./images/mma02.jpg" alt="">
-            <div class="live-text">
-                <h3>실매물 보기</h3>
-                <p>상가・건물</p>
+<section class="channel-section">
+    <div class="channel-title">뉴화림부동산 채널 바로가기</div>
+    <div class="channel-wrap">
+        <a class="channel-card" href="https://www.youtube.com/@뉴화림부동산TV" target="_blank">
+            <img src="./images/youtube-channel.jpg">
+            <div class="channel-info">
+                <h3>뉴화림부동산TV</h3>
+                <p>실매물 영상, 단지 소개, 상가 정보를 영상으로 확인하세요.</p>
             </div>
-        </div>
-
-        <div class="live-card" onclick="openRealListing()">
-            <img src="./images/mma03.jpg" alt="">
-            <div class="live-text">
-                <h3>실매물 보기</h3>
-                <p>전세・월세</p>
+        </a>
+        <a class="channel-card" href="https://blog.naver.com/apartmentgirl" target="_blank">
+            <img src="./images/blog-channel.jpg">
+            <div class="channel-info">
+                <h3>네이버 블로그</h3>
+                <p>실거래가, 매물분석, 입지분석 정보를 자세히 안내드립니다.</p>
             </div>
-        </div>
-
-        <div class="live-card" onclick="openRealListing()">
-            <img src="./images/mma04.jpg" alt="">
-            <div class="live-text">
-                <h3>실매물 보기</h3>
-                <p>상가임대</p>
-            </div>
-        </div>
+        </a>
     </div>
 </section>
 
@@ -947,37 +288,26 @@ img {
         <div class="inquiry-left">
             <h3>TEL : 051-555-9982</h3>
             <p>Mobile : 010-3567-7087</p>
-            <img src="./images/inq_i.jpg" alt="상담 문의 이미지">
+            <img src="./images/inq_i.jpg">
         </div>
-
         <div class="inquiry-right">
             <h2>매도・매수 문의</h2>
-            <div class="desc">
-                래미안포레스티지와 온천장 부동산 상담은<br>
-                뉴화림부동산에서 편하게 문의주세요.
-            </div>
-
+            <div class="desc">래미안포레스티지와 온천장 부동산 상담은<br>뉴화림부동산에서 편하게 문의주세요.</div>
             <form onsubmit="return validateForm()">
                 <div class="form-list">
                     <input type="text" id="name" placeholder="성함">
                     <input type="text" id="phone" placeholder="연락처">
                     <select id="type">
                         <option value="">매도・매수 선택</option>
-                        <option>매도</option>
-                        <option>매수</option>
-                        <option>전세</option>
-                        <option>월세</option>
-                        <option>상가임대</option>
+                        <option>매도</option><option>매수</option><option>전세</option><option>월세</option><option>상가임대</option>
                     </select>
                     <textarea id="message" placeholder="문의내용"></textarea>
                 </div>
-
                 <div class="privacy-row">
                     <input type="checkbox" id="agree">
                     개인정보처리방침 동의
                     <a href="#" onclick="openPrivacy(event)">[전문보기]</a>
                 </div>
-
                 <button class="submit-btn" type="submit">문의하기</button>
             </form>
         </div>
@@ -985,7 +315,7 @@ img {
 </section>
 
 <section class="footer-banner">
-    <img src="./images/bu_pc.jpg" alt="뉴화림부동산 하단 배너">
+    <img src="./images/전체(1).png" alt="인증기관 배너">
 </section>
 
 <footer class="footer">
@@ -1000,7 +330,6 @@ img {
             </p>
             <p style="margin-top:24px;">COPYRIGHT(c) 2026 뉴화림부동산 ALL RIGHTS RESERVED.</p>
         </div>
-
         <div>
             <p>TEL</p>
             <div class="footer-tel">051-555-9982</div>
@@ -1021,117 +350,97 @@ img {
             <h3>개인정보처리방침</h3>
             <span class="close-modal" onclick="closePrivacy()">×</span>
         </div>
-
         <table class="privacy-table">
-            <tr>
-                <th>구분</th>
-                <th>목적</th>
-                <th>항목</th>
-                <th>보유기간</th>
-            </tr>
-            <tr>
-                <td rowspan="4">필수정보</td>
-                <td>서비스 이용 / 본인확인</td>
-                <td>이름, 연락처</td>
-                <td rowspan="4">상담 종료 후 6개월</td>
-            </tr>
-            <tr>
-                <td>계약 진행 및 고객 고충처리</td>
-                <td>이름, 연락처</td>
-            </tr>
-            <tr>
-                <td>매물 안내 및 상담</td>
-                <td>연락처</td>
-            </tr>
-            <tr>
-                <td>자동수집정보</td>
-                <td>접속로그, 쿠키, 접속IP</td>
-            </tr>
+            <tr><th>구분</th><th>목적</th><th>항목</th><th>보유기간</th></tr>
+            <tr><td rowspan="4">필수정보</td><td>서비스 이용 / 본인확인</td><td>이름, 연락처</td><td rowspan="4">상담 종료 후 6개월</td></tr>
+            <tr><td>계약 진행 및 고객 고충처리</td><td>이름, 연락처</td></tr>
+            <tr><td>매물 안내 및 상담</td><td>연락처</td></tr>
+            <tr><td>자동수집정보</td><td>접속로그, 쿠키, 접속IP</td></tr>
         </table>
     </div>
 </div>
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.hero-dots span');
+let currentSlide=0;
+const slides=document.querySelectorAll('.hero-slide');
+const dots=document.querySelectorAll('.hero-dots span');
 
-function showSlide(index) {
+function showSlide(index){
     slides[currentSlide].classList.remove('active');
     dots[currentSlide].classList.remove('active');
-
-    currentSlide = index;
-
+    currentSlide=index;
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
 }
+function nextSlide(){showSlide((currentSlide+1)%slides.length)}
+function prevSlide(){showSlide((currentSlide-1+slides.length)%slides.length)}
+setInterval(nextSlide,3000);
 
-function nextSlide() {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
+const serviceData={
+intro:{
+badge:'공식 인증 우수 중개사무소',
+title:'부동산소개',
+html:`지역 소비자가 직접 평가한 공식 인증 우수 중개사무소입니다.<br><br>
+2026 베스트타임즈 선정 <b>동래구 우수 부동산</b> 수상<br>
+2025 한국소비자산업평가(KCIA) 공인중개사무소 부문 <b>우수업체 선정</b><br><br>
+입주권・분양권・상가 매매・전세・월세・분양까지 현장에서 바로 확인되는 빠른 정보로 정확한 시세 및 향후 전망까지 친절히 상담드립니다.<br><br>
+전화 주시면 정확한 매물 안내 및 상세 매수내역을 보내드리겠습니다.`
+},
+stock:{
+badge:'현장 중심 실매물 확보',
+title:'부동산 최대물량 확보',
+html:`<ul class="detail-list">
+<li>입주민 네트워크 운영</li>
+<li>실시간 매물 접수</li>
+<li>비공개 매물 다수 보유</li>
+<li>매도・매수 빠른 매칭</li>
+<li>정확한 시세 안내</li>
+</ul><br>
+현장에서 직접 확인되는 실매물 중심으로 운영하며, 고객님께 가장 빠르고 정확한 정보를 제공하기 위해 노력하고 있습니다.`
+},
+special:{
+badge:'뉴화림만의 차별화 서비스',
+title:'뉴화림만의 차별화 서비스',
+html:`<ul class="detail-list">
+<li>전자계약 시스템 도입으로 안전하고 편리한 거래</li>
+<li>전자계약 시 약 0.1% ~ 최대 0.3% 금리 우대 적용</li>
+<li>대행 수수료 전세권설정등기・소유권이전등기 30% 절감</li>
+<li>세무 상담 연계 지원</li>
+<li>계약부터 등기까지 원스톱 진행</li>
+<li>전문가 법률 상담 지원</li>
+</ul>`
+},
+safe:{
+badge:'안심케어 서비스 제공',
+title:'안심중개 100% 책임보장',
+html:`안심케어 서비스 제공 현장대표부동산<br><br>
+<ul class="detail-list">
+<li>잔금일까지 등기변동 모니터링</li>
+<li>전문가 법률상담</li>
+<li>공제증서 외 권리보험 추가 제공</li>
+</ul>`
 }
+};
 
-function prevSlide() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
+function openService(key){
+    document.getElementById('detailBadge').innerText=serviceData[key].badge;
+    document.getElementById('detailTitle').innerText=serviceData[key].title;
+    document.getElementById('detailText').innerHTML=serviceData[key].html;
+    document.getElementById('serviceDetail').scrollIntoView({behavior:'smooth'});
 }
+openService('intro');
 
-setInterval(nextSlide, 3000);
-
-function scrollToInquiry() {
-    document.getElementById('inquiry').scrollIntoView({
-        behavior: 'smooth'
-    });
-}
-
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-function openRealListing() {
-    window.open('https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15', '_blank');
-}
-
-function openPrivacy(event) {
-    event.preventDefault();
-    document.getElementById('privacyModal').style.display = 'block';
-}
-
-function closePrivacy() {
-    document.getElementById('privacyModal').style.display = 'none';
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('privacyModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-}
-
-function validateForm() {
-    if (!document.getElementById('name').value.trim()) {
-        alert('성함을 입력해주세요.');
-        return false;
-    }
-
-    if (!document.getElementById('phone').value.trim()) {
-        alert('연락처를 입력해주세요.');
-        return false;
-    }
-
-    if (!document.getElementById('message').value.trim()) {
-        alert('문의내용을 입력해주세요.');
-        return false;
-    }
-
-    if (!document.getElementById('agree').checked) {
-        alert('개인정보처리방침에 동의해주세요.');
-        return false;
-    }
-
+function scrollToInquiry(){document.getElementById('inquiry').scrollIntoView({behavior:'smooth'})}
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+function openRealListing(){window.open('https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeAVj4E5%2BADgBMACwDu6CHTABfCg1QIAxmIAKNek1gg5cgLpA&center=3AHFLz-2zbH2Q&zoom=15','_blank')}
+function openPrivacy(e){e.preventDefault();document.getElementById('privacyModal').style.display='block'}
+function closePrivacy(){document.getElementById('privacyModal').style.display='none'}
+window.onclick=function(e){if(e.target===document.getElementById('privacyModal'))closePrivacy()}
+function validateForm(){
+    if(!document.getElementById('name').value.trim()){alert('성함을 입력해주세요.');return false}
+    if(!document.getElementById('phone').value.trim()){alert('연락처를 입력해주세요.');return false}
+    if(!document.getElementById('message').value.trim()){alert('문의내용을 입력해주세요.');return false}
+    if(!document.getElementById('agree').checked){alert('개인정보처리방침에 동의해주세요.');return false}
     alert('문의가 접수되었습니다.');
     return false;
 }
