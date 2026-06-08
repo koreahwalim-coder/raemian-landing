@@ -246,6 +246,65 @@ font-size:25px;
 display:block;
 }
 }
+    .marketing-grid{
+    max-width:900px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.marketing-card{
+    display:block;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.marketing-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.marketing-text{
+    padding:22px;
+    text-align:center;
+}
+
+.marketing-text h3{
+    font-size:23px;
+    color:#0b4f95;
+    margin-bottom:8px;
+}
+
+.marketing-text p{
+    color:#666;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.channel-btn{
+    display:inline-block;
+    background:#071a54;
+    color:#fff;
+    padding:11px 24px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:800;
+}
+
+@media(max-width:768px){
+    .marketing-grid{
+        max-width:100%;
+        grid-template-columns:1fr;
+    }
+
+    .marketing-card img{
+        height:auto;
+    }
+}
 </style>
 </head>
 
