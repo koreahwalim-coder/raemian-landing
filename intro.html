@@ -3,197 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>뉴화림부동산 소개</title>
+<title>친절계약 | 뉴화림부동산</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;color:#111;background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-body{
-    font-family:'Pretendard','Malgun Gothic',sans-serif;
-    color:#222;
-    line-height:1.7;
-}
+.header{position:fixed;top:0;left:0;width:100%;height:82px;background:rgba(255,255,255,.86);z-index:1000;border-bottom:1px solid rgba(0,0,0,.08)}
+.header-inner{max-width:1450px;height:82px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between}
+.call-btn{background:#ef3d3d;color:#fff;border-radius:15px;padding:9px 24px;font-size:17px;font-weight:800;line-height:1.25;text-align:center}
+.logo{font-size:32px;font-weight:900;color:#00458f;letter-spacing:-2px}
+.home-btn{background:#071a54;color:#fff;border-radius:15px;padding:11px 23px;font-size:16px;font-weight:800;line-height:1.25;text-align:center}
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+.hero{margin-top:82px;height:430px;background:url('friendly-banner.jpg') center center/cover no-repeat;position:relative}
+.hero:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.38)}
+.hero-text{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;text-align:center;color:#fff}
+.hero-text h1{font-size:58px;font-weight:900;letter-spacing:-2px}
+.hero-text p{margin-top:15px;font-size:21px;font-weight:600}
 
-/* 상단메뉴 */
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:80px;
-    background:#fff;
-    border-bottom:1px solid #eee;
-    z-index:999;
-}
+.tab-wrap{background:#f5f5f5;padding:14px 20px}
+.tabs{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.tabs a{height:58px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #ddd;font-size:17px;font-weight:800}
+.tabs a.active{background:#4e9fea;color:#fff;box-shadow:0 12px 25px rgba(78,159,234,.25)}
 
-.header-inner{
-    max-width:1200px;
-    height:80px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 20px;
-}
+.section{max-width:1180px;margin:0 auto;padding:82px 20px}
+.section-title{text-align:center;margin-bottom:48px}
+.section-title h2{font-size:42px;letter-spacing:-2px}
+.section-title p{margin-top:10px;font-size:18px;color:#666}
 
-.logo{
-    font-size:28px;
-    font-weight:900;
-    color:#1d4f91;
-}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.intro-photo img{border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.intro-text h3{font-size:30px;color:#0b4f95;margin-bottom:22px;letter-spacing:-1px}
+.intro-text p{font-size:18px;color:#333;word-break:keep-all}
 
-.home-btn{
-    background:#1d4f91;
-    color:#fff;
-    padding:12px 22px;
-    border-radius:10px;
-    font-weight:700;
-}
+.message-box{background:#f8fbff;border-left:7px solid #0b5eb8;border-radius:16px;padding:48px}
+.message-box h3{font-size:31px;color:#0b4f95;margin-bottom:22px}
+.message-box p{font-size:18px;color:#333;word-break:keep-all}
 
-/* 상단 이미지 */
-.top-banner{
-    margin-top:80px;
-    height:380px;
-    background:url('raemian-main.jpg') center center/cover no-repeat;
-    position:relative;
-}
+.award-box{background:#fff;border:1px solid #e5e5e5;border-radius:18px;padding:45px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.award-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.award-item{background:#f7f9fc;border-radius:16px;padding:30px 22px;text-align:center}
+.award-item strong{display:block;font-size:26px;color:#0b4f95;margin-bottom:12px}
+.award-item p{font-size:17px;font-weight:700;line-height:1.55}
+.award-note{margin-top:30px;text-align:center;font-size:18px;color:#444}
 
-.top-banner::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
-}
+.map-box iframe{width:100%;height:430px;border:0;border-radius:18px}
+.address-box{margin-top:28px;background:#f7f9fc;border-radius:16px;padding:30px;text-align:center}
+.address-box h3{font-size:26px;color:#0b4f95;margin-bottom:12px}
+.address-box p{font-size:19px;font-weight:700;color:#333}
 
-.banner-text{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
-    color:#fff;
-    z-index:2;
-}
+.footer{background:#2f333a;color:#c8cbd0;padding:45px 20px 55px;margin-top:40px}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:30px}
+.footer h3{color:#fff;font-size:20px;margin-bottom:18px}
+.footer p{font-size:15px;line-height:1.8}
+.footer-tel{font-size:32px;color:#fff;font-weight:900}
 
-.banner-text h1{
-    font-size:52px;
-    font-weight:900;
-}
+.top-btn{position:fixed;right:30px;bottom:36px;width:50px;height:50px;background:rgba(255,255,255,.8);border:2px solid #333;font-size:26px;cursor:pointer}
 
-.banner-text p{
-    margin-top:15px;
-    font-size:20px;
-}
-
-/* 공통 */
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:90px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:44px;
-    margin-bottom:15px;
-}
-
-.section-title p{
-    color:#666;
-    font-size:18px;
-}
-
-/* 소개 */
-.intro-box{
-    background:#f8f9fb;
-    padding:50px;
-    border-radius:20px;
-}
-
-.intro-box p{
-    font-size:19px;
-}
-
-/* 대표인사말 */
-.ceo-box{
-    background:#fff;
-    border:1px solid #e5e5e5;
-    padding:50px;
-    border-radius:20px;
-}
-
-.ceo-box h3{
-    font-size:32px;
-    margin-bottom:25px;
-    color:#1d4f91;
-}
-
-.ceo-box p{
-    font-size:18px;
-}
-
-/* 오시는길 */
-.map-box{
-    text-align:center;
-}
-
-.map-box iframe{
-    width:100%;
-    height:500px;
-    border:none;
-    border-radius:20px;
-}
-
-.address{
-    margin-top:30px;
-    font-size:20px;
-    font-weight:700;
-}
-
-/* 모바일 */
 @media(max-width:768px){
-
-    .top-banner{
-        height:260px;
-    }
-
-    .banner-text h1{
-        font-size:34px;
-    }
-
-    .banner-text p{
-        font-size:15px;
-    }
-
-    .section{
-        padding:60px 16px;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .intro-box,
-    .ceo-box{
-        padding:28px;
-    }
-
-    .map-box iframe{
-        height:350px;
-    }
+    .header{height:78px;background:#fff}
+    .header-inner{justify-content:center}
+    .call-btn,.home-btn{display:none}
+    .logo{font-size:27px;letter-spacing:-1px}
+    .hero{margin-top:78px;height:300px}
+    .hero-text h1{font-size:38px}
+    .hero-text p{font-size:16px}
+    .tab-wrap{padding:10px}
+    .tabs{grid-template-columns:1fr 1fr}
+    .tabs a{height:52px;font-size:15px}
+    .section{padding:58px 18px}
+    .section-title h2{font-size:31px}
+    .section-title p{font-size:16px}
+    .intro-grid{grid-template-columns:1fr;gap:30px}
+    .intro-text h3{font-size:25px}
+    .intro-text p,.message-box p{font-size:16px}
+    .message-box{padding:30px}
+    .message-box h3{font-size:25px}
+    .award-box{padding:25px}
+    .award-list{grid-template-columns:1fr}
+    .map-box iframe{height:330px}
+    .footer-inner{display:block}
+    .footer-tel{margin-top:25px}
+    .top-btn{right:24px;bottom:24px}
 }
 </style>
 </head>
@@ -202,87 +95,134 @@ a{
 
 <header class="header">
     <div class="header-inner">
+        <a href="tel:051-555-9982" class="call-btn">☎ 문의전화<br>051-555-9982</a>
         <div class="logo">뉴화림부동산</div>
-
-        <a href="wharim.html" class="home-btn">
-            메인으로
-        </a>
+        <a href="wharim.html" class="home-btn">메인으로<br>돌아가기</a>
     </div>
 </header>
 
-<section class="top-banner">
-    <div class="banner-text">
-        <h1>뉴화림부동산</h1>
-        <p>온천장 · 래미안포레스티지 전문 중개</p>
+<section class="hero">
+    <div class="hero-text">
+        <h1>친절계약</h1>
+        <p>고객 중심의 책임중개 · 뉴화림부동산</p>
     </div>
 </section>
 
-<section class="section">
+<nav class="tab-wrap">
+    <div class="tabs">
+        <a href="#intro" class="active">뉴화림 소개</a>
+        <a href="#message">대표 인사말</a>
+        <a href="#award">수상 및 인증</a>
+        <a href="#map">오시는 길</a>
+    </div>
+</nav>
 
+<section class="section" id="intro">
     <div class="section-title">
         <h2>뉴화림부동산 소개</h2>
         <p>온천장 · 래미안포레스티지 전문 중개</p>
     </div>
 
-    <div class="intro-box">
-        <p>
-            뉴화림부동산은 부산 동래구 온천동 래미안포레스티지 단지 내 상가에 위치한
-            공인중개사사무소입니다.
-            <br><br>
-            래미안포레스티지, 더샵온천헤리티지, 동래래미안아이파크를 비롯하여
-            아파트, 상가, 전세, 월세, 매매까지 다양한 부동산 상담을 진행하고 있습니다.
-            <br><br>
-            지역 시장을 꾸준히 분석하며 고객님의 상황에 맞는 최적의 거래를
-            도와드리고 있습니다.
-        </p>
+    <div class="intro-grid">
+        <div class="intro-photo">
+            <img src="friendly-office.jpg" alt="뉴화림부동산 소개">
+        </div>
+        <div class="intro-text">
+            <h3>지역을 잘 아는 현장 중심 중개사무소</h3>
+            <p>
+                뉴화림부동산은 부산 동래구 온천동, 래미안포레스티지 단지 내 상가에 위치한 공인중개사사무소입니다.
+                <br><br>
+                래미안포레스티지, 더샵온천헤리티지, 동래래미안아이파크를 비롯해 아파트 매매·전세·월세와 상가 임대, 입주권·분양권 상담까지 폭넓게 안내드립니다.
+                <br><br>
+                현장에서 바로 확인되는 빠른 정보와 정확한 시세 분석으로 고객님의 상황에 맞는 거래 방향을 함께 찾아드립니다.
+            </p>
+        </div>
     </div>
-
 </section>
 
-<section class="section">
-
+<section class="section" id="message">
     <div class="section-title">
         <h2>대표 인사말</h2>
+        <p>고객의 입장에서 먼저 생각하겠습니다</p>
     </div>
 
-    <div class="ceo-box">
-
-        <h3>고객의 입장에서 생각하겠습니다.</h3>
-
+    <div class="message-box">
+        <h3>정확한 정보와 책임 있는 중개로 보답하겠습니다.</h3>
         <p>
-            부동산 거래는 단순한 계약이 아니라 고객님의 소중한 자산과
-            미래가 함께하는 중요한 결정입니다.
+            부동산 거래는 고객님의 소중한 자산과 생활이 함께하는 중요한 결정입니다.
             <br><br>
-            뉴화림부동산은 정확한 정보와 책임감 있는 중개를 바탕으로
-            고객님께 신뢰를 드리는 중개사가 되겠습니다.
+            뉴화림부동산은 단순히 매물을 소개하는 것을 넘어, 시세 흐름과 입지, 권리관계, 계약 과정까지 꼼꼼히 확인하여 안전하고 만족스러운 거래가 될 수 있도록 도와드리겠습니다.
             <br><br>
-            언제든 편하게 방문해 주시면 친절하게 상담해 드리겠습니다.
+            언제든 편하게 문의 주시면 친절하고 정확하게 상담드리겠습니다.
         </p>
-
     </div>
-
 </section>
 
-<section class="section">
+<section class="section" id="award">
+    <div class="section-title">
+        <h2>수상 및 인증</h2>
+        <p>지역 소비자가 직접 평가한 공식 인증 우수 중개사무소</p>
+    </div>
 
+    <div class="award-box">
+        <div class="award-list">
+            <div class="award-item">
+                <strong>2026</strong>
+                <p>베스트타임즈 선정<br>동래구 우수 부동산</p>
+            </div>
+            <div class="award-item">
+                <strong>2025</strong>
+                <p>한국소비자산업평가 KCIA<br>공인중개사무소 부문 우수업체</p>
+            </div>
+            <div class="award-item">
+                <strong>공식 인증</strong>
+                <p>지역 소비자가 직접 평가한<br>우수 중개사무소</p>
+            </div>
+        </div>
+        <div class="award-note">
+            고객 만족도와 서비스 품질을 바탕으로 신뢰받는 중개사무소가 되겠습니다.
+        </div>
+    </div>
+</section>
+
+<section class="section" id="map">
     <div class="section-title">
         <h2>오시는 길</h2>
+        <p>뉴화림부동산공인중개사사무소</p>
     </div>
 
     <div class="map-box">
-
-        <iframe
-        src="https://maps.google.com/maps?q=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8F%99%EB%9E%98%EA%B5%AC%20%EA%B8%88%EA%B0%95%EB%A1%9C131%EB%B2%88%EA%B8%B8%2042&t=&z=16&ie=UTF8&iwloc=&output=embed">
-        </iframe>
-
-        <div class="address">
-            부산광역시 동래구 금강로131번길 42<br>
-            래미안포레스티지 2단지 상가 A동 9호
-        </div>
-
+        <iframe src="https://maps.google.com/maps?q=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8F%99%EB%9E%98%EA%B5%AC%20%EA%B8%88%EA%B0%95%EB%A1%9C131%EB%B2%88%EA%B8%B8%2042&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
 
+    <div class="address-box">
+        <h3>뉴화림부동산공인중개사사무소</h3>
+        <p>
+            부산광역시 동래구 금강로131번길 42<br>
+            래미안포레스티지 2단지 상가 A동 9호<br><br>
+            TEL. 051-555-9982 / 010-3567-7087
+        </p>
+    </div>
 </section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <h3>뉴화림부동산공인중개사</h3>
+            <p>
+                부산광역시 동래구 금강로131번길 42<br>
+                래미안포레스티지 2단지 상가 A동 9호<br>
+                대표 : 이창주
+            </p>
+        </div>
+        <div>
+            <p>TEL</p>
+            <div class="footer-tel">051-555-9982</div>
+        </div>
+    </div>
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 </body>
 </html>
