@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>뉴화림만의 차별화 서비스 | 뉴화림부동산</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;color:#111;background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+.tabs button{
+height:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fff;
+border:1px solid #ddd;
+font-size:17px;
+font-weight:800;
+cursor:pointer;
+}
+
+.tabs button.active{
+background:#4e9fea;
+color:#fff;
+box-shadow:0 12px 25px rgba(78,159,234,.25);
+}
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:82px;
+background:rgba(255,255,255,.9);
+z-index:1000;
+border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.header-inner{
+max-width:1450px;
+height:82px;
+margin:0 auto;
+padding:0 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.call-btn{
+background:#ef3d3d;
+color:#fff;
+border-radius:15px;
+padding:9px 24px;
+font-size:17px;
+font-weight:800;
+text-align:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:900;
+color:#00458f;
+letter-spacing:-2px;
+}
+
+.home-btn{
+background:#071a54;
+color:#fff;
+border-radius:15px;
+padding:11px 23px;
+font-size:16px;
+font-weight:800;
+text-align:center;
+}
+
+.hero{
+margin-top:82px;
+height:430px;
+background:url('images/special-banner.jpg') center center/cover no-repeat;
+position:relative;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.38);
+}
+
+.hero-text{
+position:absolute;
+z-index:2;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
+text-align:center;
+color:#fff;
+}
+
+.hero-text h1{
+font-size:58px;
+font-weight:900;
+}
+
+.hero-text p{
+margin-top:15px;
+font-size:21px;
+font-weight:600;
+}
+
+.tab-wrap{
+background:#f5f5f5;
+padding:14px 20px;
+}
+
+.tabs{
+max-width:1200px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
+
+.section{
+max-width:1180px;
+margin:0 auto;
+padding:82px 20px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:48px;
+}
+
+.section-title h2{
+font-size:42px;
+}
+
+.section-title p{
+margin-top:10px;
+font-size:18px;
+color:#666;
+}
+
+.message-box{
+background:#f8fbff;
+border-left:7px solid #0b5eb8;
+border-radius:16px;
+padding:48px;
+}
+
+.message-box h3{
+font-size:31px;
+color:#0b4f95;
+margin-bottom:22px;
+}
+
+.message-box p{
+font-size:18px;
+}
+
+.footer{
+background:#2f333a;
+color:#c8cbd0;
+padding:45px 20px 55px;
+}
+
+.footer-inner{
+max-width:1180px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+}
+
+.footer-tel{
+font-size:32px;
+font-weight:900;
+color:#fff;
+}
+
+@media(max-width:768px){
+
+.header{
+height:78px;
+background:#fff;
+}
+
+.header-inner{
+justify-content:center;
+}
+
+.call-btn,.home-btn{
+display:none;
+}
+
+.logo{
+font-size:27px;
+}
+
+.hero{
+margin-top:78px;
+height:300px;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+.hero-text p{
+font-size:16px;
+}
+
+.tabs{
+grid-template-columns:1fr 1fr;
+}
+
+.tabs button{
+height:52px;
+font-size:15px;
+}
+
+.section{
+padding:58px 18px;
+}
+
+.section-title h2{
+font-size:31px;
+}
+
+.message-box{
+padding:30px;
+}
+
+.message-box h3{
+font-size:25px;
+}
+
+.footer-inner{
+display:block;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="header-inner">
+
+<a href="tel:051-555-9982" class="call-btn">
+☎ 문의전화<br>051-555-9982
+</a>
+
+<div class="logo">
+뉴화림부동산
+</div>
+
+<a href="wharim.html" class="home-btn">
+메인으로<br>돌아가기
+</a>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<h1>뉴화림만의 차별화 서비스</h1>
+<p>중개를 넘어 고객의 거래를 끝까지 책임집니다</p>
+</div>
+</section>
+
+<nav class="tab-wrap">
+<div class="tabs">
+<button class="tab-btn active" onclick="showTab('contract',this)">전자계약 · 원스톱</button>
+<button class="tab-btn" onclick="showTab('realtime',this)">실시간 매물정보</button>
+<button class="tab-btn" onclick="showTab('marketing',this)">유튜브 · 블로그</button>
+<button class="tab-btn" onclick="showTab('care',this)">안심케어</button>
+</div>
+</nav>
+<section class="section tab-content active" id="contract">
+
+    <div class="section-title">
+        <h2>전자계약 · 원스톱 서비스</h2>
+        <p>안전하고 편리한 거래 시스템</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>계약부터 등기까지 한 번에 진행합니다.</h3>
+
+        <p>
+            뉴화림부동산은 안전하고 편리한 전자계약 시스템을
+            도입하여 보다 신속하고 정확한 거래를 지원하고 있습니다.
+            <br><br>
+
+            전자계약 진행 시
+            약 0.1% ~ 최대 0.3% 수준의 금리 우대 혜택이 가능하며
+            고객님의 편의를 높여드립니다.
+            <br><br>
+
+            계약부터 등기까지
+            원스톱 진행이 가능하며
+            세무 상담 및 법률 상담 연계 서비스도 제공해드립니다.
+            <br><br>
+
+            또한 전세권설정등기,
+            소유권이전등기 등 각종 업무를
+            보다 효율적으로 진행할 수 있도록 도와드립니다.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section tab-content" id="realtime">
+
+    <div class="section-title">
+        <h2>실시간 매물 정보 제공</h2>
+        <p>현장에서 직접 확인되는 빠른 정보</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>실시간 신규 매물을 빠르게 안내해드립니다.</h3>
+
+        <p>
+            뉴화림부동산은 현장에서 직접 확인한
+            최신 매물 정보를 제공하고 있습니다.
+            <br><br>
+
+            광고에 공개되지 않은
+            비공개 매물 상담도 가능하며
+            고객님의 조건에 맞는 매물을 빠르게 찾아드립니다.
+            <br><br>
+
+            원하는 동,
+            원하는 평형,
+            원하는 방향,
+            원하는 입주 시기에 맞춘
+            맞춤형 상담이 가능합니다.
+            <br><br>
+
+            실거주 목적의 매수부터
+            투자 목적의 상담까지
+            정확한 시세와 시장 상황을 바탕으로 안내해드립니다.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section tab-content" id="marketing">
+
+    <div class="section-title">
+        <h2>유튜브 · 블로그 홍보</h2>
+        <p>온라인 마케팅을 통한 빠른 매칭</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>다양한 온라인 채널을 활용하여 홍보합니다.</h3>
+
+        <p>
+            뉴화림부동산은
+            유튜브 '뉴화림부동산TV'와
+            네이버 블로그를 운영하며
+            지역 정보와 매물 정보를 꾸준히 제공하고 있습니다.
+            <br><br>
+
+            매도 의뢰 시
+            유튜브 및 블로그를 활용한
+            온라인 홍보를 통해
+            보다 많은 고객에게 매물을 노출합니다.
+            <br><br>
+
+            단순 등록이 아닌
+            적극적인 온라인 마케팅으로
+            빠른 매칭을 지원해드립니다.
+        </p>
+
+        <br><br>
+
+        <p>
+            ▶ 유튜브 : 뉴화림부동산TV<br>
+            ▶ 블로그 : 뉴화림부동산
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section tab-content" id="care">
+
+    <div class="section-title">
+        <h2>안심케어 서비스</h2>
+        <p>계약 이후에도 함께합니다</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>안전한 거래를 위한 사후관리 서비스</h3>
+
+        <p>
+            뉴화림부동산은 계약 체결 이후에도
+            고객님의 안전한 거래를 위해
+            안심케어 서비스를 제공합니다.
+            <br><br>
+
+            잔금일까지 등기변동 모니터링
+            <br>
+            전문가 법률 상담 지원
+            <br>
+            공제증서 외 권리보험 추가 제공
+            <br><br>
+
+            거래 이후에도 언제든지 상담 가능하며
+            고객님의 소중한 자산을
+            안전하게 보호해드립니다.
+        </p>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+            <h3 style="color:#fff;margin-bottom:15px;">
+                뉴화림부동산공인중개사사무소
+            </h3>
+
+            <p>
+                부산광역시 동래구 금강로131번길 42<br>
+                래미안포레스티지 2단지 상가 A동 9호<br>
+                대표 : 이창주
+            </p>
+        </div>
+
+        <div>
+            <p>TEL</p>
+            <div class="footer-tel">
+                051-555-9982
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+function showTab(tabId, clickedButton){
+
+    document.querySelectorAll('.tab-content').forEach(function(section){
+        section.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(function(button){
+        button.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+    clickedButton.classList.add('active');
+
+    window.scrollTo({
+        top: document.querySelector('.tab-wrap').offsetTop - 80,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+</html>
