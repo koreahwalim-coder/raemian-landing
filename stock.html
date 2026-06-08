@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부동산 최대물량 확보 | 뉴화림부동산</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;color:#111;background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+.tabs button{
+height:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fff;
+border:1px solid #ddd;
+font-size:17px;
+font-weight:800;
+cursor:pointer;
+}
+
+.tabs button.active{
+background:#4e9fea;
+color:#fff;
+box-shadow:0 12px 25px rgba(78,159,234,.25);
+}
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:82px;
+background:rgba(255,255,255,.9);
+z-index:1000;
+border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.header-inner{
+max-width:1450px;
+height:82px;
+margin:0 auto;
+padding:0 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.call-btn{
+background:#ef3d3d;
+color:#fff;
+border-radius:15px;
+padding:9px 24px;
+font-size:17px;
+font-weight:800;
+line-height:1.25;
+text-align:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:900;
+color:#00458f;
+letter-spacing:-2px;
+}
+
+.home-btn{
+background:#071a54;
+color:#fff;
+border-radius:15px;
+padding:11px 23px;
+font-size:16px;
+font-weight:800;
+line-height:1.25;
+text-align:center;
+}
+
+.hero{
+margin-top:82px;
+height:430px;
+background:url('images/stock-banner.jpg') center center/cover no-repeat;
+position:relative;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.38);
+}
+
+.hero-text{
+position:absolute;
+z-index:2;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
+text-align:center;
+color:#fff;
+}
+
+.hero-text h1{
+font-size:58px;
+font-weight:900;
+}
+
+.hero-text p{
+margin-top:15px;
+font-size:21px;
+font-weight:600;
+}
+
+.tab-wrap{
+background:#f5f5f5;
+padding:14px 20px;
+}
+
+.tabs{
+max-width:1200px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
+
+.section{
+max-width:1180px;
+margin:0 auto;
+padding:82px 20px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:48px;
+}
+
+.section-title h2{
+font-size:42px;
+}
+
+.section-title p{
+font-size:18px;
+color:#666;
+margin-top:10px;
+}
+
+.message-box{
+background:#f8fbff;
+border-left:7px solid #0b5eb8;
+border-radius:16px;
+padding:48px;
+}
+
+.message-box h3{
+font-size:31px;
+color:#0b4f95;
+margin-bottom:22px;
+}
+
+.message-box p{
+font-size:18px;
+}
+
+.detail-list{
+padding-left:25px;
+}
+
+.detail-list li{
+margin-bottom:10px;
+font-size:18px;
+font-weight:700;
+}
+
+.footer{
+background:#2f333a;
+color:#c8cbd0;
+padding:45px 20px 55px;
+}
+
+.footer-inner{
+max-width:1180px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+}
+
+.footer-tel{
+font-size:32px;
+font-weight:900;
+color:#fff;
+}
+
+@media(max-width:768px){
+
+.header{
+height:78px;
+background:#fff;
+}
+
+.header-inner{
+justify-content:center;
+}
+
+.call-btn,.home-btn{
+display:none;
+}
+
+.logo{
+font-size:27px;
+}
+
+.hero{
+margin-top:78px;
+height:300px;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+.hero-text p{
+font-size:16px;
+}
+
+.tabs{
+grid-template-columns:1fr 1fr;
+}
+
+.tabs button{
+height:52px;
+font-size:15px;
+}
+
+.section{
+padding:58px 18px;
+}
+
+.section-title h2{
+font-size:31px;
+}
+
+.message-box{
+padding:30px;
+}
+
+.message-box h3{
+font-size:25px;
+}
+
+.footer-inner{
+display:block;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="header-inner">
+<a href="tel:051-555-9982" class="call-btn">
+☎ 문의전화<br>051-555-9982
+</a>
+
+<div class="logo">
+뉴화림부동산
+</div>
+
+<a href="wharim.html" class="home-btn">
+메인으로<br>돌아가기
+</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<h1>부동산 최대물량 확보</h1>
+<p>원하시는 조건의 매물을 빠르게 찾아드립니다</p>
+</div>
+</section>
+
+<nav class="tab-wrap">
+<div class="tabs">
+<button class="tab-btn active" onclick="showTab('system',this)">실매물 확보 시스템</button>
+<button class="tab-btn" onclick="showTab('apartment',this)">아파트 매물 다량 보유</button>
+<button class="tab-btn" onclick="showTab('commercial',this)">상가 · 건물 매물 확보</button>
+<button class="tab-btn" onclick="showTab('consult',this)">빠른 상담 안내</button>
+</div>
+</nav>
+<section class="section tab-content active" id="system">
+
+    <div class="section-title">
+        <h2>실매물 확보 시스템</h2>
+        <p>실제 거래 가능한 매물을 우선 확보합니다</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>광고용 매물이 아닌 실제 거래 가능한 매물을 안내합니다.</h3>
+
+        <p>
+            뉴화림부동산은 단순 광고 노출용 매물이 아닌
+            실제 거래 가능한 실매물을 중심으로 운영하고 있습니다.
+            <br><br>
+
+            집주인 직접 의뢰,
+            입주민 네트워크,
+            실시간 신규 매물 접수 시스템을 통해
+            가장 빠른 정보를 제공해드립니다.
+            <br><br>
+
+            원하는 동,
+            원하는 평형,
+            원하는 방향,
+            원하는 입주 시기에 맞는
+            매물을 신속하게 찾아드립니다.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section tab-content" id="apartment">
+
+    <div class="section-title">
+        <h2>아파트 매물 다량 보유</h2>
+        <p>온천동 대표 아파트 전문 중개</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>원하시는 조건의 매물을 다수 확보하고 있습니다.</h3>
+
+        <p>
+            뉴화림부동산은 래미안포레스티지를 중심으로
+            온천동 주요 아파트 매물을 폭넓게 확보하고 있습니다.
+            <br><br>
+
+            매매 · 전세 · 월세 매물을 지속적으로 확보하고 있으며
+            광고에 공개되지 않은 비공개 매물 상담도 가능합니다.
+            <br><br>
+
+            특히 래미안포레스티지 단지 내 상가 입점 중개사무소로서
+            실시간 신규 매물 확인이 가능하며
+            고객님께 가장 빠른 정보를 제공합니다.
+            <br><br>
+
+            원하는 평형,
+            원하는 동,
+            원하는 방향,
+            원하는 입주 시기에 맞는
+            다양한 매물을 보유하고 있습니다.
+        </p>
+
+        <br><br>
+
+        <ul class="detail-list">
+            <li>래미안포레스티지 중심 전문 중개</li>
+            <li>온천동 아파트 다수 확보</li>
+            <li>매매 · 전세 · 월세 상담</li>
+            <li>비공개 매물 상담 가능</li>
+            <li>실시간 신규 매물 확인</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="section tab-content" id="commercial">
+
+    <div class="section-title">
+        <h2>상가 · 건물 매물 확보</h2>
+        <p>온천장 상권 전문 중개</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>다양한 업종의 상가 및 건물 매물을 확보하고 있습니다.</h3>
+
+        <p>
+            온천장 및 동래권을 중심으로
+            다양한 업종의 상가와 건물 매물을 확보하고 있습니다.
+            <br><br>
+
+            창업을 준비하시는 분,
+            업종 이전을 계획하시는 분,
+            사업 확장을 고려하시는 분들께
+            맞춤형 매물을 추천해드립니다.
+        </p>
+
+        <br><br>
+
+        <ul class="detail-list">
+            <li>일반 상가</li>
+            <li>음식점</li>
+            <li>학원</li>
+            <li>병원 · 의원</li>
+            <li>사무실</li>
+            <li>메디컬 빌딩</li>
+            <li>수익형 건물</li>
+        </ul>
+
+        <br><br>
+
+        <h3>특별 추천 매물</h3>
+
+        <p>
+            ✔ 온천스마트메디컬<br>
+            ✔ 래미안포레스티지 단지 내 상가<br>
+            ✔ 온천장역 인근 상업시설
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section tab-content" id="consult">
+
+    <div class="section-title">
+        <h2>빠른 상담 안내</h2>
+        <p>언제든 편하게 문의하세요</p>
+    </div>
+
+    <div class="message-box">
+
+        <h3>고객님의 상황에 맞춰 친절하게 안내해드립니다.</h3>
+
+        <p>
+            부동산 거래는 타이밍과 정보가 중요합니다.
+            <br><br>
+
+            매수 · 매도 · 전세 · 월세
+            <br>
+            상가 임대 · 상가 매매
+            <br>
+            건물 매매 및 투자 상담까지
+            <br><br>
+
+            현재 시장 상황과 실거래 사례를 바탕으로
+            고객님의 상황에 맞는 방향을
+            친절하게 안내해드립니다.
+            <br><br>
+
+            처음 상담하시는 분도 부담 없이 연락 주시면
+            하나부터 차근차근 설명해 드리겠습니다.
+        </p>
+
+        <br><br>
+
+        <h3>문의전화</h3>
+
+        <p>
+            ☎ 051-555-9982<br>
+            ☎ 010-3567-7087
+        </p>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div>
+            <h3 style="color:#fff;margin-bottom:15px;">
+                뉴화림부동산공인중개사사무소
+            </h3>
+
+            <p>
+                부산광역시 동래구 금강로131번길 42<br>
+                래미안포레스티지 2단지 상가 A동 9호<br>
+                대표 : 이창주
+            </p>
+        </div>
+
+        <div>
+            <p>TEL</p>
+            <div class="footer-tel">
+                051-555-9982
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+function showTab(tabId, clickedButton){
+
+    document.querySelectorAll('.tab-content').forEach(function(section){
+        section.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(function(button){
+        button.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+    clickedButton.classList.add('active');
+
+    window.scrollTo({
+        top: document.querySelector('.tab-wrap').offsetTop - 80,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+</html>
