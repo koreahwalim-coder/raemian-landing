@@ -404,6 +404,22 @@ img{max-width:100%;display:block}
 <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
+function resetKakaoMapOnMobile(){
+    if(window.innerWidth > 768) return;
+
+    const mapBox = document.getElementById('daumRoughmapContainer1780957290651');
+    if(!mapBox) return;
+
+    mapBox.innerHTML = '';
+
+    new daum.roughmap.Lander({
+        "timestamp" : "1780957290651",
+        "key" : "2qnftpdxe4qh",
+        "mapWidth" : "760",
+        "mapHeight" : "430"
+    }).render();
+}
+
 function showTab(tabId, clickedButton){
     document.querySelectorAll('.tab-content').forEach(function(section){
         section.classList.remove('active');
@@ -415,6 +431,10 @@ function showTab(tabId, clickedButton){
 
     document.getElementById(tabId).classList.add('active');
     clickedButton.classList.add('active');
+
+    if(tabId === 'map'){
+        setTimeout(resetKakaoMapOnMobile, 150);
+    }
 
     window.scrollTo({
         top: document.querySelector('.tab-wrap').offsetTop - 80,
