@@ -341,16 +341,19 @@ img{max-width:100%;display:block}
     </div>
 
     <div class="map-box">
-        <!-- 카카오맵 퍼가기 코드 iframe을 여기에 붙여넣기 -->
-        <iframe 
-            src="여기에_카카오맵_퍼가기주소"
-            width="100%" 
-            height="430" 
-            style="border:0;border-radius:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </div>
+    <div id="daumRoughmapContainer1780957290651" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+</div>
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<script charset="UTF-8">
+    new daum.roughmap.Lander({
+        "timestamp" : "1780957290651",
+        "key" : "2qnftpdxe4qh",
+        "mapWidth" : "100%",
+        "mapHeight" : "430"
+    }).render();
+</script>
 
     <div class="location-table">
         <div class="loc-label">뉴화림부동산</div>
@@ -362,7 +365,6 @@ img{max-width:100%;display:block}
         </div>
     </div>
 </section>
-</section>
 
 <footer class="footer">
     <div class="footer-inner">
@@ -371,7 +373,7 @@ img{max-width:100%;display:block}
             <p>
                 부산광역시 동래구 금강로131번길 42<br>
                 래미안포레스티지 2단지 상가 A동 9호<br>
-                대표 : 이창주
+                대표 : 이정아
             </p>
         </div>
         <div>
