@@ -111,6 +111,56 @@ img{max-width:100%;display:block}
     .footer-tel{margin-top:25px}
     .top-btn{right:24px;bottom:24px}
 }
+    .tab-content.active{
+    display:block;
+}
+
+.award-main{
+    text-align:center;
+    font-size:22px;
+    font-weight:900;
+    color:#0b4f95;
+    margin-bottom:30px;
+}
+
+.award-images{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.award-images img{
+    width:100%;
+    border-radius:12px;
+    border:1px solid #ddd;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.article-btn{
+    display:inline-block;
+    margin-top:35px;
+    background:#071a54;
+    color:#fff;
+    padding:14px 34px;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:800;
+}
+
+@media(max-width:768px){
+
+    .award-images{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .award-main{
+        font-size:18px;
+    }
+
+}
+
+</style>
 </style>
 </head>
 
@@ -187,25 +237,45 @@ img{max-width:100%;display:block}
         <p>지역 소비자가 직접 평가한 공식 인증 우수 중개사무소</p>
     </div>
 
-    <div class="award-box">
-        <div class="award-list">
-            <div class="award-item">
-                <strong>2026</strong>
-                <p>베스트타임즈 선정<br>동래구 우수 부동산</p>
-            </div>
-            <div class="award-item">
-                <strong>2025</strong>
-                <p>한국소비자산업평가 KCIA<br>공인중개사무소 부문 우수업체</p>
-            </div>
-            <div class="award-item">
-                <strong>공식 인증</strong>
-                <p>지역 소비자가 직접 평가한<br>우수 중개사무소</p>
-            </div>
+   <div class="award-box">
+
+    <p class="award-main">
+        지역 소비자가 직접 평가한 공식 인증 우수 중개사무소
+    </p>
+
+    <div class="award-list">
+        <div class="award-item">
+            <strong>2026</strong>
+            <p>베스트타임즈 선정<br>동래구 우수 부동산</p>
         </div>
-        <div class="award-note">
-            고객 만족도와 서비스 품질을 바탕으로 신뢰받는 중개사무소가 되겠습니다.
+
+        <div class="award-item">
+            <strong>2025</strong>
+            <p>한국소비자산업평가 KCIA<br>공인중개사무소 부문 우수업체</p>
+        </div>
+
+        <div class="award-item">
+            <strong>공식 인증</strong>
+            <p>지역 소비자가 직접 평가한<br>우수 중개사무소</p>
         </div>
     </div>
+
+    <div class="award-images">
+        <img src="images/kcia-poster.jpg" alt="">
+        <img src="images/kcia-certificate.jpg" alt="">
+        <img src="images/kcia-gold.jpg" alt="">
+        <img src="images/kcia-medal.jpg" alt="">
+    </div>
+
+    <div style="text-align:center;">
+        <a href="https://www.besttimes.co.kr/9573"
+           target="_blank"
+           class="article-btn">
+           베스트타임즈 기사 보기
+        </a>
+    </div>
+
+</div>
 </section>
 
 <section class="section tab-content" id="map">
