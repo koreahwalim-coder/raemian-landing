@@ -182,6 +182,34 @@ img{max-width:100%;display:block}
     .footer-tel{margin-top:25px}
     .top-btn{right:24px;bottom:24px}
 }
+    .map-box{
+    width:100%;
+    max-width:760px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.map-box .root_daum_roughmap{
+    width:100% !important;
+}
+
+.map-box .root_daum_roughmap .wrap_map{
+    width:100% !important;
+}
+
+.map-box .root_daum_roughmap .wrap_controllers{
+    width:100% !important;
+}
+
+@media(max-width:768px){
+    .map-box{
+        max-width:100%;
+    }
+
+    .map-box .root_daum_roughmap{
+        width:100% !important;
+    }
+}
 </style>
 </head>
 
@@ -345,7 +373,7 @@ img{max-width:100%;display:block}
             "timestamp" : "1780957290651",
             "key" : "2qnftpdxe4qh",
             "mapWidth" : "100%",
-            "mapHeight" : "430"
+            "mapHeight" : "330"
         }).render();
     </script>
 
