@@ -192,6 +192,26 @@ img{max-width:100%;display:block}
     .modal-content{width:92%;margin:28% auto;overflow-x:auto}
     .privacy-table{min-width:680px}
 }
+    .bottom-photo{
+    width:100%;
+    background:#fff;
+    margin:0;
+    padding:0;
+}
+
+.bottom-photo img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    display:block;
+}
+
+@media(max-width:768px){
+    .bottom-photo img{
+        height:260px;
+        object-fit:cover;
+    }
+}
 </style>
 </head>
 
@@ -337,7 +357,9 @@ img{max-width:100%;display:block}
         </div>
     </div>
 </section>
-
+<section class="bottom-photo">
+    <img src="./images/main-bottom.jpg" alt="뉴화림부동산 하단 홍보 이미지">
+</section>
 <section class="footer-banner">
     <img src="./images/전체.png" alt="인증기관 배너">
 </section>
