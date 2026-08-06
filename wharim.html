@@ -108,7 +108,8 @@ img{max-width:100%;display:block}
 .form-list input,.form-list select{height:46px}
 .form-list textarea{height:130px;padding-top:18px;resize:none}
 .privacy-row{text-align:left;font-size:16px;margin:12px 0 25px}
-.submit-btn{display:block;width:190px;height:54px;margin:0 auto;border:0;border-radius:35px;background:#333;color:#fff;font-size:17px;font-weight:700}
+.submit-btn{display:block;width:190px;height:54px;margin:0 auto;border:0;border-radius:35px;background:#333;color:#fff;font-size:17px;font-weight:700;cursor:pointer}
+.submit-btn:disabled{background:#888;cursor:not-allowed}
 
 .footer-banner{
     background:#fff;
@@ -359,22 +360,22 @@ img{max-width:100%;display:block}
         <div class="inquiry-right">
             <h2>매도・매수 문의</h2>
             <div class="desc">래미안포레스티지와 온천장 부동산 상담은<br>뉴화림부동산에서 편하게 문의주세요.</div>
-            <form onsubmit="return validateForm()">
+            <form id="inquiryForm" onsubmit="return submitInquiry(event)">
                 <div class="form-list">
-                    <input type="text" id="name" placeholder="성함">
-                    <input type="text" id="phone" placeholder="연락처">
-                    <select id="type">
+                    <input type="text" id="name" name="name" placeholder="성함" autocomplete="name" required>
+                    <input type="tel" id="phone" name="phone" placeholder="연락처" autocomplete="tel" required>
+                    <select id="type" name="type">
                         <option value="">매도・매수 선택</option>
                         <option>매도</option><option>매수</option><option>전세</option><option>월세</option><option>상가임대</option>
                     </select>
-                    <textarea id="message" placeholder="문의내용"></textarea>
+                    <textarea id="message" name="message" placeholder="문의내용" required></textarea>
                 </div>
                 <div class="privacy-row">
                     <input type="checkbox" id="agree">
                     개인정보처리방침 동의
                     <a href="#" onclick="openPrivacy(event)">[전문보기]</a>
                 </div>
-                <button class="submit-btn" type="submit">문의하기</button>
+                <button class="submit-btn" id="submitBtn" type="submit">문의하기</button>
             </form>
         </div>
     </div>
@@ -503,12 +504,48 @@ function openRealListing(){window.open('https://fin.land.naver.com/map?layer=Nob
 function openPrivacy(e){e.preventDefault();document.getElementById('privacyModal').style.display='block'}
 function closePrivacy(){document.getElementById('privacyModal').style.display='none'}
 window.onclick=function(e){if(e.target===document.getElementById('privacyModal'))closePrivacy()}
-function validateForm(){
+const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbyzftbeTbE3iURJjEACCeo0Yt47JvZCNCVX-qEWusi982rv5qG6lEMjXmdIlLI6Bry90g/exec';
+
+async function submitInquiry(event){
+    event.preventDefault();
+
     if(!document.getElementById('name').value.trim()){alert('성함을 입력해주세요.');return false}
     if(!document.getElementById('phone').value.trim()){alert('연락처를 입력해주세요.');return false}
     if(!document.getElementById('message').value.trim()){alert('문의내용을 입력해주세요.');return false}
     if(!document.getElementById('agree').checked){alert('개인정보처리방침에 동의해주세요.');return false}
-    alert('문의가 접수되었습니다.');
+
+    const form=document.getElementById('inquiryForm');
+    const submitBtn=document.getElementById('submitBtn');
+    const originalText=submitBtn.textContent;
+    const formData=new URLSearchParams();
+
+    formData.append('name',document.getElementById('name').value.trim());
+    formData.append('phone',document.getElementById('phone').value.trim());
+    formData.append('type',document.getElementById('type').value);
+    formData.append('message',document.getElementById('message').value.trim());
+    formData.append('page',window.location.href);
+
+    submitBtn.disabled=true;
+    submitBtn.textContent='접수 중...';
+
+    try{
+        await fetch(GOOGLE_SCRIPT_URL,{
+            method:'POST',
+            mode:'no-cors',
+            headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+            body:formData.toString()
+        });
+
+        alert('문의가 정상적으로 접수되었습니다. 빠른 시간 안에 연락드리겠습니다.');
+        form.reset();
+    }catch(error){
+        console.error('문의 접수 오류:',error);
+        alert('문의 접수 중 오류가 발생했습니다. 051-555-9982로 연락해주세요.');
+    }finally{
+        submitBtn.disabled=false;
+        submitBtn.textContent=originalText;
+    }
+
     return false;
 }
 </script>
