@@ -1,9 +1,8 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/wharim.html",
-      "permanent": true
+      "destination": "/wharim.html"
     }
   ]
 }
