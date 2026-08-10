@@ -4,8 +4,9 @@
       "source": "/",
       "has": [
         {
-          "type": "host",
-          "value": "xn--vg1b31lo1z.kr"
+          "type": "header",
+          "key": "host",
+          "value": "xn--vg1b31lo1z\\.kr"
         }
       ],
       "destination": "/wharim.html"
