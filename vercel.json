@@ -1,11 +1,14 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/$",
-      "dest": "/wharim.html"
-    },
-    {
-      "handle": "filesystem"
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "xn--vg1b31lo1z.kr"
+        }
+      ],
+      "destination": "/wharim.html"
     }
   ]
 }
