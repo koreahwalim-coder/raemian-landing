@@ -454,6 +454,497 @@ img{max-width:100%;display:block}
         letter-spacing:-1px;
     }
 }
+    /* ==================================================
+   채널 카드 최종 수정 - PC + 모바일
+   반드시 </style> 바로 위에 넣기
+================================================== */
+
+
+/* ---------- PC ---------- */
+
+.channel-section{
+    padding:35px 20px 45px !important;
+}
+
+.channel-title{
+    font-size:34px !important;
+    font-weight:900 !important;
+    margin-bottom:25px !important;
+}
+
+.channel-wrap{
+    max-width:980px !important;
+    gap:16px !important;
+}
+
+.channel-card{
+    width:100% !important;
+    height:190px !important;
+    min-height:190px !important;
+    padding:14px 24px !important;
+
+    display:flex !important;
+    align-items:center !important;
+
+    gap:28px !important;
+
+    border-radius:18px !important;
+    overflow:hidden !important;
+}
+
+
+/* 왼쪽 로고 영역 */
+.channel-logo-box{
+    width:46% !important;
+    min-width:46% !important;
+    height:160px !important;
+
+    padding:0 24px 0 0 !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    border-right:1px solid #ddd !important;
+
+    overflow:hidden !important;
+}
+
+
+/* 유튜브 / 블로그 이미지 */
+.channel-logo-box img{
+    width:100% !important;
+    max-width:none !important;
+    height:145px !important;
+
+    object-fit:contain !important;
+
+    margin:0 !important;
+}
+
+
+/* 이미지 자체의 흰 여백 보정 */
+.channel-card:nth-child(1) .channel-logo-box img{
+    transform:scale(1.55) !important;
+}
+
+.channel-card:nth-child(3) .channel-logo-box img{
+    transform:scale(1.55) !important;
+}
+
+
+/* 오른쪽 글자 */
+.channel-info{
+    flex:1 !important;
+    padding:0 5px !important;
+    text-align:left !important;
+}
+
+.channel-info h3{
+    font-size:32px !important;
+    line-height:1.2 !important;
+    font-weight:900 !important;
+
+    margin:0 0 12px !important;
+
+    word-break:keep-all !important;
+}
+
+.channel-info p{
+    font-size:19px !important;
+    line-height:1.55 !important;
+
+    margin:0 !important;
+
+    color:#333 !important;
+
+    word-break:keep-all !important;
+}
+
+
+/* 카카오톡 로고 */
+.kakao-logo-box{
+    flex-direction:column !important;
+    gap:6px !important;
+}
+
+.kakao-icon{
+    width:110px !important;
+    height:110px !important;
+    flex:0 0 110px !important;
+
+    border-radius:22px !important;
+
+    font-size:22px !important;
+}
+
+.kakao-name{
+    font-size:32px !important;
+    font-weight:900 !important;
+    line-height:1 !important;
+}
+
+
+/* ==================================================
+   모바일
+================================================== */
+
+@media(max-width:768px){
+
+    .channel-section{
+        padding:18px 8px 25px !important;
+    }
+
+    .channel-title{
+        font-size:28px !important;
+        line-height:1.2 !important;
+
+        margin:0 0 16px !important;
+
+        white-space:nowrap !important;
+    }
+
+    .channel-wrap{
+        width:100% !important;
+
+        gap:12px !important;
+
+        padding:0 !important;
+    }
+
+
+    /* 카드 높이 축소 */
+    .channel-card{
+        width:100% !important;
+
+        height:190px !important;
+        min-height:190px !important;
+
+        padding:10px 10px !important;
+
+        display:flex !important;
+        align-items:center !important;
+
+        gap:12px !important;
+
+        border-radius:18px !important;
+
+        overflow:hidden !important;
+    }
+
+
+    /* 왼쪽 로고가 화면 절반 가까이 차지 */
+    .channel-logo-box{
+        width:47% !important;
+        min-width:47% !important;
+
+        height:165px !important;
+
+        padding:0 10px 0 0 !important;
+
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        border-right:1px solid #ddd !important;
+
+        overflow:hidden !important;
+    }
+
+
+    /* 로고 크게 */
+    .channel-logo-box img{
+        width:100% !important;
+        max-width:none !important;
+
+        height:155px !important;
+
+        object-fit:contain !important;
+
+        margin:0 !important;
+    }
+
+
+    /* 유튜브 이미지 내부 흰 여백 제거 효과 */
+    .channel-card:nth-child(1) .channel-logo-box img{
+        transform:scale(1.7) !important;
+    }
+
+
+    /* 블로그 이미지 내부 흰 여백 제거 효과 */
+    .channel-card:nth-child(3) .channel-logo-box img{
+        transform:scale(1.7) !important;
+    }
+
+
+    /* 오른쪽 설명 */
+    .channel-info{
+        width:53% !important;
+        flex:1 !important;
+
+        min-width:0 !important;
+
+        padding:0 2px !important;
+    }
+
+    .channel-info h3{
+        font-size:25px !important;
+        line-height:1.22 !important;
+
+        font-weight:900 !important;
+
+        margin:0 0 10px !important;
+
+        word-break:keep-all !important;
+    }
+
+    .channel-info p{
+        font-size:18px !important;
+        line-height:1.48 !important;
+
+        margin:0 !important;
+
+        color:#333 !important;
+
+        word-break:keep-all !important;
+    }
+
+
+    /* 카카오톡 */
+    .kakao-logo-box{
+        flex-direction:column !important;
+
+        gap:5px !important;
+    }
+
+    .kakao-icon{
+        width:105px !important;
+        height:105px !important;
+
+        flex:0 0 105px !important;
+
+        border-radius:20px !important;
+
+        font-size:21px !important;
+    }
+
+    .kakao-name{
+        font-size:25px !important;
+        font-weight:900 !important;
+
+        margin-top:4px !important;
+    }
+}
+    /* =========================================
+   뉴화림 채널 최종 통일 버전
+========================================= */
+
+.channel-section{
+    background:#f4f6f9;
+    padding:35px 20px 45px;
+}
+
+.channel-title{
+    text-align:center;
+    font-size:34px;
+    font-weight:900;
+    margin:0 0 25px;
+}
+
+.channel-wrap{
+    width:100%;
+    max-width:980px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.channel-card{
+    width:100% !important;
+    height:190px !important;
+    min-height:190px !important;
+    padding:15px 25px !important;
+    box-sizing:border-box;
+
+    display:flex !important;
+    align-items:center !important;
+
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    text-decoration:none;
+    color:#111;
+    overflow:hidden;
+}
+
+
+/* 왼쪽 로고 영역 */
+.channel-logo-box{
+    width:45% !important;
+    min-width:45% !important;
+    height:155px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    padding:0 25px 0 10px !important;
+    box-sizing:border-box;
+
+    border-right:1px solid #ddd;
+
+    overflow:hidden;
+}
+
+
+/* ★ 세 로고 동일 크기 */
+.channel-logo-box img{
+    display:block !important;
+
+    width:100% !important;
+    height:130px !important;
+
+    max-width:330px !important;
+
+    object-fit:contain !important;
+
+    margin:0 auto !important;
+}
+
+
+/* 오른쪽 글자 */
+.channel-info{
+    flex:1 !important;
+    min-width:0;
+    padding-left:35px !important;
+}
+
+.channel-info h3{
+    font-size:32px !important;
+    font-weight:900 !important;
+    line-height:1.25 !important;
+
+    margin:0 0 12px !important;
+
+    word-break:keep-all;
+}
+
+.channel-info p{
+    font-size:19px !important;
+    line-height:1.55 !important;
+
+    color:#444;
+
+    margin:0 !important;
+
+    word-break:keep-all;
+}
+
+
+/* =========================================
+   모바일
+========================================= */
+
+@media(max-width:768px){
+
+    .channel-section{
+        padding:18px 12px 25px !important;
+    }
+
+    .channel-title{
+        font-size:27px !important;
+        margin-bottom:16px !important;
+    }
+
+    .channel-wrap{
+        gap:12px !important;
+    }
+
+
+    .channel-card{
+        width:100% !important;
+
+        height:190px !important;
+        min-height:190px !important;
+
+        padding:10px 12px !important;
+
+        border-radius:18px !important;
+
+        display:flex !important;
+        align-items:center !important;
+    }
+
+
+    /* 왼쪽을 약 45% 사용 */
+    .channel-logo-box{
+        width:45% !important;
+        min-width:45% !important;
+
+        height:165px !important;
+
+        padding:0 12px 0 4px !important;
+
+        border-right:1px solid #ddd !important;
+
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        overflow:hidden !important;
+    }
+
+
+    /* ★ 유튜브/카카오/블로그 모두 동일 영역 */
+    .channel-logo-box img{
+        width:100% !important;
+
+        max-width:190px !important;
+
+        height:140px !important;
+
+        object-fit:contain !important;
+
+        margin:0 auto !important;
+    }
+
+
+    /* 오른쪽 */
+    .channel-info{
+        width:55% !important;
+        flex:1 !important;
+
+        min-width:0 !important;
+
+        padding-left:14px !important;
+    }
+
+
+    .channel-info h3{
+        font-size:25px !important;
+        line-height:1.2 !important;
+
+        font-weight:900 !important;
+
+        margin:0 0 10px !important;
+
+        word-break:keep-all !important;
+    }
+
+
+    .channel-info p{
+        font-size:18px !important;
+        line-height:1.45 !important;
+
+        margin:0 !important;
+
+        color:#333 !important;
+
+        word-break:keep-all !important;
+    }
+}
 </style>
 </head>
 
