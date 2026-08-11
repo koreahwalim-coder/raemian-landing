@@ -240,6 +240,219 @@ img{max-width:100%;display:block}
         object-fit:cover;
     }
 }
+    /* =====================================
+   뉴화림 채널 - PC / 모바일 최적화
+===================================== */
+
+.channel-section{
+    background:#f4f6f9;
+    padding:55px 20px 65px;
+}
+
+.channel-title{
+    text-align:center;
+    font-size:32px;
+    font-weight:900;
+    margin-bottom:32px;
+    letter-spacing:-1px;
+}
+
+.channel-wrap{
+    width:100%;
+    max-width:920px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.channel-card{
+    width:100% !important;
+    min-height:190px !important;
+    padding:28px 40px !important;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    display:flex !important;
+    align-items:center !important;
+    gap:45px !important;
+    text-decoration:none;
+    color:#111;
+    overflow:hidden;
+}
+
+.channel-logo-box{
+    width:310px !important;
+    min-width:310px !important;
+    height:130px !important;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-right:1px solid #e7e7e7;
+    padding-right:35px;
+}
+
+.channel-logo-box img{
+    display:block;
+    width:100% !important;
+    max-width:270px !important;
+    height:110px !important;
+    object-fit:contain !important;
+    margin:0 !important;
+}
+
+.channel-info{
+    flex:1;
+    text-align:left;
+}
+
+.channel-info h3{
+    font-size:27px !important;
+    font-weight:900;
+    line-height:1.3;
+    margin:0 0 12px !important;
+    word-break:keep-all;
+}
+
+.channel-info p{
+    font-size:16px !important;
+    line-height:1.7;
+    color:#555;
+    margin:0 !important;
+    word-break:keep-all;
+}
+
+
+/* 카카오톡 로고 */
+.kakao-logo-box{
+    flex-direction:row;
+    gap:15px;
+}
+
+.kakao-icon{
+    width:82px;
+    height:82px;
+    flex:0 0 82px;
+    border-radius:18px;
+    background:#fee500;
+    color:#3b1e1e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:900;
+    position:relative;
+}
+
+.kakao-icon:after{
+    content:"";
+    position:absolute;
+    left:17px;
+    bottom:-8px;
+    width:0;
+    height:0;
+    border-top:15px solid #fee500;
+    border-right:13px solid transparent;
+}
+
+.kakao-name{
+    font-size:29px;
+    font-weight:900;
+    color:#111;
+    letter-spacing:-1px;
+}
+
+
+/* ==============================
+   모바일
+============================== */
+
+@media(max-width:768px){
+
+    .channel-section{
+        padding:30px 14px 38px !important;
+    }
+
+    .channel-title{
+        font-size:25px !important;
+        margin-bottom:22px !important;
+        white-space:nowrap;
+    }
+
+    .channel-wrap{
+        gap:14px !important;
+    }
+
+    .channel-card{
+        min-height:0 !important;
+        height:auto !important;
+        padding:18px 16px !important;
+        border-radius:16px;
+        gap:16px !important;
+        display:flex !important;
+        align-items:center !important;
+    }
+
+    .channel-logo-box{
+        width:43% !important;
+        min-width:43% !important;
+        height:100px !important;
+        padding-right:14px !important;
+        border-right:1px solid #e5e5e5;
+    }
+
+    .channel-logo-box img{
+        width:100% !important;
+        max-width:170px !important;
+        height:80px !important;
+        object-fit:contain !important;
+        margin:0 !important;
+    }
+
+    .channel-info{
+        width:57%;
+        flex:1;
+        min-width:0;
+    }
+
+    .channel-info h3{
+        font-size:20px !important;
+        line-height:1.25 !important;
+        margin:0 0 7px !important;
+        word-break:keep-all;
+    }
+
+    .channel-info p{
+        font-size:13px !important;
+        line-height:1.55 !important;
+        margin:0 !important;
+        word-break:keep-all;
+    }
+
+    .kakao-logo-box{
+        gap:7px !important;
+    }
+
+    .kakao-icon{
+        width:52px;
+        height:52px;
+        flex:0 0 52px;
+        border-radius:12px;
+        font-size:12px;
+    }
+
+    .kakao-icon:after{
+        left:11px;
+        bottom:-6px;
+        border-top-width:10px;
+        border-right-width:9px;
+    }
+
+    .kakao-name{
+        font-size:19px;
+        letter-spacing:-1px;
+    }
+}
 </style>
 </head>
 
