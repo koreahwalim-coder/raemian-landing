@@ -177,9 +177,36 @@ img{max-width:100%;display:block}
     .live-title h2{font-size:39px}
     .live-grid{grid-template-columns:1fr 1fr;gap:12px}
     .live-card img{height:170px}
-    .channel-card{display:block}
-    .channel-card img{width:100%;height:auto}
-    .channel-info h3{font-size:26px}
+.channel-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:22px 20px;
+    min-height:0;
+}
+
+.channel-card img{
+    width:42%;
+    max-width:220px;
+    height:auto;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.channel-info{
+    flex:1;
+}
+
+.channel-info h3{
+    font-size:22px;
+    margin:0 0 8px;
+}
+
+.channel-info p{
+    font-size:14px;
+    line-height:1.6;
+    margin:0;
+}
     .inquiry-box{display:block;padding:30px 26px}
     .inquiry-left,.inquiry-right{width:100%}
     .inquiry-right h2{margin-top:45px;font-size:38px}
